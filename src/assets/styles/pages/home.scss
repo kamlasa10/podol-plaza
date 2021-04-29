@@ -67,5 +67,11 @@
             flex-direction: column;
             justify-content: center;
         }
+
+        &__bottom {
+          .big-container::before {
+            display: none;
+          }
+        }
     }
 }

@@ -19,44 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-	// end functions 
+	// end functions
 
     (function() {
-		const swiper = new Swiper('.js-hero-slider', {
-			speed: 700,
-			pagination: {
-				el: '.hero__slider-pagination',
-				type: 'bullets',
-				clickable: true
-			  },
-
-			  on: {
-				  init(e) {
-					  setTimeout(() => {
-						const bullets = e.pagination.bullets
-						console.log(bullets)
-						const cirlceProgress = `
-						<div class="wrapper-progress" data-anim="base wrapper">
-						<div class="circle" data-anim="base left"></div>
-						<div class="circle" data-anim="base right"></div>
-						</div>
-							`
-  
-						bullets.forEach(item => {
-							item.insertAdjacentHTML('afterbegin', cirlceProgress)
-						})
-					  })
-				  }
-			  }
-		  });
-
-        showPopupByType()
+    showPopupByType()
 
 		const currentLanguage = $('html').attr('lang')
 
         $('[name=phone]').each(function() {
             $(this).attr('placeholder', '+ (38) ___ - ___ - __')
             $(this).inputmask("+ (38) 999 - 999 - 99", { clearMaskOnLostFocus: false })
+        })
+
+        $('.js-btn-top').on('click', () => {
+          $('html, body').stop().animate({scrollTop: 0}, 1000)
         })
 
         $('.js-open-menu').on('click', e => {
@@ -112,28 +88,28 @@ document.addEventListener('DOMContentLoaded', () => {
 		  function checkNumbers(str) {
             return str.replace(/[\W_]+/g, '')
         }
-		
+
 		  function removeAllFormTextWarn(inputs) {
 			inputs.each(function () {
 			  $(this).parent().find(".field__error-msg").remove();
 			});
 		  }
-		
+
 		  function addIndicateWarnForNode(node, classes, isAdded = true) {
 			if (isAdded) {
 			  $(node).closest(".field").addClass(classes);
 			  return;
 			}
-		
+
 			$(node).closest(".field").removeClass(classes);
 		  }
-		
+
 		  function removeNodeByDelay(node, delay) {
 			setTimeout(() => {
 			  node.remove();
 			}, delay);
 		  }
-		
+
 		  function validateForm(inputs) {
 			let isValid = true;
 			inputs.each(function () {
@@ -168,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					isValid = false;
 					return
 				}
-		
+
 			  if (!$(this).val().replace(/\s+/g, "")) {
 				const parent = $(this).parent().parent()
 				parent.find('.popup__item-msg-warn').text(msgWarnObj[currentLanguage].warn)
@@ -177,22 +153,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			  }
 			}
 			});
-		
+
 			return isValid;
 		  }
-		
+
 		  $('form').on("submit", (e) => {
             e.preventDefault();
 
 			let $form = $(e.currentTarget)
 			const inputs = $form.find($("[name]"));
 			const isValid = validateForm(inputs);
-		
+
 			if (isValid) {
 			  sendAjaxForm("static/mail.php", $form);
 			}
 		  });
-		
+
 		  function sendAjaxForm(url, selectorForm) {
 			const status = {
 			  sucess: {
@@ -217,8 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			})
 
-			console.log(data)
-		
 			$.ajax({
 			  url: url, //url страницы (action_ajax_form.php)
 			  type: "POST", //метод отправки
@@ -245,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				  `<div class="form__status">${status.error[currentLanguage]}</div>`
 				);
 				const msg = $(selectorForm).find(".form__status");
-		
+
 				removeNodeByDelay(msg, 5000);
 
 				if(selectorForm[0].tagName.toLowerCase() === 'form') {

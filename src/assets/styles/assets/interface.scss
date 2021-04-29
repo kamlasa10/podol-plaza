@@ -332,9 +332,8 @@
 .slider-pagination {
   .swiper-pagination-bullet {
     position: relative;
-    display: none;
-    width: 0;
-    height: 0;
+    width: 34px;
+    height: 34px;
     transition: all .4s;
     background-color: transparent;
     display: flex;
@@ -349,80 +348,98 @@
 
     &::after {
       content: "";
-      display: none;
       position: absolute;
+      left: 0;
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background-color: #fff;
+
+      &:hover {
+        opacity: .5;
+      }
     }
 
     @include to(1440px) {
       width: 6px;
       height: 6px;
     }
+
+    svg {
+      position: relative;
+      transform: rotate(-90deg) translateY(13px);
+      fill: none;
+      stroke-dasharray: 251; /* (2PI * 40px) */
+      stroke-dashoffset: 251;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &.start-animate {
+        animation: offsettozero 12.1s linear forwards;
+      }
+    }
+
+    @keyframes offsettozero {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
   }
 }
 
-.wrapper-progress {
-  width: 100px; /* Set the size of the progress bar */
-  height: 100px;
-  position: absolute; /* Enable clipping */
-  clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
-}
-/* Set the sizes of the elements that make up the progress bar */
-.circle {
-  width: 80px;
-  height: 80px;
-  border: 10px solid green;
-  border-radius: 50px;
-  position: absolute;
-  clip: rect(0px, 50px, 100px, 0px);
-}
-/* Using the data attributes for the animation selectors. */
-/* Base settings for all animated elements */
-div[data-anim~=base] {
-  -webkit-animation-iteration-count: 1;  /* Only run once */
-  -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
-  -webkit-animation-timing-function:linear; /* Linear animation */
+.btn-go-top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(343.46deg, #EBBA8C 0%, #EBC78C 17.56%, #FFE9B8 78.41%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  bottom: 40px;
+  right: 63px;
+  cursor: pointer;
+
+  svg {
+    width: 18px;
+    height: 21px;
+    fill: none;
+    transition: all .4s;
+    animation: 1s linear btnTopAnimate infinite;
+  }
+
+  &:hover {
+    svg {
+    }
+  }
 }
 
-.wrapper-progress[data-anim~=wrapper] {
-  -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
-  -webkit-animation-delay: 3s; /* Wait half of the animation */
-  -webkit-animation-name: close-wrapper; /* Keyframes name */
-}
+@keyframes btnTopAnimate {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
 
-.circle[data-anim~=left] {
-  -webkit-animation-duration: 6s; /* Full animation time */
-  -webkit-animation-name: left-spin;
-}
+  50% {
+    transform: translateY(-7px);
+  }
 
-.circle[data-anim~=right] {
-  -webkit-animation-duration: 3s; /* Half animation time */
-  -webkit-animation-name: right-spin;
-}
-/* Rotate the right side of the progress bar from 0 to 180 degrees */
-@-webkit-keyframes right-spin {
-  from {
-    -webkit-transform: rotate(0deg);
+  75% {
+    transform: translateY(-5px);
   }
-  to {
-    -webkit-transform: rotate(180deg);
+
+  100% {
+    transform: translateY(0px);
   }
-}
-/* Rotate the left side of the progress bar from 0 to 360 degrees */
-@-webkit-keyframes left-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-/* Set the wrapper clip to auto, effectively removing the clip */
-@-webkit-keyframes close-wrapper {
-  to {
-    clip: rect(auto, auto, auto, auto);
-  }
+
 }
