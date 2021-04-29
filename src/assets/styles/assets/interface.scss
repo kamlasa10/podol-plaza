@@ -1,0 +1,428 @@
+.pu-form{
+  &__header{
+   
+  }
+  &__data{
+    margin-top: 60px;
+  }
+
+  &__close{
+    margin-left: auto;
+  }
+}
+
+.header-pu-form{
+  display: flex;
+  @include to(640px){
+    flex-wrap: wrap;
+  }
+  &__title{
+    margin-bottom: 40px;
+    @include to(640px){
+      display: none !important; 
+    }
+  }
+  &__info-wrapper {
+    padding-left: 30px;
+    width: 100%;
+    @include to(640px){
+      padding-left: 0;
+    }
+  }
+  &__radio-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  &__img-wrapper {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    @include to(640px){
+      flex-basis: 100%;
+      margin-bottom: 15px;
+    }
+    img{
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__radio-btn-wrapper{
+    flex-basis: 50%;
+  }
+}
+
+.data-pu-form{
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include to(640px){
+      flex-wrap: wrap;
+    }
+  }
+  &__btn{
+    @include to(640px){
+      margin: 48px auto 0;
+    }
+  }
+  &__subtitle{
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 16px;
+    &_m40{
+      margin-bottom: 40px;
+    }
+    &_price{
+      margin-bottom: 0;
+    }
+  }
+  &__row + &__row{
+    margin-top: 16px;
+  }
+
+  &__form-input-group{
+    position: relative;
+    width: 100%;
+    &_three{
+      flex-basis: calc(33.3% - 15px);
+    }
+    &_two{
+      flex-basis: calc(67% - 12px);
+    }
+    &_full{
+      flex-basis: 100%;
+    }
+    &_phone{
+      flex-basis: calc(40% - 15px);
+      @include to(640px){
+        flex-basis: 100%;
+      }
+    }
+    &_email{
+      flex-basis: calc(60% - 15px);
+      @include to(640px){
+        flex-basis: 100%;
+      }
+    }
+
+  }
+
+  &__price{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  &__warning-text{
+    P + p{
+      margin-top: 10px;
+    }
+  }
+}
+
+.form-input-group{
+  label.form-input-group__upload-btn{
+    display: inline-flex;
+    cursor: pointer;
+    input{
+      display: none;
+    }
+  }
+  &__upload-text-wrapper{
+    max-width: 176px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    height: 52px;
+    @include to(640px){
+      margin-bottom: 15px;
+      max-width: 200px;
+    }
+    span {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: block;
+    }
+  }
+
+  &__add-info{
+    width: 100%;
+  }
+  &__input{
+    border-radius: 4px;
+    border: 1px solid #808080;
+    padding: 0 16px;
+    height: 52px;
+    width: 100%;
+    margin-bottom: 7px;
+
+    &_textarea{
+      height: 95px;
+      resize: none;
+      width: 100%;
+      padding-top: 5px;
+    }
+  }
+
+  &_upload{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 45%;
+    @include to(640px){
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  &__label{
+    margin-bottom: 15px;
+    display: block;
+  }
+
+}
+
+.big-container {
+   max-width: 1520px;
+   padding-left: 50px;
+   padding-right: 50px;
+   margin: 0 auto;
+   width: 100%;
+}
+
+.btn-round {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: 0;
+    background: $gold;
+    border-radius: 50%;
+    transition: all .4s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 50%;
+    transition: all .4s;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+.btn--res {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-with-animate {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    width: 0;
+    transition: all .5s;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+      background-color: $black;
+    }
+  }
+}
+
+.btn {
+  background: $gold;
+  min-height: 50px;
+  border-radius: 25px;
+  padding: 16px 50px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: $forum;
+  transition: all .4s;
+  box-shadow: 0px 4px 20px rgba(201, 117, 51, 0.25), inset 0px -1px 0px #F6ED96;
+  transition: all .4s;
+  text-shadow: 0px 1px 1px #EEE6A0;
+  color: $black;
+  text-decoration: none;
+  display: inline-flex;
+  
+
+  @include to(1440px) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+}
+
+.burger-btn {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin-right: 20px;
+    font-size: 12px;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    @include to(1440px) {
+      font-size: 10px;
+    }
+  }
+
+  &__decor {
+    height: 1px;
+    width: 18px;
+    background-color: $black;
+    position: relative;
+    z-index: 5;
+    transition: all .4s;
+
+    &:last-child {
+      margin-top: 6px;
+    }
+  }
+
+  &__block {
+    flex-direction: column;
+
+    &:hover {
+      .burger-btn__decor {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.slider-pagination {
+  .swiper-pagination-bullet {
+    position: relative;
+    display: none;
+    width: 0;
+    height: 0;
+    transition: all .4s;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    margin-bottom: 34px !important;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    @include to(1440px) {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+.wrapper-progress {
+  width: 100px; /* Set the size of the progress bar */
+  height: 100px;
+  position: absolute; /* Enable clipping */
+  clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+}
+/* Set the sizes of the elements that make up the progress bar */
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 10px solid green;
+  border-radius: 50px;
+  position: absolute;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+/* Using the data attributes for the animation selectors. */
+/* Base settings for all animated elements */
+div[data-anim~=base] {
+  -webkit-animation-iteration-count: 1;  /* Only run once */
+  -webkit-animation-fill-mode: forwards; /* Hold the last keyframe */
+  -webkit-animation-timing-function:linear; /* Linear animation */
+}
+
+.wrapper-progress[data-anim~=wrapper] {
+  -webkit-animation-duration: 0.01s; /* Complete keyframes asap */
+  -webkit-animation-delay: 3s; /* Wait half of the animation */
+  -webkit-animation-name: close-wrapper; /* Keyframes name */
+}
+
+.circle[data-anim~=left] {
+  -webkit-animation-duration: 6s; /* Full animation time */
+  -webkit-animation-name: left-spin;
+}
+
+.circle[data-anim~=right] {
+  -webkit-animation-duration: 3s; /* Half animation time */
+  -webkit-animation-name: right-spin;
+}
+/* Rotate the right side of the progress bar from 0 to 180 degrees */
+@-webkit-keyframes right-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+/* Rotate the left side of the progress bar from 0 to 360 degrees */
+@-webkit-keyframes left-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* Set the wrapper clip to auto, effectively removing the clip */
+@-webkit-keyframes close-wrapper {
+  to {
+    clip: rect(auto, auto, auto, auto);
+  }
+}

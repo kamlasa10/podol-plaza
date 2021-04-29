@@ -1,0 +1,24 @@
+$default-font: 'Montserrat', sans-serif;
+$forum: 'Forum', 'cursive';
+
+$mc: #34B9E0;
+$mc2: #FF554C;
+$mc3: #E5DF06;
+$mc4: #4F90B6;
+$gray:rgb(135, 135, 151);
+$text: #22223E;
+$wc: #fff;
+$bc: #000;
+$bc2: #000;
+$gold: linear-gradient(87.34deg, #FBBF65 0%, #F2C37C 14.69%, #F2CE7C 26.02%, #FFE3A3 51.54%, #F2CE7C 74.04%, #F2C37C 83.65%, #FBBF65 100%);
+$black: #031826;
+$blue: #133C58;
+$error: #DF5E5E;
+$goldText: #C5903A;
+$yellow: #E9B560;
+
+:root {
+  --in: cubic-bezier(0.13, 0.81, 0.23, 0.96);
+  --header-h: 110px;
+}
+

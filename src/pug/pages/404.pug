@@ -1,0 +1,35 @@
+extends ../layout/main
+block variable
+	-
+		var title_page = 'error'
+		var id_page = 'id-page-error'
+		var class_page = 'class-page-error'
+	
+block meta
+	title= '404'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(defer src='./assets/scripts/vendors.bundle.js')
+	script(defer src='./assets/scripts/index.bundle.js')
+	script(defer src='./assets/scripts/index.js')
+
+block content
+	section(class="page404-wrap inner-page")
+		div(class="page404")
+			h1(class="page404__title title") 404
+			p(class="page404__subtitle") Что-то пошло не так, страница не найдена
+			div(class="link-wrap")
+				a(href="/").btn--with-icon.page404__link На главную
+					span
+					+svg('round')
+
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header.pug
+

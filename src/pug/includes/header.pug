@@ -1,0 +1,26 @@
+header.header
+  .big-container 
+    .header__content
+      a(href="/").logo.header__logo
+        +svg('logo')
+      .header__right 
+        .language.header__language
+          span.language__current.btn-round
+            span ук
+          ul.language__list 
+            li.language__item 
+              a(href="#").language__link Ру
+            li.language__item 
+              a(href="#").language__link En
+        .header__links 
+          a(href="#").header__link.btn-with-animate Обрати квартиру
+          a(href="#").header__link.btn-with-animate Комерційна нерухомість
+        a(href="tel:0443382727").header__phone.btn-with-animate (044) 338-27-27
+        button(type="button").header__btn.btn.btn--res.js-popup-open(data-popup-type="callback") Замовити дзвінок
+        button(type="button").burger-btn.btn--res.js-open-menu 
+          span.burger-btn__text Меню
+          span.burger-btn__block.btn-round
+            span.burger-btn__decor
+            span.burger-btn__decor
+
+      

@@ -1,0 +1,233 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(#fff, .8);
+    z-index: 1000;
+    opacity: 0;
+    z-index: -5;
+    transition: all .4s;
+
+    &.show {
+        opacity: 1;
+        z-index: 1000;
+        transition: all .4s;
+    }
+}
+
+.popup {
+    padding: 20px 20px 60px 70px;
+    background-color: #fff;
+    width: 560px;
+    box-shadow: 0px 50px 200px rgba(201, 117, 51, 0.5);
+    border-radius: 5px;
+
+    &__title {
+        color: $black;
+    }
+
+    &__form {
+        padding-right: 70px;
+        color: $blue;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__close-btn {
+        
+        svg {
+            position: relative;
+            z-index: 3;
+            width: 15px;
+            height: 15px;
+            transition: all .4s;
+        }
+
+        &:hover {
+            svg {
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-family: $forum;
+        font-size: 26px;
+        line-height: 1em;
+
+        @include to(1440px) {
+            font-size: 24px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 24px;
+
+        &-title {
+            margin-bottom: 20px;
+            color: $blue;
+        }
+
+        &-msg-warn {
+            color: $error;
+            font-size: 12px;
+            line-height: 1.4em;
+            opacity: 0;
+            transition: all .4s;
+
+            @include to(1440px) {
+                font-size: 10px;
+            }
+        }
+
+        &-block {
+            overflow: hidden;
+            position: relative;
+
+            svg {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        &.warn {
+           .popup__input {
+               border-color: $error;
+           }
+           
+           .popup__item-msg-warn {
+               opacity: 1;
+           }
+        }
+
+        &--bottom {
+            margin-bottom: 31px;
+        }
+
+        &-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 130px));
+            column-gap: 82px;
+
+            .popup__item-block {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__input {
+        margin-bottom: 6px;
+        border-radius: 5px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 40px;
+        width: 100%;
+        border: 1px solid #E8E6DF;
+        transition: all .4s;
+
+        @include placeholder {
+            color: $blue;
+            font-family: $default-font;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $blue;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 8px;
+        color: $blue;
+
+        input {
+            display: none;
+        }
+
+        .popup__checkbox-indicator {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            background-color: $yellow;
+            opacity: 0;
+            transition: all .4s;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        input:checked + .popup__checkbox-indicator {
+            opacity: 1;
+        }
+
+        &::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            top: 0;
+            left: 0;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid #E8E6DF;
+            cursor: pointer;
+            transition: all .4s;
+
+            @include to(1440px) {
+                width: 16px;
+                height: 16px;
+            }
+
+            &:hover::before {
+                border-color: $blue;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-left {
+            display: flex;
+            width: 50%;
+
+            svg {
+                margin-right: 15px;
+                min-width: 25px;
+                max-width: 25px;
+                height: 25px;
+            }
+        }
+
+        &-text {
+            font-size: 12px;
+            line-height: 1.4em;
+            color: $blue;
+
+            @include to(1440px) {
+                font-size: 10px;
+            }
+        }
+    }
+}

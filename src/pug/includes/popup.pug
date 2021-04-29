@@ -1,0 +1,124 @@
+.nav.js-menu 
+    .nav__decor
+        +img('menu-bg.jpg')
+    .big-container.nav__menu-wrap
+        .nav__top
+            .nav__left 
+                ul.nav__left-list 
+                    li.nav__left-item 
+                        a(href="#").nav__left-link.btn-with-animate Головна
+                    li.nav__left-item 
+                        a(href="#").nav__left-link.btn-with-animate Забудовник
+                    li.nav__left-item 
+                        a(href="#").nav__left-link.btn-with-animate Новини
+                    li.nav__left-item 
+                        a(href="#").nav__left-link.btn-with-animate Контакти
+            .nav__right
+                .nav__right-block
+                    .nav__title Про проєкт
+                    ul.nav__right-list 
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate про комплекс
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate розташування
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate переваги
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate умови придбання
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate документація
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate паркінг
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate панорама
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate інвесторам
+                        li.nav__right-item 
+                            a(href="#").nav__right-link.btn-with-animate відео
+                .nav__right-block
+                    .nav__title Podil Plaza 1
+                    ul.nav__right-list
+                        li.nav__right-item
+                            a(href="#").nav__right-link.btn-with-animate обрати квартиру
+                        li.nav__right-item
+                            a(href="#").nav__right-link.btn-with-animate комерційні приміщення
+                        li.nav__right-item
+                            a(href="#").nav__right-link.btn-with-animate галерея
+                        li.nav__right-item
+                            a(href="#").nav__right-link.btn-with-animate будівництво
+                .nav__right-block
+                    .nav__title Podil Plaza 2
+                    ul.nav__right-list
+                        li.nav__right-item
+                            a(href="#").nav__right-link обрати квартиру
+                        li.nav__right-item
+                            a(href="#").nav__right-link комерційні приміщення
+                        li.nav__right-item
+                            a(href="#").nav__right-link галерея
+                        li.nav__right-item
+                            a(href="#").nav__right-link будівництво
+    .nav__footer 
+        .big-container
+            a(href="#").nav__footer-logo 
+                +img('footer-logo.svg')
+            .nav__footer-content 
+                .nav__footer-item.nav__footer-item--1 
+                    span.btn-round 
+                        +svg('mark')
+                    .nav__footer-item-content
+                        .nav__footer__text м. Київ, Глибочицька 77-79
+                .nav__footer-item.nav__footer-item--2 
+                    span.btn-round 
+                        +svg('metro')
+                    .nav__footer-item-content
+                        .nav__footer__text Контрактова площа
+                .nav__footer-item.nav__footer-item--3 
+                    span.btn-round 
+                        +svg('clock')
+                    .nav__footer-item-content
+                        .nav__footer__text пн-пт: 09:00-18:00 сб-нд: 10:00-18:00
+.overlay
+    .popup.js-popup.popup-callback(data-popup="popup" data-popup-name="callback") 
+        .popup__top
+            button(type="button").js-close-popup.popup__close-btn.btn-round.btn--res
+                +svg('cross')
+        .popup__title Залишились запитання?
+        form.popup__form.js-form
+            .popup__item 
+                .popup__item-title Введіть ваше ім’я
+                .popup__item-block
+                    input(type="text" placeholder="Ім`я:" name="name" data-required="true" data-warn-type="name" class="popup__input")
+                    +svg('star')
+                .popup__item-msg-warn(data-warn-text="name") text
+            .popup__item 
+                .popup__item-title Введіть ваш номер телефону
+                .popup__item-block
+                    input(type="text" placeholder="+ (38) ___ - ___ - __" data-required="true" data-warn-type="phone" name="phone" class="popup__input")
+                    +svg('star')
+                .popup__item-msg-warn(data-warn-text="name") text
+            .popup__item.popup__item--bottom 
+                .popup__item-title Вкажіть в якому месенджері вам зручно спілкуватися
+                .popup__item-wrap
+                    .popup__item-block
+                        label.popup__checkbox
+                            input(type="radio" checked name="typeMsg" value="phone" data-required="true")
+                            span.popup__checkbox-indicator
+                            span.popup__checkbox-text Телефон
+                        label.popup__checkbox
+                            input(type="radio" name="typeMsg"  value="whatsApp" data-required="true")
+                            span.popup__checkbox-indicator
+                            span.popup__checkbox-text WhatsApp
+                    .popup__item-block
+                        label.popup__checkbox
+                            input(type="radio" name="typeMsg"  value="viber")
+                            span.popup__checkbox-indicator
+                            span.popup__checkbox-text Viber
+                        label.popup__checkbox
+                            input(type="radio" name="typeMsg"  value="telegram")
+                            span.popup__checkbox-indicator
+                            span.popup__checkbox-text Telegram
+            .popup__footer
+                .popup__footer-left 
+                    +svg('star')
+                    span.popup__footer-text обов’язкові поля для заповнення
+                button(type="submit" class="btn popup__btn btn--res") Надіслати

@@ -1,0 +1,65 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Главная'
+    var id_page = 'index-page'
+    var class_page = 'index-page'
+    var breadcrumbsBtn = 'filter'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4EBsCfQfnwCFGD_o8iLWwH97tmNCU-6E&amp;ver=1613742125#038;sensor=false&amp;ver=1.33"></script>
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/home.js')
+block content
+  section.hero 
+    .swiper-container.js-hero-slider 
+      .hero__slider.swiper-wrapper
+        .hero__slide.swiper-slide(style="background-image: url('./assets/images/hero-bg.jpg')")
+          .big-container 
+            .hero__title Podil Plaza & Residence 2
+            a(href="#" class="btn hero__btn btn--res") Дізнатися більше
+        .hero__slide.swiper-slide(style="background-image: url('./assets/images/hero-bg.jpg')")
+          .big-container 
+            .hero__title Podil Plaza & Residence 2
+            a(href="#" class="btn hero__btn btn--res") Дізнатися більше
+        .hero__slide.swiper-slide(style="background-image: url('./assets/images/hero-bg.jpg')")
+          .big-container 
+            .hero__title Podil Plaza & Residence 2
+            a(href="#" class="btn hero__btn btn--res") Дізнатися більше
+      .hero__slider-pagination.slider-pagination.js-slider-pagination
+    .hero__bottom 
+      .nav__footer 
+        .big-container
+            .nav__footer-content 
+                .nav__footer-item.nav__footer-item--1 
+                    span.btn-round 
+                        +svg('mark')
+                    .nav__footer-item-content
+                        .nav__footer__text м. Київ, Глибочицька 77-79
+                .nav__footer-item.nav__footer-item--2 
+                    span.btn-round 
+                        +svg('metro')
+                    .nav__footer-item-content
+                        .nav__footer__text Контрактова площа
+
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

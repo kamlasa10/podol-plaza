@@ -1,0 +1,228 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/hero-bg.jpg') no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: all .4s;
+
+    &.show {
+        opacity: 1;
+        z-index: 100;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    &__decor {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        object-fit: cover;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__menu-wrap {
+        margin-top: calc(var(--header-h) + 10px);
+        position: relative;
+        padding-bottom: 35px;
+        z-index: 5;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(270deg, rgba(235, 199, 140, 0) 0%, #EBC78C 48.44%, rgba(235, 199, 140, 0) 100%);
+        }
+
+        &::after {
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__left {
+        margin-right: auto;
+        font-family: $forum;
+        font-size: 38px;
+        line-height: 1em;
+
+        @include to(1440px) {
+            font-size: 36px;
+        }
+
+        &-item {
+            margin-bottom: 15px;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $black;
+            transition: all .4s;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: flex-start;
+
+        &-block {
+            margin-right: 135px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-list {
+            margin-top: auto;
+        }
+
+        &-item {
+            margin-bottom: 15px;
+        }
+
+        &-link {
+            color: $black;
+            text-decoration: none;
+        }
+    }
+
+    &__title {
+        font-family: $forum;
+        font-size: 32px;
+        line-height: 1.1em;
+        margin-bottom: 20px;
+
+        @include to(1440px) {
+            font-size: 30px;
+        }
+    }
+
+    &__footer {
+        padding-top: 46px;
+        position: absolute;
+        bottom: 45px;
+        width: 100%;
+        z-index: 10;
+
+        .big-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -50px;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(270deg, rgba(235, 199, 140, 0) 0%, #EBC78C 48.44%, rgba(235, 199, 140, 0) 100%);
+            }
+        }
+
+        &-logo {
+            width: 110px;
+            display: block;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &-content {
+            width: 68%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 210px));
+            column-gap: 60px;
+
+            @include to(1440px) {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 185px));
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            .btn-round {
+                margin-right: 20px;
+                min-width: 50px;
+                background-color: transparent;
+
+                &::after {
+                    background: rgba($black, .2);
+                }
+
+                svg {
+                    position: relative;
+                    z-index: 3;
+                    fill: none;
+                }
+            }
+
+            &-content {
+                font-size: 12px;
+                line-height: 1.6em;
+                text-transform: uppercase;
+
+                @include to(1440px) {
+                    font-size: 10px;
+                }
+            }
+
+            &--1 {
+                svg {
+                    min-width: 13px;
+                    height: 18px;
+                }
+            }
+
+            &--2 {
+                svg {
+                    width: 21px;
+                    height: 14px;
+                }
+            }
+
+            &--3 {
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+}
