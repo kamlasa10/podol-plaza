@@ -31,6 +31,12 @@
         color: $black;
     }
 
+    &__textarea {
+        resize: none;
+        padding-top: 17px;
+        min-height: 100px;
+    }
+
     &__form {
         padding-right: 70px;
         color: $blue;

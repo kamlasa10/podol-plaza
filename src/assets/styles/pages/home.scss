@@ -74,4 +74,680 @@
           }
         }
     }
+
+    .complex-name {
+      position: relative;
+      color: #fff;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 40px;
+        right: 0;
+        bottom: 0;
+        background: url('../images/complex-name-bg.jpg') no-repeat center/cover;
+      }
+
+      &__content {
+        min-height: calc(100vh - 100px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__wrap {
+        max-width: 450px;
+        padding: 100px 75px ;
+        text-align: center;
+        position: relative;
+        background: url('../images/circle-decor.png') no-repeat center/contain;
+
+        @include to(1440px) {
+          max-width: 400px;
+        }
+      }
+
+      &__desc {
+        margin-bottom: 30px;
+        font-family: $forum;
+        font-size: 26px;
+        line-height: 1.1em;
+
+        @include to(1440px) {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .about-complex {
+      &__content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__wrap {
+        display: flex;
+      }
+
+      &__item {
+        max-width: 320px;
+
+        @include to(1440px) {
+          max-width: 290px;
+        }
+      }
+
+      .about-complex__item:not(:last-child) {
+        margin-right: 100px;
+      }
+
+      &-info {
+        &__item {
+          max-width: 430px;
+        }
+      }
+    }
+
+    .panorama {
+      position: relative;
+
+      &__title {
+        margin-bottom: 30px;
+        max-width: 500px;
+
+        @include to(1250px) {
+          max-width: auto;
+        }
+      }
+
+      &__content {
+        min-height: 55vh;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__info {
+        padding: 40px 50px 60px 50px;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 5px;
+        right: 0;
+        width: 45%;
+        background-color: #fff;
+
+        @include to(1250px) {
+          width: 55%;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 70%;
+          right: 0;
+          background: url("../images/panorama-decor.jpg") no-repeat center/cover;
+
+          @include to(1440px) {
+            width: 84%;
+          }
+
+          @include to(1370px) {
+            width: 100%;
+          }
+        }
+      }
+
+      &__wrap {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    .floor {
+      position: relative;
+      color: #fff;
+      background: url('../images/floor-home-bg.jpg') no-repeat center/cover;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+      }
+
+      &__content {
+        min-height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 380px;
+      }
+
+      &__title {
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      &__desc {
+        margin-bottom: 30px;
+      }
+
+      &__btn {
+        align-self: flex-start;
+      }
+    }
+
+    .features {
+
+      &__top {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .features__content {
+        max-width: 1920px;
+
+        .swiper-wrapper {
+          padding-top: 2px;
+          max-width: 1360px;
+          margin: 0 auto;
+          padding-left: 97px;
+          width: 100%;
+
+          @include to(1440px) {
+            padding-left: 76px;
+          }
+
+          @include to(1370px) {
+            max-width: 1067px;
+            padding-left: 34px;
+          }
+        }
+      }
+
+      &__img {
+        margin-bottom: 15px;
+        background-color: transparent;
+
+        img {
+          position: relative;
+          z-index: 3;
+        }
+      }
+
+      &__item {
+        width: 350px !important;
+
+        @include to(1440px) {
+          width: 300px;
+        }
+
+        &--1 {
+          img {
+            width: 27px;
+            height: 21px;
+          }
+        }
+
+        &--2 {
+          img {
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        &--3 {
+          img {
+            width: 29px;
+            height: 28px;
+          }
+        }
+
+        &--4 {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &--5 {
+          img {
+            width: 27px;
+            height: 25px;
+          }
+        }
+
+        &--6 {
+          img {
+            width: 29px;
+            height: 28px;
+          }
+        }
+
+        &--7 {
+          img {
+            width: 26px;
+            height: 25px;
+          }
+        }
+
+        &--8 {
+          img {
+            width: 36px;
+            height: 14px;
+          }
+        }
+      }
+    }
+
+  .office-block {
+    color: #fff;
+    background: url('../images/office-block-bg.jpg') no-repeat center/cover;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    &__content {
+      min-height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    
+    &__title {
+      color: #fff;
+      margin-bottom: 25px;
+    }
+
+    &__desc {
+      margin-bottom: 25px;
+    }
+
+    &__wrap {
+      max-width: 378px;
+
+      @include to(1440px) {
+        max-width: 332px;
+      }
+    }
+  }
+
+  .parking {
+    background: url('../images/parking-bg.jpg') no-repeat center/cover;
+
+    .office-block__content {
+      align-items: flex-start;
+    }
+  }
+
+  .builder {
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__left {
+      width: 30%;
+      position: relative;
+      display: flex;
+      padding-top: 148px;
+      justify-content: center;
+
+      img {
+        width: 180px;
+        height: 70px;
+
+        @include to(1440px) {
+          width: 164px;
+          height: 71px;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -39px;
+        width: 100%;
+        height: 100%;
+        background: url('../images/circle-decor.png') no-repeat center/contain;
+        object-fit: contain;
+        transform: rotate(-90deg);
+
+        @include to(1440px) {
+          width: 95%;
+          top: -16px;
+        }
+
+        @include to(1370px) {
+          width: 117%;
+          top: -46px;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__intro {
+      font-size: 22px;
+      line-height: 1.5em;
+      color: #758BA2;
+      margin-bottom: 40px;
+
+      @include to(1440px) {
+        font-size: 20px;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 40px;
+      width: 80%;
+    }
+
+    &__right {
+      padding-left: 158px;
+      width: 70%;
+    }
+
+  }
+
+  .objects {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      background: url('../images/BG.jpg') no-repeat center/cover;
+      background-position: 0 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 40px;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(240, 240, 240, 0) 0%, #F0F0F0 100%);
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      min-height: calc(100vh - 100px);
+      justify-content: center;
+
+      @include to(1370px) {
+        padding-bottom: 50px;
+      }
+    }
+
+    &__title {
+      max-width: 550px;
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__logo {
+      margin-right: 62px;
+    }
+
+    &__item {
+      position: relative;
+      width: 50%;
+      background: #fff;
+      z-index: 1;
+      border: 1px solid #E8E6DF;
+      transition: all .4s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: all .4s;
+        bottom: 0;
+        background: linear-gradient(83.47deg, #EBBA8C 0%, #EBC78C 22.34%, #FBDB94 99.73%);
+      }
+
+      &--top {
+        border-radius: 5px 0px 0px 0px;
+        border-bottom-color: transparent;
+      }
+
+      &:nth-child(2) {
+        border-radius: 0px 5px 0px 0px;
+      }
+
+      &:nth-child(2n) {
+        border-left-color: transparent;
+      }
+
+      &--bottom {
+        border-radius: 0px 0px 0px 5px;
+      }
+
+      &--bottom:nth-child(2) {
+        border-radius: 0px 0px 5px 0;
+      }
+
+      img {
+        object-fit: contain;
+        height: auto;
+      }
+
+      &--1 {
+        img {
+          width: 140px;
+
+          @include to(1440px) {
+            width: 129px;
+          }
+        }
+      }
+
+      &--2 {
+        img {
+          width: 132px;
+
+          @include to(1440px) {
+            width: 121px;
+          }
+        }
+      }
+
+      &--3 {
+        img {
+          width: 82px;
+
+          @include to(1440px) {
+            width: 71px;
+          }
+        }
+      }
+
+      &--4 {
+        img {
+          width: 117px;
+
+          @include to(1440px) {
+            width: 106px;
+          }
+        }
+      }
+
+      &:hover {
+        border-color: transparent;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__wrap {
+      max-width: 240px;
+    }
+
+    &__name {
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.3em;
+      margin-bottom: 25px;
+    }
+
+    &__info {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 10px;
+        fill: $blue;
+      }
+
+      &--1 {
+        svg {
+          width: 22px;
+          height: 14px;
+          stroke: transparent;
+
+          @include to(1440px) {
+            width: 18px;
+            height: 12px;
+          }
+        }
+      }
+
+      &--2 {
+        svg {
+          width: 21px;
+          height: 16px;
+          stroke: transparent;
+
+          @include to(1440px) {
+            width: 18px;
+            height: 13px;
+          }
+        }
+      }
+    }
+
+    &__link {
+      display: flex;
+      width: 100%;
+      padding: 43px 50px;
+      justify-content: center;
+      text-decoration: none;
+      color: $blue;
+      position: relative;
+      z-index: 3;
+    }
+
+    &__decor {
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .team {
+    .features__content {
+      max-width: 1920px;
+    }
+
+    .swiper-wrapper {
+      max-width: 1360px;
+      padding-left: 98px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__item {
+      width: 275px !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include to(1440px) {
+        width: 210px !important;
+      }
+
+      @include to(1250px) {
+        width: auto !important;
+      }
+    }
+
+    &__img {
+      position: relative;
+      margin-bottom: 20px;
+      width: 100%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -4px;
+        right: 0;
+        width: 103%;
+        height: 111%;
+        bottom: 0;
+        transform: rotate(-90deg);
+        background: url('../images/circle-decor.png') no-repeat center/contain;
+
+        @include to(1440px) {
+          top: -12px;
+          left: -4px;
+        }
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__name {
+      text-align: center;
+      max-width: 120px;
+      font-family: $forum;
+      font-size: 26px;
+      line-height: 1.2em;
+
+      @include to(1440px) {
+        font-size: 24px;
+      }
+    }
+  }
 }

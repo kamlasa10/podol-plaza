@@ -1,0 +1,146 @@
+.contacts {
+    background-color: #F0F0F0;
+    padding-left: 40px;
+
+    &__wrap {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 35%;
+    }
+
+    &__right {
+        width: 39%;
+
+        .popup__form {
+            width: 100%;
+        }
+
+        .popup__footer {
+            margin-top: 37px;
+        }
+
+        @include to(1440px) {
+            width: 42%;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        margin-bottom: 50px;
+
+        &-title {
+            margin-bottom: 20px;
+            font-family: $forum;
+            font-size: 26px;
+            line-height: 1em;
+
+            @include to(1440px) {
+                font-size: 24px;
+            }
+        }
+
+        &-block {
+            display: flex;
+            margin-bottom: 20px;
+
+            &--align {
+                align-items: center;
+
+                .contacts__item-text {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        &-icon {
+            margin-right: 20px;
+            min-width: 45px;
+            height: 45px;
+
+            @include to(1440px) {
+                min-width: 40px;
+                height: 40px;
+            }
+
+            &::after {
+               background: rgba($blue, 0.2); 
+            }
+
+            svg {
+                fill: none;
+                position: relative;
+                z-index: 3;
+            }
+
+            &--1 {
+                svg {
+                    width: 17px;
+                    height: 20px;
+
+                    @include to(1440px) {
+                        width: 15px;
+                        height: 18px;
+                    }
+                }
+            }
+
+            &--2 {
+                svg {
+                   width: 19px;
+                   height: 20px; 
+
+                   @include to(1440px) {
+                    width: 17px;
+                    height: 18px;
+                   }
+                }
+            }
+
+            &--3 {
+                svg {
+                    width: 20px;
+                    height: 20px;
+
+                    @include to(1440px) {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+
+        &-text {
+            color: $blue;
+            text-decoration: none;
+        }
+
+        &-btn {
+            margin-bottom: 22px;
+        }
+
+        &-small-text {
+            font-size: 12px;
+            line-height: 1.4em;
+            color: $blue;
+            width: 70%;
+
+            @include to(1440px) {
+                font-size: 10px;
+            }
+        }
+    }
+}

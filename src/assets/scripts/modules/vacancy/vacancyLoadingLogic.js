@@ -50,7 +50,7 @@ class VacancyProgress {
     $(`[data-portion=${this.currentPortion}]`).fadeIn(400)
     this.calculateCountLoading()
     
-    if($(window).width() > 1025) {
+    if ($(window).width() > 1025) {
       window.locoScroll.update()
     }
   }
@@ -82,7 +82,7 @@ class VacancyProgress {
       $('.js-loading__more').hide()
     }
 
-    this.prepareListener('click', (e) => this.showNextPortionItems(e))
+    this.prepareListener('click', e => this.showNextPortionItems(e))
     this.calculateCountLoading()
   }
 }

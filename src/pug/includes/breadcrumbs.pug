@@ -1,9 +1,7 @@
-.breadcrumbs
-	ul.breadcrumbs-list
-		li
-			h1.main-title= title_page
-		if breadcrumbsSubitem
-			each v in breadcrumbsSubitem
-				li.breadcrumbs-item
-					a(href= v.link).breadcrumbs-item__link.underline_2= v.label
-		li.breadcrumbs-item__current--color.breadcrumbs-item= title_page
+div(class=`breadcrumbs ${colorThemeBreadCrumbs}`)
+	ul.breadcrumbs__list 
+		li.breadcrumbs__item 
+			a(href="/").breadcrumbs__link головна
+		if(breadcrumbsLink === 'gallery')
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Галерея

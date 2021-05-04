@@ -1,0 +1,57 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Главная'
+    var id_page = 'gallery-page'
+    var class_page = 'gallery-page'
+    var breadcrumbsLink = 'gallery'
+    var colorThemeBreadCrumbs = 'gold'
+    var headerColor = 'white'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/gallery.js')
+block content
+    .gallery
+        .swiper-container.js-gallery-slider 
+            .swiper-wrapper
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/hero-bg.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/gallery/1.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/hero-bg.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/gallery/1.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/hero-bg.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/gallery/1.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/hero-bg.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/gallery/1.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/hero-bg.jpg')")
+                .swiper-slide.gallery__slide(style="background-image: url('./assets/images/gallery/1.jpg')")
+        .big-container.gallery__wrapper-top
+            include ../includes/breadcrumbs.pug
+            .page__title Галерея
+        .gallery__controls 
+          .big-container
+            button(type="button").js-controls-gallery-slider.gallery__controls-btn.gallery__controls-btn-left.btn--res
+                +svg('gallery-arrow')
+            button(type="button").js-controls-gallery-slider.gallery__controls-btn.gallery__controls-btn-right.btn--res
+                +svg('long-arrow')
+        .gallery__tabs 
+            a(href="#").gallery__tab Podol Plaza 1
+            a(href="#").gallery__tab Podol Plaza 2
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

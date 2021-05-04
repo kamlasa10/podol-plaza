@@ -1,11 +1,15 @@
-header.header
+header(class=`header ${headerColor || ''}`)
   .big-container 
     .header__content
       a(href="/").logo.header__logo
-        +svg('logo')
+        if(colorThemeBreadCrumbs === 'gold')
+          +img('logo-white.svg')
+        else 
+          +img('logo.svg')
       .header__right 
-        .language.header__language
-          span.language__current.btn-round
+        .language.header__language.btn-round
+          span.language__current
+            +svg('circle-gradient').btn-round-cirlce
             span ук
           ul.language__list 
             li.language__item 
@@ -20,7 +24,7 @@ header.header
         button(type="button").burger-btn.btn--res.js-open-menu 
           span.burger-btn__text Меню
           span.burger-btn__block.btn-round
+            +svg('circle-gradient').btn-round-cirlce
             span.burger-btn__decor
             span.burger-btn__decor
 
-      

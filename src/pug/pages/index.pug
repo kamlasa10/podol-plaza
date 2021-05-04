@@ -54,10 +54,257 @@ block content
                         +svg('metro')
                     .nav__footer-item-content
                         .nav__footer__text Контрактова площа
+  section.complex-name.section-padding
+    .container
+      .complex-name__content
+        .complex-name__wrap
+          p.complex-name__desc Назва комплексу — не просто гарне поєднання слів.
+          p.complex-name__desc Це відображення особливого статусу та способу життя.
 
-
-
-
+  section.about-complex.section-padding
+    .container
+      .about-complex__content
+        .about-complex__item
+          h3.about-complex__title.section-title Про комплекс
+        .about-complex__wrap
+          p.about-complex__item «PODIL PLAZA & RESIDENCE - 2» — це багатофункціональний престижний житловий комплекс преміум-класу, розташований у самому серці Подолу.
+          p.about-complex__item Розкішне природне оточення біля підніжжя гори Щекавиця, статусне сусідство, ексклюзивна архітектура і дизайн, високоякісний сервіс — це правила життя у стилі преміум. Ваші правила!.
+  section.section-padding.panorama 
+      .panorama__content 
+        +img('panorama-bg.jpg')
+        .panorama__info 
+          .container 
+            .panorama__wrap
+              h3.panorama__title.section-title Панорама з вікон житлового комплексу
+              a(href="#").panorama__btn.btn Показати на Google Maps
+  section.about-complex.section-padding.about-complex-info
+    .container
+      .about-complex__content
+        .about-complex__item.about-complex-info__item
+          h3.about-complex__title.section-title «PODIL PLAZA & RESIDENCE - 2» - це новий настрій класичного Подолу.
+        .about-complex__wrap
+          p.about-complex__item Сучасний Поділ - це основний культурний центр Києва, котрий приваблює городян і туристів старовинною архітектурою, історичними пам’ятками та богемною атмосферою.
+          p.about-complex__item За кількістю історико-архітектурних пам’яток сучасний Поділ впевнено займає лідируючу позицію серед інших столичних районів. Незважаючи на появу нових сучасних об’єктів, Поділ зберіг свою чарівність та самобутність.
+  section.floor.section-padding
+    .container
+      .floor__content
+        h3.floor__title.section-title Квартири
+        p.floor__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
+        a(href="#").btn.floor__btn Обрати квартиру
+  section.features.section-padding
+    .container
+      .features__top
+        h3.features__title.section-title Переваги
+        .controls-slider
+          button(type="button").js-controls-features-slider-prev.controls-slider__btn.controls-slider__btn--prev
+            +svg('arrow')
+          button(type="button").js-controls-features-slider-next.controls-slider__btn--next.controls-slider__btn
+            +svg('arrow')
+    .features__content
+      .swiper-container.js-feature-slider
+        .swiper-wrapper
+          .swiper-slide.features__item.features__item--1
+            .features__img.btn-round
+              +img('ui/features-icon.svg')
+            p.features__desc Закритий, повністю вільний від проїзду автомобілів двір з ландшафтним благоустроєм, зоною відпочинку та дитячим ігровим містечком преміального рівня для відпочинку та розваги мешканців будинку.
+          .swiper-slide.features__item.features__item--2
+            .features__img.btn-round
+              +img('ui/features-icon2.svg')
+            p.features__desc Наявність офісного центу в комплексі дозволить вам вести свій бізнес.
+          .swiper-slide.features__item.features__item--3
+            .features__img.btn-round
+              +img('ui/features-icon3.svg')
+            p.features__desc Наявність торговельного центру в комплексі, де буде абсолютно все,що необхідно для комфортного життя мешканців будинку,
+          .swiper-slide.features__item.features__item--4
+            .features__img.btn-round
+              +img('ui/features-icon4.svg')
+            p.features__desc Фітнес та SPA центри, салон краси, банк, ресторан, кав’ярня.
+          .swiper-slide.features__item.features__item--5
+            .features__img.btn-round
+              +img('ui/features-icon5.svg')
+            p.features__desc Автономне опалення.
+          .swiper-slide.features__item.features__item--6
+            .features__img.btn-round
+              +img('ui/features-icon6.svg')
+            p.features__desc Дитячий садок з авторськими розвиваючими програмами.
+          .swiper-slide.features__item.features__item--7
+            .features__img.btn-round
+              +img('ui/features-icon7.svg')
+            p.features__desc Цілодобова охорона, відеоспостереження за внутрішньою і прибудинковою територією.
+          .swiper-slide.features__item.features__item--8
+            .features__img.btn-round
+              +img('ui/features-icon8.svg')
+            p.features__desc Наявність дворівневого підземного паркінгу.
+  section.section-padding.office-block
+    .container
+      .office-block__content
+        .office-block__wrap
+          h3.section-title.office-block__title Торгові та офісні приміщення
+          p.office-block__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
+          a(href="#" class="btn office-block__btn") Обрати приміщення
+  section.section-padding.office-block.parking
+    .container
+      .office-block__content
+        .office-block__wrap
+          h3.section-title.office-block__title Паркінг
+          p.office-block__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
+          a(href="#" class="btn office-block__btn") Дізнатися більше
+  section.section-padding.builder
+    .container
+      .builder__content
+        .builder__left
+          +img('footer-logo.svg')
+        .builder__right
+          h3.section-title.builder__title Забудовник
+          p.builder__intro STATUS GROUP — стабільна і перспективна компанія, яка працює з 2005 року і представляє нове покоління в будівельному бізнесі, де стиль роботи базується на інноваційних рішеннях, величезному практичному досвіді і прагненні до досконалості.
+          p.builder__desc Компанія STATUS GROUP здійснює функції забудовника, замовника, інвестора, генерального підрядника і девелопера. Усі наші проекти – це новий формат житлової нерухомості з унікальною архітектурою, безпечною та упорядкованою територією і власною соціальною інфраструктурою, в яких враховані всі потреби покупців.
+  section.objects.section-padding
+    .container
+      .object__decor
+        +img('decor-section.svg')
+      .objects__content
+        .objects__title.section-title Об’єкти які знаходяться на стадії на будівництва:
+        ul.objects__list
+          li.objects__item.objects__item--1.objects__item--top
+            a(href="#").objects__link
+              .objects__logo
+                +img('logo.svg')
+              .objects__wrap
+                .objects__name ЖК «PODIL PLAZA&RESIDENCE»
+                .objects__info.objects__info--1
+                  +svg('metro')
+                  span Контрактова площа
+                .objects__info.objects__info--2
+                  +svg('mark-fill')
+                  span вул. Глибочицька 73
+          li.objects__item.objects__item--2.objects__item--top
+            a(href="#").objects__link
+              .objects__logo
+                +img('object-img.png')
+              .objects__wrap
+                .objects__name ЖК «SKY RIVER»
+                .objects__info.objects__info--1
+                  +svg('metro')
+                  span м. Славутич
+                .objects__info.objects__info--2
+                  +svg('mark-fill')
+                  span вул. Приозерна 15
+          li.objects__item.objects__item--3.objects__item--bottom
+            a(href="#").objects__link
+              .objects__logo
+                +img('object-img2.png')
+              .objects__wrap
+                .objects__name ЖК «OLYMPIC PARK»
+                .objects__info.objects__info--1
+                  +svg('metro')
+                  span м. Бориспільська
+                .objects__info.objects__info--2
+                  +svg('mark-fill')
+                  span пр-т Бажана 17
+          li.objects__item.objects__item--4.objects__item--bottom
+            a(href="#").objects__link
+              .objects__logo
+                +img('object-img3.svg')
+              .objects__wrap
+                .objects__name ЖК «РІВ’ЄРА»19
+                .objects__info.objects__info--1
+                  +svg('metro')
+                  span м. Славутич
+                .objects__info.objects__info--2
+                  +svg('mark-fill')
+                  span вул. Центральна 19
+  section.section-padding.team
+    .container
+      .features__top
+        h3.features__title.section-title Наша команда
+        .controls-slider
+          button(type="button").js-controls-team-slider-prev.controls-slider__btn.controls-slider__btn--prev
+            +svg('arrow')
+          button(type="button").js-controls-team-slider-next.controls-slider__btn--next.controls-slider__btn
+            +svg('arrow')
+    .features__content
+      .swiper-container.js-team-slider
+        .swiper-wrapper
+          .swiper-slide.team__item
+            .team__img
+              +img('team/1.jpg')
+            .team__name Бондаренко Сергій
+          .swiper-slide.team__item
+            .team__img
+              +img('team/2.jpg')
+            .team__name Здоренко Марина
+          .swiper-slide.team__item
+            .team__img
+              +img('team/3.jpg')
+            .team__name Абрамов Олексій
+          .swiper-slide.team__item
+            .team__img
+              +img('team/4.jpg')
+            .team__name Січко Світлана
+          .swiper-slide.team__item
+            .team__img
+              +img('team/5.jpg')
+            .team__name Бондаренко Сергій
+          .swiper-slide.team__item
+            .team__img
+              +img('team/6.jpg')
+            .team__name Здоренко Марина
+  section.section-padding.contacts
+    .container
+      .contacts__wrap
+        h3.section-title.contacts__title Контакти
+        .contacts__content
+          .contacts__left
+            .contacts__item
+              .contacts__item-title Розташування:
+              .contacts__item-block
+                .btn-round.contacts__item-icon.contacts__item-icon--1
+                  +svg('mark')
+                .contacts__item-text Київ, Шевченківський район, вул. Глибочицька, 77-79
+              a(href="#" target="_blank").contacts__item-btn.btn Показати на Google Maps
+              .contacts__item-small-text Перегляд об’єкту (для покупців) триває щоденно за попередньою згодою з відділом продажів
+            .contacts__item
+              .contacts__item-title Відділ продажів:
+              .contacts__item-block.contacts__item-block--align
+                a(href="tel:0443382727").btn-round.contacts__item-icon.contacts__item-icon--2
+                  +svg('phone')
+                a(href="tel:0443382727").contacts__item-text 044 338 27 27
+                .socials.contacts__socials
+                  a(href="#").socials__link.socials__link--1
+                    +svg('whatsapp')
+                  a(href="#").socials__link.socials__link--2
+                    +svg('telegram')
+                  a(href="#").socials__link.socials__link--3
+                    +svg('viber')
+              .contacts__item-block
+                .btn-round.contacts__item-icon.contacts__item-icon--3
+                  +svg('clock')
+                .contacts__item-icon-text пн-пт: 09:00-19:00 <br> сб-нд: 10:00-17:00
+              .contacts__item-small-text * Працюємо без вихідних та перерв на обід
+          .contacts__right
+            .popup__title Залишились запитання?
+            form.popup__form.js-form
+              .popup__item 
+                  .popup__item-title Введіть ваше ім’я
+                  .popup__item-block
+                      input(type="text" placeholder="Ім`я:" name="name" data-required="true" data-warn-type="name" class="popup__input")
+                      +svg('star')
+                  .popup__item-msg-warn(data-warn-text="name") text
+              .popup__item 
+                  .popup__item-title Введіть ваш номер телефону
+                  .popup__item-block
+                      input(type="text" placeholder="+ (38) ___ - ___ - __" data-required="true" data-warn-type="phone" name="phone" class="popup__input")
+                      +svg('star')
+                  .popup__item-msg-warn(data-warn-text="name") text
+              .popup__item 
+                  .popup__item-title Введіть ваш номер телефону
+                  .popup__item-block
+                      textarea(placeholder="Повідомлення:" name="msg" class="popup__input popup__textarea")
+              .popup__footer
+                  .popup__footer-left 
+                      +svg('star')
+                      span.popup__footer-text обов’язкові поля для заповнення
+                  button(type="submit" class="btn popup__btn btn--res") Надіслати
 block footer
   include ../includes/footer.pug
 

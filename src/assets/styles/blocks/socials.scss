@@ -1,0 +1,81 @@
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        transition: all .4s;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        @include to(1440px) {
+            min-width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            fill: none;
+        }
+
+        &--1 {
+            background-color: #69E282;
+
+            svg {
+              width: 20px;
+              height: 20px; 
+              
+              @include to(1440px) {
+                width: 18px;
+                height: 18px; 
+              }
+            }
+
+            &:hover {
+                background-color: darken(#69E282, 10%);
+            }
+        }
+
+        &--2 {
+            background-color: #52A5E2;
+
+            svg {
+               width: 22px;
+               height: 21px; 
+
+               @include to(1440px) {
+                    width: 20px;
+                    height: 19px; 
+               }
+            }
+
+            &:hover {
+                background-color: darken(#52A5E2, 10%);
+            }
+        }
+
+        &--3 {
+            background-color: #655FA4;
+
+            svg {
+                width: 22px;
+                height: 23px;
+
+                @include to(1440px) {
+                    width: 20px;
+                    height: 21px;
+                }
+            }
+
+            &:hover {
+                background-color: darken(#655FA4, 10%);
+            }
+        }
+    }
+}

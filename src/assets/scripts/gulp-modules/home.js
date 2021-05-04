@@ -39,4 +39,35 @@ document.addEventListener('DOMContentLoaded', () => {
   heroSwiper.on('transitionEnd', (e) => {
     $('.swiper-pagination-bullet-active .js-hero-progress-slider').addClass('start-animate')
   })
+
+  const swiperFeatures = new Swiper('.js-feature-slider', {
+    spaceBetween: 30,
+    slidesPerView: 4.3,
+    navigation: {
+      nextEl: '.js-controls-features-slider-next',
+      prevEl: '.js-controls-features-slider-prev',
+    },
+  })
+
+  const swiperTeam = new Swiper('.js-team-slider', {
+    spaceBetween: 40,
+    slidesPerView: 5.2,
+    navigation: {
+      nextEl: '.js-controls-team-slider-next',
+      prevEl: '.js-controls-team-slider-prev',
+    },
+    breakpoints: {
+      1440: {
+        slidesPerView: 5.2,
+      },
+      1250: {
+        slidesPerView: 4.2,
+        spaceBetween: 30
+      },
+      1020: {
+        slidesPerView: 3.2,
+        spaceBetween: 25
+      }
+    }
+  })
 })
