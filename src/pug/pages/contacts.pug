@@ -1,0 +1,89 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Контакты'
+    var id_page = 'contacts-page'
+    var class_page = 'contacts-page'
+    var breadcrumbsLink = 'contacts'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/contacts.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Контакти
+    section.contacts
+    .container
+      .contacts__wrap
+        .contacts__content
+          .contacts__left
+            .contacts__item
+              .contacts__item-title Розташування:
+              .contacts__item-block
+                .btn-round.contacts__item-icon.contacts__item-icon--1
+                  +svg('mark')
+                .contacts__item-text Київ, Шевченківський район, вул. Глибочицька, 77-79
+              a(href="#" target="_blank").contacts__item-btn.btn Показати на Google Maps
+              .contacts__item-small-text Перегляд об’єкту (для покупців) триває щоденно за попередньою згодою з відділом продажів
+            .contacts__item
+              .contacts__item-title Відділ продажів:
+              .contacts__item-block.contacts__item-block--align
+                a(href="tel:0443382727").btn-round.contacts__item-icon.contacts__item-icon--2
+                  +svg('phone')
+                a(href="tel:0443382727").contacts__item-text 044 338 27 27
+                .socials.contacts__socials
+                  a(href="#").socials__link.socials__link--1
+                    +svg('whatsapp')
+                  a(href="#").socials__link.socials__link--2
+                    +svg('telegram')
+                  a(href="#").socials__link.socials__link--3
+                    +svg('viber')
+              .contacts__item-block
+                .btn-round.contacts__item-icon.contacts__item-icon--3
+                  +svg('clock')
+                .contacts__item-icon-text пн-пт: 09:00-19:00 <br> сб-нд: 10:00-17:00
+              .contacts__item-small-text * Працюємо без вихідних та перерв на обід
+          .contacts__right
+            .popup__title Залишились запитання?
+            form.popup__form.js-form
+              .popup__item 
+                  .popup__item-title Введіть ваше ім’я
+                  .popup__item-block
+                      input(type="text" placeholder="Ім`я:" name="name" data-required="true" data-warn-type="name" class="popup__input")
+                      +svg('star')
+                  .popup__item-msg-warn(data-warn-text="name") text
+              .popup__item 
+                  .popup__item-title Введіть ваш номер телефону
+                  .popup__item-block
+                      input(type="text" placeholder="+ (38) ___ - ___ - __" data-required="true" data-warn-type="phone" name="phone" class="popup__input")
+                      +svg('star')
+                  .popup__item-msg-warn(data-warn-text="name") text
+              .popup__item 
+                  .popup__item-title Введіть ваш номер телефону
+                  .popup__item-block
+                      textarea(placeholder="Повідомлення:" name="msg" class="popup__input popup__textarea")
+              .popup__footer
+                  .popup__footer-left 
+                      +svg('star')
+                      span.popup__footer-text обов’язкові поля для заповнення
+                  button(type="submit" class="btn popup__btn btn--res") Надіслати
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

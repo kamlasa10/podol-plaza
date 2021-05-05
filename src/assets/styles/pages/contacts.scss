@@ -1,0 +1,20 @@
+#contacts-page {
+    background-color: #F0F0F0;
+
+    .header {
+        background-color: transparent;
+
+        .btn-round {
+            &::before {
+                background-color: #F0F0F0;
+            }
+        }
+    }
+
+    .contacts__wrap {
+        margin-top: 30px;
+        margin-bottom: 111px;
+        min-height: auto;
+        justify-content: flex-start;
+    }
+}

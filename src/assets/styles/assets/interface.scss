@@ -196,6 +196,15 @@
 }
 
 .btn-round-cirlce {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
   display: none;
 }
 
@@ -423,12 +432,17 @@
   cursor: pointer;
 
   img {
-    width: 18px;
+    min-width: 18px;
+    max-width: 22px;
     height: 21px;
     transform: rotate(90deg);
     fill: none;
     transition: all .4s;
     animation: 1s linear btnTopAnimate infinite;
+
+    @include to(1440px) {
+      max-width: 20px;
+    }
   }
 
   &:hover {
@@ -576,12 +590,26 @@
       color: #fff
     }
   }
+
+  &.dark {
+    .breadcrumbs__link {
+      color: $blue;
+
+      &:hover {
+        border-color: $blue;
+      }
+    }
+
+    span.breadcrumbs__link {
+      color: #758BA2;
+    }
+  }
 }
 
 .page__title {
   font-size: 38px;
   line-height: 1em;
-  color: #fff;
+  color: $black;
 
   @include to(1440px) {
     font-size: 36px;

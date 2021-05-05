@@ -1,9 +1,22 @@
 #gallery-page {
+    .btn-go-top {
+        display: none;
+    }
+
+    .page__title {
+        color: #fff;
+    }
+
+    .header {
+        position: absolute;
+    }
+
     .gallery {
         position: relative;
         min-height: 100vh;
 
-        &::before {
+        &::before,
+        &::after {
             content: "";
             position: absolute;
             bottom: 0;
@@ -11,6 +24,12 @@
             z-index: 3;
             width: 100%;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+        }
+
+        &::after {
+            bottom: auto;
+            top: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
         }
 
         &__slide {
@@ -54,10 +73,125 @@
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                transition: all .4s;
 
-                svg {
-                    width: 12px;
+                img {
+                    min-width: 12px;
+                    max-width: 22px;
                     height: 18px;
+                    transition: all .4s;
+
+                    @include to(1440px) {
+                        max-width: 20px;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        transform: translateX(-5px)
+                    }
+                }
+
+                
+                &-right {
+                    img {
+                        transform: rotate(180deg);
+                    }
+
+                    &:hover {
+                        img {
+                            transform: rotate(180deg) translateX(-5px);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__slider-info {
+            position: absolute;
+            pointer-events: none;
+            top: 0;
+            font-family: $forum;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 85px;
+            height: 85px;
+            font-size: 20px;
+            line-height: 1em;
+            opacity: 0;
+
+            @include to(1440px) {
+                width: 80px;
+                height: 80px;
+                font-size: 18px;
+            }
+        }
+
+        &__tabs {
+            z-index: 3;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            padding-bottom: 50px;
+            display: flex;
+            justify-content: center; 
+        }
+
+        &__tab {
+            cursor: pointer;
+            position: relative;
+            background: #fff;
+            box-shadow: none;
+            transition: all .4s;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                background: linear-gradient(87.34deg, #FBBF65 0%, #F2C37C 14.69%, #F2CE7C 26.02%, #FFE3A3 51.54%, #F2CE7C 74.04%, #F2C37C 83.65%, #FBBF65 100%);
+                opacity: 0;
+                transition: all .4s;
+            }
+
+            &:nth-child(1) {
+                border-radius: 25px 0px 0px 25px;
+
+                &::before {
+                    border-radius: 25px 0px 0px 25px;
+                }
+            }
+
+            &:nth-child(2) {
+                border-radius: 0px 25px 25px 0px;
+
+                &::before {
+                    border-radius: 0px 25px 25px 0px;
+                }
+            }
+
+            &-btn {
+                position: relative;
+                z-index: 2;
+                font-size: 20px;
+                font-family: $forum;
+                background: linear-gradient(180deg, #703221 0%, #000000 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &.active {
+                box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.25), inset 0px -1px 0px #F6ED96;
+
+                &::before {
+                    opacity: 1;
                 }
             }
         }

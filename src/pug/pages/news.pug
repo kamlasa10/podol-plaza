@@ -1,0 +1,118 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Новини'
+    var id_page = 'news-page'
+    var class_page = 'news-page'
+    var breadcrumbsLink = 'news'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/news.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Новини
+    .news 
+        .container 
+            .news__wrap 
+                a(href="#").news__item
+                    .news__img 
+                        +img('/news/1.jpg')
+                    .news__info 
+                        .news__info-date 02.03.2021
+                        .news__info-wrap
+                            .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                            .news__intro 
+                                p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                                .news__more.btn Читати новину
+                a(href="#").news__item
+                    .news__img 
+                        +img('/news/1.jpg')
+                    .news__info 
+                        .news__info-date 02.03.2021
+                        .news__info-wrap
+                            .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                            .news__intro 
+                                p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                                .news__more.btn Читати новину
+                a(href="#").news__item
+                    .news__img 
+                        +img('/news/1.jpg')
+                    .news__info 
+                        .news__info-date 02.03.2021
+                        .news__info-wrap
+                            .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                            .news__intro 
+                                p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                                .news__more.btn Читати новину
+                a(href="#").news__item
+                    .news__img 
+                        +img('/news/1.jpg')
+                    .news__info 
+                        .news__info-date 02.03.2021
+                        .news__info-wrap
+                            .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                            .news__intro 
+                                p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                                .news__more.btn Читати новину
+                a(href="#").news__item
+                    .news__img 
+                        +img('/news/1.jpg')
+                    .news__info 
+                        .news__info-date 02.03.2021
+                        .news__info-wrap
+                            .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                            .news__intro 
+                                p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                                .news__more.btn Читати новину
+                a(href="#").news__item
+                    .news__img 
+                        +img('/news/1.jpg')
+                    .news__info 
+                        .news__info-date 02.03.2021
+                        .news__info-wrap
+                            .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                            .news__intro 
+                                p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                                .news__more.btn Читати новину
+                a(href="#").news__item
+                    .news__img 
+                        +img('/news/1.jpg')
+                    .news__info 
+                        .news__info-date 02.03.2021
+                        .news__info-wrap
+                            .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                            .news__intro 
+                                p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                                .news__more.btn Читати новину
+                a(href="#").news__item
+                    .news__img 
+                        +img('/news/1.jpg')
+                    .news__info 
+                        .news__info-date 02.03.2021
+                        .news__info-wrap
+                            .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                            .news__intro 
+                                p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                                .news__more.btn Читати новину
+                .pagination.news__pagination
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

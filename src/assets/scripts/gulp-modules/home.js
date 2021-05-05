@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  window.initCustomScroll()
+  window.animateScrollTop()
   const heroSwiper = new Swiper('.js-hero-slider', {
     speed: 700,
     pagination: {
@@ -13,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       init(e) {
         setTimeout(() => {
           const { bullets } = e.pagination
-          console.log(bullets)
           const cirlceProgress = `
 						<svg class="js-hero-progress-slider" height="100" width="100">
             <circle cx="17" cy="23" r="16" stroke="#fff" stroke-width="1" fill="transparent" />

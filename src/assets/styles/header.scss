@@ -52,7 +52,7 @@
       }
 
       &::before {
-        background: transparent;
+        display: none;
       }
 
       &::after {
@@ -61,6 +61,13 @@
 
       .burger-btn__decor {
         background-color: #fff;
+      }
+    }
+
+    .header__language {
+      &::before,
+      &::after {
+        display: none;
       }
 
       &:hover {
@@ -72,14 +79,6 @@
     
     .burger-btn__text {
       color: #fff;
-    }
-
-    .language__link {
-      color: #fff;
-
-      &:hover {
-        text-shadow: 0 0 0.7px #fff, 0 0 0.7px #fff;
-      }
     }
   }
 
@@ -93,6 +92,32 @@
 
     .burger-btn__decor:nth-child(2) {
       transform: rotate(-45deg) translate(-2px, 2px);
+    }
+
+    .btn-round {
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      .btn-round-cirlce {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        fill: none;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+      }
+
+      &:hover {
+        .btn-round-cirlce {
+          opacity: 0;
+        }
+      }
     }
   }
 
