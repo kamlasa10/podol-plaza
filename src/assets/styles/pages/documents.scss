@@ -1,0 +1,113 @@
+#documents-page {
+    background-color: #F0F0F0;
+
+    .btn-go-top {
+        display: none;
+    }
+
+    .header {
+        position: absolute;
+        background-color: transparent;
+
+        .btn-round {
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            .btn-round-cirlce {
+                display: block;
+            }
+        }
+
+        .header__language,
+        .burger-btn {
+            &:hover {
+                .btn-round-cirlce {
+                    opacity: 0;
+                }
+            }
+        }
+
+    }
+
+    .page__title {
+        margin-bottom: 30px;
+    }
+
+    .documents {
+        margin-right: 60px;
+        padding-bottom: 129px;
+
+        @include to(1200px) {
+            margin-right: 0;
+        }
+
+        .big-container {
+            padding-left: 138px;
+
+            @include to(1100px) {
+                padding-left: 50px;
+            }
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(45.5%, 45%));
+            column-gap: 80px;
+            flex-wrap: wrap;
+            row-gap: 35px;
+
+            @include to(1440px) {
+                grid-template-columns: repeat(auto-fit, minmax(46%, 45%));
+            }
+        }
+    
+        &__link {
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            display: flex;
+            padding: 30px 30px 40px;
+            min-height: 125px;
+            color: $blue;
+            text-decoration: none;
+            transition: all .4s;
+    
+            svg {
+                width: 46px;
+                height: 50px;
+                margin-right: 27px;
+            }
+
+            &:hover {
+                box-shadow: 0px 20px 80px rgba(201, 117, 51, 0.15);
+
+                .documents__title {
+                    text-decoration: underline;
+                }
+            }
+        }
+    
+        &__date {
+            margin-bottom: 8px;
+            font-size: 12px;
+            line-height: 1em;
+            color: #758BA2;
+    
+            @include to(1440px) {
+                font-size: 10px;
+            }
+        }
+    
+        &__title {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.5em;
+    
+            @include to(1440px) {
+                font-size: 20px;
+            }
+        }
+    }
+}

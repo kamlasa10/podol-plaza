@@ -1,0 +1,50 @@
+#panorama-page {
+    .btn-go-top {
+        display: none;
+    }
+
+    .breadcrumbs {
+        padding-top: 115px;
+    }
+
+    .header {
+        background-color: transparent;
+        position: absolute;
+    }
+    
+    .panorama {
+
+        &__img {
+            height: 75vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__top {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-right {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__small-title {
+            margin-right: 40px;
+            font-family: $forum;
+            font-size: 26px;
+            line-height: 1em;
+
+            @include to(1440px) {
+                font-size: 24px;
+            }
+        }
+    }
+}

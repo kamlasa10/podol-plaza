@@ -1,0 +1,71 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    max-width: 550px;
+
+    &__arrow {
+        transition: all .4s;
+
+        svg {
+            stroke: $blue;
+            fill: none;
+            width: 21px;
+            height: 18px;
+
+            @include to(1440px) {
+                font-size: 19px;
+                height: 18px;
+            }
+        }
+
+        &:hover {
+            transform: translateX(-5px);
+        }
+    }
+
+    &__next {
+        svg {
+            transform: rotate(180deg) translateY(-3px);
+        }
+
+        &:hover {
+            transform: translateX(5px);
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin: 0 40px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    &__link {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        font-family: $forum;
+        line-height: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $blue;
+        text-decoration: none;
+        background-color: #fff;
+        transition: all .4s;
+        border-radius: 50%;
+
+        @include to(1440px) {
+            font-size: 18px;
+        }
+
+        &:hover,
+        &--active {
+            background-color: #EBC78C;
+        }
+    }
+}

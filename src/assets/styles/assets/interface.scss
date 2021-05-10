@@ -416,6 +416,12 @@
   }
 }
 
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .btn-go-top {
   position: fixed;
   width: 50px;
@@ -540,8 +546,8 @@
 }
 
 .breadcrumbs {
-  margin-bottom: 10px;
-  padding-top: 150px;
+  margin-bottom: 15px;
+  padding-top: 158px;
 
   &__list {
     display: flex;
@@ -613,5 +619,15 @@
 
   @include to(1440px) {
     font-size: 36px;
+  }
+}
+
+.small-text {
+  font-size: 12px;
+  line-height: 1em;
+  color: #758BA2;
+
+  @include to(1440px) {
+    font-size: 10px;
   }
 }

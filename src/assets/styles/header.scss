@@ -14,6 +14,31 @@
     transition: all .4s;
   }
 
+  &.no-bg {
+    position: absolute;
+    background-color: transparent;
+
+    .btn-round {
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        .btn-round-cirlce {
+            display: block;
+        }
+    }
+
+    .header__language,
+    .burger-btn {
+        &:hover {
+            .btn-round-cirlce {
+                opacity: 0;
+            }
+        }
+    }
+}
+
   &.white {
     background: transparent;
 
@@ -82,6 +107,10 @@
     }
   }
 
+  &.show-gallery {
+    padding-top: 30px;
+  }
+
   &.show-menu {
     padding-top: 30px;
     background: transparent;
@@ -139,7 +168,7 @@
 
     img {
       object-fit: contain;
-      width: 100%;
+      width: auto;
       height: 100%;
     }
 

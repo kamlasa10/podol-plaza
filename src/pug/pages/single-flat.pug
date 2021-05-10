@@ -1,0 +1,96 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Квартира 2А'
+    var id_page = 'single-flat-page'
+    var class_page = 'single-flat-page'
+    var breadcrumbsLink = 'single-flat'
+    var colorThemeBreadCrumbs = 'dark'
+    var noBg = true
+    var i = 0
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+block content
+    .big-container.gallery__wrapper-top
+      include ../includes/breadcrumbs.pug
+      .page__title Квартира 2А
+      .single-flat 
+        .contacts__left.single-flat__left
+            .contacts__item
+              .contacts__item-title Розташування:
+              .contacts__item-block
+                .btn-round.contacts__item-icon.contacts__item-icon--1
+                  +svg('mark')
+                .contacts__item-text Київ, Шевченківський район, вул. Глибочицька, 77-79
+            .contacts__item
+              .contacts__item-title Відділ продажів:
+              .contacts__item-block.contacts__item-block--align
+                a(href="tel:0443382727").btn-round.contacts__item-icon.contacts__item-icon--2
+                  +svg('phone')
+                a(href="tel:0443382727").contacts__item-text 044 338 27 27
+              .socials.contacts__socials
+                a(href="#").socials__link.socials__link--1
+                  +svg('whatsapp')
+                a(href="#").socials__link.socials__link--2
+                  +svg('telegram')
+                a(href="#").socials__link.socials__link--3
+                  +svg('viber')
+              .contacts__item-block
+                .btn-round.contacts__item-icon.contacts__item-icon--3
+                  +svg('clock')
+                .contacts__item-icon-text пн-пт: 09:00-19:00 <br> сб-нд: 10:00-17:00
+              .contacts__item-small-text * Працюємо без вихідних та перерв на обід
+        .single-flat__img 
+          +img('/choison-flat/2.jpg')
+        .single-flat__right 
+          .single-flat__info 
+            .single-flat__info-top
+              .single-flat__info-item 
+                .single-flat__info-name Загальна площа:
+                .single-flat__info-value 23 м<sup>2</sup>
+              .single-flat__info-item 
+                .single-flat__info-name Житлова площа:
+                .single-flat__info-value 34 м<sup>2</sup>
+            .single-flat__info-item 
+              .single-flat__info-name Поверх:
+              .single-flat__info-value 5
+            .single-flat__info-item 
+              .single-flat__info-name Передпокій:
+              .single-flat__info-value 23 м<sup>2</sup>
+            .single-flat__info-item 
+              .single-flat__info-name Балкон:
+              .single-flat__info-value 34 м<sup>2</sup>
+            .single-flat__info-item 
+              .single-flat__info-name Вітальня:
+              .single-flat__info-value 23 м<sup>2</sup>
+            .single-flat__info-item 
+              .single-flat__info-name Загальна площа:
+              .single-flat__info-value 23 м<sup>2</sup>
+            .single-flat__info-item 
+              .single-flat__info-name Кухня-їдальня:
+              .single-flat__info-value 34 м<sup>2</sup>
+            .single-flat__info-item 
+              .single-flat__info-name Ванна кімната:
+              .single-flat__info-value 23 м<sup>2</sup>
+          a(href="#").single-flat__btn.btn Записатися на перегляд
+          a(href="#" download).single-flat__btn.btn Завантажити планування
+          
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

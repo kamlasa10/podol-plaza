@@ -1,0 +1,96 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Девелопер'
+    var id_page = 'developer-page'
+    var class_page = 'developer-page'
+    var breadcrumbsLink = 'developer'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Девелопер
+    .developer
+        .container.developer__content
+            section.section-padding.builder
+                .builder__content
+                    .builder__left
+                        +img('footer-logo.svg')
+                    .builder__right
+                        p.builder__intro STATUS GROUP — стабільна і перспективна компанія, яка працює з 2005 року і представляє нове покоління в будівельному бізнесі, де стиль роботи базується на інноваційних рішеннях, величезному практичному досвіді і прагненні до досконалості.
+                        p.builder__desc Компанія STATUS GROUP здійснює функції забудовника, замовника, інвестора, генерального підрядника і девелопера. Усі наші проекти – це новий формат житлової нерухомості з унікальною архітектурою, безпечною та упорядкованою територією і власною соціальною інфраструктурою, в яких враховані всі потреби покупців.
+            section.objects.section-padding
+                .objects__content
+                    .objects__title.section-title Об’єкти які знаходяться на стадії на будівництва:
+                    ul.objects__list
+                        li.objects__item.objects__item--1.objects__item--top
+                            a(href="#").objects__link
+                                .objects__logo
+                                    +img('logo.svg')
+                                .objects__wrap
+                                    .objects__name ЖК «PODIL PLAZA&RESIDENCE»
+                                    .objects__info.objects__info--1
+                                        +svg('metro')
+                                        span Контрактова площа
+                                    .objects__info.objects__info--2
+                                        +svg('mark-fill')
+                                        span вул. Глибочицька 73
+                        li.objects__item.objects__item--2.objects__item--top
+                            a(href="#").objects__link
+                                .objects__logo
+                                    +img('object-img.png')
+                                .objects__wrap
+                                    .objects__name ЖК «SKY RIVER»
+                                    .objects__info.objects__info--1
+                                        +svg('metro')
+                                        span м. Славутич
+                                    .objects__info.objects__info--2
+                                        +svg('mark-fill')
+                                        span вул. Приозерна 15
+                        li.objects__item.objects__item--3.objects__item--bottom
+                            a(href="#").objects__link
+                                .objects__logo
+                                    +img('object-img2.png')
+                                .objects__wrap
+                                    .objects__name ЖК «OLYMPIC PARK»
+                                    .objects__info.objects__info--1
+                                        +svg('metro')
+                                        span м. Бориспільська
+                                    .objects__info.objects__info--2
+                                        +svg('mark-fill')
+                                        span пр-т Бажана 17
+                        li.objects__item.objects__item--4.objects__item--bottom
+                            a(href="#").objects__link
+                                .objects__logo
+                                    +img('object-img3.svg')
+                                .objects__wrap
+                                    .objects__name ЖК «РІВ’ЄРА»19
+                                    .objects__info.objects__info--1
+                                        +svg('metro')
+                                        span м. Славутич
+                                    .objects__info.objects__info--2
+                                        +svg('mark-fill')
+                                        span вул. Центральна 19 
+
+                        
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

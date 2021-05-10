@@ -1,0 +1,252 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Хід будівництва'
+    var id_page = 'building-progress-page'
+    var class_page = 'building-progress-page'
+    var breadcrumbsLink = 'building-progress'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/building-progress.js')
+block content
+    .building-gallery
+      .gallery__slider-info.js-gallery__slider-info 
+        span.gallery__slider-info-current 2/
+        span.gallery__slider-info-total 5
+      .swiper-container.js-bulding-gallery-slider 
+        .swiper-wrapper 
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+          .swiper-slide.building-gallery__item 
+            +img('/building-gallery/1.jpg')
+      .building-gallery__top
+        .big-container
+          .building-gallery__top-content 
+            .building-gallery__top-wrap 
+              .building-gallery__date.small-text 02.03.2021
+              .building-gallery__month Січень
+            button(type="button").js-gallery-close.building-gallery__btn.btn--res
+              span.building-gallery__btn-text.small-text закрити
+              span.building-gallery__btn-block 
+                +svg('cross')
+      .gallery__controls.js-gallery__controls 
+        .big-container
+          button(type="button").js-controls-building-prev.gallery__controls-btn.gallery__controls-btn-left.btn--res
+            +img('ui/gallery-arrow.svg')
+          button(type="button").js-controls-building-next.gallery__controls-btn.gallery__controls-btn-right.btn--res
+            +img('ui/gallery-arrow.svg')
+      .gallery__tabs 
+        .gallery__tab.js-gallery__tab-wrap.btn 
+          button(type="button").gallery__tab-btn.btn--res.js-building-gallery__tab(data-gallery-next="1") Попередній місяць
+        .gallery__tab.js-gallery__tab-wrap.btn
+          button(type="button").gallery__tab-btn.btn--res.js-building-gallery__tab(data-gallery-prev="2") Наступний місяць
+    .building-progress
+        .big-container.gallery__wrapper-top
+            include ../includes/breadcrumbs.pug
+            .section-top.building-progress__top
+                .page__title Хід будівництва
+                .building-progress__top-right
+                     .gallery__tabs 
+                        .gallery__tab.js-building-progress__tab-wrap.btn 
+                            button(type="button").gallery__tab-btn.btn--res.js-gallery__tab(data-gallery="1") Podol Plaza 1
+                        .gallery__tab.js-building-progress__tab-wrap.btn
+                            button(type="button").gallery__tab-btn.btn--res.js-gallery__tab(data-gallery="2") Podol Plaza 2
+            .building-progress__content 
+                .building-progress__info 
+                    .building-progress__info-title Статус робіт:
+                    .building-progress__info-desc Виконується монтаж ліфтів. Триває влаштування систем опалення, вентиляції, водопроводу, каналізації та електрики. 
+                    .building-progress__info-list 
+                      .building-progress__info-item(data-progress="74")
+                        .building-progress__info-percent 
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="data-progress-circle" cx="25" cy="25" r="24.5" stroke="url(#paint0_linear)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear" x1="-1.71657e-06" y1="-0.000120926" x2="50" y2="49.9999" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FBBF65"/>
+                            <stop offset="0.182292" stop-color="#F2C37C"/>
+                            <stop offset="0.354167" stop-color="#F2CE7C"/>
+                            <stop offset="0.510417" stop-color="#FFE3A3"/>
+                            <stop offset="0.6875" stop-color="#F2CE7C"/>
+                            <stop offset="0.84375" stop-color="#F2C37C"/>
+                            <stop offset="0.994792" stop-color="#FBBF65"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>
+                            span.building-progress__info-text 74%
+                        .building-progress__info-name будівництво
+                      .building-progress__info-item(data-progress="25")
+                          .building-progress__info-percent 
+                              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle class="data-progress-circle" cx="25" cy="25" r="24.5" stroke="url(#paint0_linear1)"/>
+                              <defs>
+                              <linearGradient id="paint0_linear1" x1="-1.71657e-06" y1="-0.000120926" x2="50" y2="49.9999" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#FBBF65"/>
+                              <stop offset="0.182292" stop-color="#F2C37C"/>
+                              <stop offset="0.354167" stop-color="#F2CE7C"/>
+                              <stop offset="0.510417" stop-color="#FFE3A3"/>
+                              <stop offset="0.6875" stop-color="#F2CE7C"/>
+                              <stop offset="0.84375" stop-color="#F2C37C"/>
+                              <stop offset="0.994792" stop-color="#FBBF65"/>
+                              </linearGradient>
+                              </defs>
+                              </svg>
+                              span.building-progress__info-text 25%
+                          .building-progress__info-name фасад
+                      .building-progress__info-item(data-progress="62")
+                          .building-progress__info-percent 
+                              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle class="data-progress-circle" cx="25" cy="25" r="24.5" stroke="url(#paint0_linear2)"/>
+                              <defs>
+                              <linearGradient id="paint0_linear2" x1="-1.71657e-06" y1="-0.000120926" x2="50" y2="49.9999" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#FBBF65"/>
+                              <stop offset="0.182292" stop-color="#F2C37C"/>
+                              <stop offset="0.354167" stop-color="#F2CE7C"/>
+                              <stop offset="0.510417" stop-color="#FFE3A3"/>
+                              <stop offset="0.6875" stop-color="#F2CE7C"/>
+                              <stop offset="0.84375" stop-color="#F2C37C"/>
+                              <stop offset="0.994792" stop-color="#FBBF65"/>
+                              </linearGradient>
+                              </defs>
+                              </svg>
+                              span.building-progress__info-text 62%
+                          .building-progress__info-name благоустрій
+                      .building-progress__info-item(data-progress="17")
+                          .building-progress__info-percent 
+                              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle class="data-progress-circle" cx="25" cy="25" r="24.5" stroke="url(#paint0_linear3)"/>
+                              <defs>
+                              <linearGradient id="paint0_linear3" x1="-1.71657e-06" y1="-0.000120926" x2="50" y2="49.9999" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#FBBF65"/>
+                              <stop offset="0.182292" stop-color="#F2C37C"/>
+                              <stop offset="0.354167" stop-color="#F2CE7C"/>
+                              <stop offset="0.510417" stop-color="#FFE3A3"/>
+                              <stop offset="0.6875" stop-color="#F2CE7C"/>
+                              <stop offset="0.84375" stop-color="#F2C37C"/>
+                              <stop offset="0.994792" stop-color="#FBBF65"/>
+                              </linearGradient>
+                              </defs>
+                              </svg>
+                              span.building-progress__info-text 17%
+                          .building-progress__info-name мережі
+                .building-progress__block
+                  ul.building-progress__report 
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                    li.building-progress__report-item.js-bulding-progress-report 
+                      .building-progress__report-img 
+                        +img('/building-progress/1.jpg')
+                        +svg('progress-report')
+                      .building-progress__report-wrap 
+                        .building-progress__report-title.building-progress__info-title Січень
+                        .building-progress__report-date.small-text 02.03.2021
+                  .pagination.news__pagination
+                    a(href="#").pagination__prev.pagination__arrow
+                        +svg('arrow')
+                    ul.pagination__list 
+                        li.pagination__item 
+                            a(href="#").pagination__link.pagination__link--active 1
+                        li.pagination__item 
+                            a(href="#").pagination__link 2
+                        li.pagination__item 
+                            a(href="#").pagination__link 3
+                        li.pagination__item 
+                            a(href="#").pagination__link 4
+                        li.pagination__item 
+                            a(href="#").pagination__link 10
+                    a(href="#").pagination__next.pagination__arrow
+                        +svg('arrow')
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

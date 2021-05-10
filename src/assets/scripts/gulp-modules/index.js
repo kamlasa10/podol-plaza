@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	window.animateScrollTop = function () {
-		if(document.documentElement.clientWidth > 1025) {
+		if(document.documentElement.clientWidth > 1025 && window.locoScroll) {
 			$('.js-btn-top').on('click', () => {
 				window.locoScroll.scrollTo(0)
 			})
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// functions
 
-	class Tabs {
+	window.Tabs = class Tabs {
 		constructor(content, tabs, activeClass) {
 			this.content = content
 			this.tabs = tabs
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let hasThemeWhiteForHeader = false
 
     showPopupByType()
-		new Tabs(null, $('.js-gallery__tab-wrap'), 'active')
+		new window.Tabs(null, $('.js-gallery__tab-wrap'), 'active')
 		const currentLanguage = $('html').attr('lang')
 
         $('[name=phone]').each(function() {

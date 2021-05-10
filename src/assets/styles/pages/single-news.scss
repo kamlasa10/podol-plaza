@@ -1,0 +1,108 @@
+#single-news-page {
+    background-color: #F0F0F0;
+
+    .news-single {
+        margin-bottom: 50px;
+        margin-top: 20px;
+        display: flex;
+        margin-right: 60px;
+
+        p {
+            color: #758BA2;
+            margin-bottom: 20px;
+        }
+
+        img {
+            margin-bottom: 20px;
+            width: 100%;
+            object-fit: cover;
+            height: 515px;
+            border-radius: 5px;
+
+            @include to(1440px) {
+                height: 425px;
+            }
+        }
+    
+        &__back {
+            margin-top: 32px;
+            min-width: 50px;
+            margin-right: 10px;
+            
+            svg {
+                position: relative;
+                z-index: 3;
+                fill: none;
+                stroke: $blue;
+                width: 21px;
+                height: 18px;
+
+                @include to(1440px) {
+                    width: 19px;
+                }
+            }
+
+            &::before {
+                background-color: #F0F0F0;
+            }
+
+            &::after {
+                background: rgba($blue, .2);
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                    background: $blue;
+                }
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: flex-start;
+            padding: 50px 153px 50px 50px;
+            background: #FFFFFF;
+            box-shadow: 0px 100px 200px rgba(201, 117, 51, 0.1);
+            border-radius: 5px;
+        }
+
+        &__date {
+            margin-top: 25px;
+            margin-right: 52px;
+            font-size: 12px;
+            line-height: 1em;
+            color: #758BA2;
+
+            @include to(1440px) {
+                font-size: 10px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 20px;
+            font-size: 38px;
+            line-height: 1.2em;
+            font-family: $forum;
+
+            @include to(1440px) {
+                font-size: 36px;
+            }
+        }
+        &__block {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    .last-news {
+        margin-bottom: 74px;
+        margin-left: 57px;
+        margin-right: 60px;
+
+        &__title {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+    }
+}

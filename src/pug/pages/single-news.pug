@@ -1,0 +1,68 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.'
+    var id_page = 'single-news-page'
+    var class_page = 'single-news-page'
+    var breadcrumbsLink = 'single-news'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/single-news.js')
+block content
+    .big-container
+        include ../includes/breadcrumbs.pug
+        .news-single
+            a(href="#").news-single__back.btn-round
+                +svg('arrow')
+            .news-single__content 
+                .news-single__date 02.03.2021
+                .news-single__wrap
+                    .news-single__title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                    p Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                    p Придбати квартиру на поточних умовах можна до 07 лютого 2021 року. Нові ціни будуть опубліковані 01 лютого 2021 року в розділі "Ціна"
+                    +img('news/2.jpg')
+                    p Більш детальну інформацію про житловий комплекс, наявність квартир, торгової та офісної нерухомості, їх вартості, а також про умови реалізації і програмах розстрочки можна дізнатися у наших фахівців відділу продажів за телефоном: (044) 338 27 27 або в офісі відділу продажів жк.Podil Plaza & Residence за адресою вул. Глибочицька 73 в будні дні - з 9.00 до 19.00, у вихідні - з 10.00 до 18.00
+                    .news-single__block
+                        a(href="#").news-single__link.btn Обрати квартиру
+        .last-news
+            .last-news__title.news-single__title Останні новини
+            a(href="#").news__item.last-news__item
+                .news__img 
+                    +img('/news/1.jpg')
+                .news__info 
+                    .news__info-date 02.03.2021
+                    .news__info-wrap
+                        .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                        .news__intro 
+                            p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                            .news__more.btn Читати новину
+            a(href="#").news__item.last-news__item
+                .news__img 
+                    +img('/news/1.jpg')
+                .news__info 
+                    .news__info-date 02.03.2021
+                    .news__info-wrap
+                        .news__info-title Планове підвищення вартості квадратного метра на квартири з 07.02.2021г.
+                        .news__intro 
+                            p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
+                            .news__more.btn Читати новину
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

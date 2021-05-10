@@ -1,0 +1,41 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Панорама'
+    var id_page = 'panorama-page'
+    var class_page = 'panorama-page'
+    var breadcrumbsLink = 'panorama'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+block content
+    .panorama
+        .big-container.gallery__wrapper-top
+            include ../includes/breadcrumbs.pug
+            .panorama__top
+                .page__title Панорама
+                .panorama__top-right 
+                    .panorama__small-title Панорама з вікон житлового комплексу
+                    a(href="https://www.google.com.ua/maps/place/%D1%83%D0%BB.+%D0%93%D0%BB%D1%83%D0%B1%D0%BE%D1%87%D0%B8%D1%86%D0%BA%D0%B0%D1%8F,+77,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4624399,30.4996779,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4ce6f21e597c3:0xd6379a004c12197d!8m2!3d50.4624365!4d30.5018666?hl=ru").btn.panorama__link Показати на Google Maps
+        .panorama__img 
+            +img('panorama-bg.jpg')
+                      
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

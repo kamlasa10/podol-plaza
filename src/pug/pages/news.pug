@@ -111,6 +111,21 @@ block content
                                 p.news__intro-desc Відділ продажів жк Podil Plaza & Residence інформує про планове підвищення цін вартості квадратного метра на квартири.
                                 .news__more.btn Читати новину
                 .pagination.news__pagination
+                    a(href="#").pagination__prev.pagination__arrow
+                        +svg('arrow')
+                    ul.pagination__list 
+                        li.pagination__item 
+                            a(href="#").pagination__link.pagination__link--active 1
+                        li.pagination__item 
+                            a(href="#").pagination__link 2
+                        li.pagination__item 
+                            a(href="#").pagination__link 3
+                        li.pagination__item 
+                            a(href="#").pagination__link 4
+                        li.pagination__item 
+                            a(href="#").pagination__link 10
+                    a(href="#").pagination__next.pagination__arrow
+                        +svg('arrow')
 block footer
   include ../includes/footer.pug
 

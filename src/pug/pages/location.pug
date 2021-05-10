@@ -1,0 +1,86 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Розташування'
+    var id_page = 'location-page'
+    var class_page = 'location-page'
+    var breadcrumbsLink = 'location'
+    var colorThemeBreadCrumbs = 'dark'
+    var noBg = true
+    var i = 0
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4EBsCfQfnwCFGD_o8iLWwH97tmNCU-6E&amp;ver=1620643921"></script>
+  script(defer src='./assets/scripts/location.js')
+block content
+    .location
+        .big-container.gallery__wrapper-top
+            include ../includes/breadcrumbs.pug
+            .location__top
+                .page__title Розташування
+                a(href="#").btn.location__btn Відкрити в навігаторі
+        .location__map
+            .location__map-content 
+            .location__map-info   
+                .location__map-title Умовні позначення
+                .location__map-infrastructure.infrastructure
+                    .js-infrastructure__item.infrastructure__item.infrastructure__item--1(data-map="complex")
+                        .infrastructure__icon
+                            +svg('logo')
+                            +svg('logo-active').infrastructure__icon-active
+                        .infrastructure__name ЖК Podil Plaza & Residence 2 
+                    .js-infrastructure__item.infrastructure__item.infrastructure__item--2(data-map="metro")
+                        .infrastructure__icon
+                            +svg('metro2')
+                            +svg('metro2-active').infrastructure__icon-active
+                        .infrastructure__name Метро 
+                    .js-infrastructure__item.infrastructure__item.infrastructure__item--3(data-map="park")
+                        .infrastructure__icon
+                            +svg('park')
+                            +svg('park-active').infrastructure__icon-active
+                        .infrastructure__name Парки  
+                    .js-infrastructure__item.infrastructure__item.infrastructure__item--4(data-map="study")
+                        .infrastructure__icon
+                            +svg('study')
+                            +svg('study-active').infrastructure__icon-active
+                        .infrastructure__name Освіта 
+                    .js-infrastructure__item.infrastructure__item.infrastructure__item--5(data-map="restaraunt")
+                        .infrastructure__icon
+                            +svg('restaraunt')
+                            +svg('restaraunt-active').infrastructure__icon-active
+                        .infrastructure__name Кафе, рестораны 
+                    .js-infrastructure__item.infrastructure__item.infrastructure__item--6(data-map="shop")
+                        .infrastructure__icon
+                            +svg('shop')
+                            +svg('shop-active').infrastructure__icon-active
+                        .infrastructure__name Магазини 
+                    .js-infrastructure__item.infrastructure__item.infrastructure__item--7(data-map="sport")
+                        .infrastructure__icon
+                            +svg('sport')
+                            +svg('sport-active').infrastructure__icon-active
+                        .infrastructure__name Спорт 
+                    .js-infrastructure__item.infrastructure__item.infrastructure__item--8(data-map="pharmacy")
+                        .infrastructure__icon
+                            +svg('pharmacy')
+                            +svg('pharmacy-active').infrastructure__icon-active
+                        .infrastructure__name Аптеки 
+                a(href="#").location__map-link.btn Обрати квартиру
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

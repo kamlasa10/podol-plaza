@@ -1,0 +1,237 @@
+#location-page {
+    .btn-go-top {
+        display: none;
+    }
+
+    .breadcrumbs {
+        padding-top: 130px;
+    }
+
+    .location {
+       &__top {
+           margin-bottom: 23px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+       }
+
+       &__map {
+           position: relative;
+           height: 90vh;
+
+           &-content {
+               height: 100%;
+           }
+
+           &-info {
+               position: absolute;
+               z-index: 100;
+               right: 50px;
+               top: 50%;
+               padding: 30px 30px 40px;
+               transform: translateY(-50%);
+               background: #FFFFFF;
+               box-shadow: 0px 20px 80px rgba(201, 117, 51, 0.15);
+               border-radius: 5px;
+           }
+
+           &-title {
+               margin-bottom: 30px;
+               font-family: $forum;
+               font-size: 26px;
+               line-height: 1em;
+
+               @include to(1440px) {
+                   font-size: 24px;
+               }
+           }
+
+           &-infrastructure {
+               margin-bottom: 27px;
+           }
+
+           &-link {
+               margin: 0 23px;
+               width: 80%;
+               padding: 0;
+           }
+       }
+
+       .infrastructure {
+           height: 300px;
+           padding-right: 22px;
+           overflow-y: scroll;
+
+           @include to(1440px) {
+               width: 240px;
+           }
+
+           &::-webkit-scrollbar-thumb {
+            background: linear-gradient(343.46deg, #EBBA8C 0%, #EBC78C 17.56%, #FFE9B8 78.41%);
+            border-radius: 25px;
+            }
+
+            &::-webkit-scrollbar {
+                width: 3px;
+                border-radius: 25px;
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: none;
+            }
+
+            &__item {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: all .4s;
+
+                &--active,
+                &:hover {
+                    color: #C5903A;
+
+                    svg {
+                        opacity: 0;
+                    }
+
+                    .infrastructure__icon-active {
+                        opacity: 1;
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+
+                svg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    fill: none;
+                    transition: all .4s;
+                }
+
+                &--1 {
+                    svg {
+                        width: 23px;
+                        height: 22px;
+
+                        @include to(1440px) {
+                            width: 21px;
+                            height: 22px;
+                        }
+                    }
+                }
+
+                &--2 {
+                    svg {
+                        top: 3px;
+                        width: 21px;
+                        height: 15px;
+
+                        @include to(1440px) {
+                            width: 19px;
+                            height: 13px;
+                        }
+                    }
+                }
+
+                &--3 {
+                    svg {
+                        width: 26px;
+                        height: 22px; 
+
+                        @include to(1440px) {
+                            width: 24px;
+                            height: 20px;
+                        }
+                    }
+                }
+
+                &--4 {
+                    svg {
+                       width: 24px;
+                       height: 22px;
+                       
+                       @include to(1440px) {
+                           width: 22px;
+                           height: 20px;
+                       }
+                    }
+                }
+
+                &--5 {
+                    svg {
+                        width: 16px;
+                        height: 24px;
+
+                        @include to(1440px) {
+                            width: 14px;
+                            height: 22px;
+                        }
+                    }
+                }
+
+                &--6 {
+                    svg {
+                      width: 23px;
+                      height: 23px; 
+                      
+                      @include to(1440px) {
+                          width: 21px;
+                          height: 21px;
+                      }
+                    }
+                }
+
+                &--7 {
+                    svg {
+                        top: 3px;
+                      width: 26px;
+                      height: 17px; 
+                      
+                      @include to(1440px) {
+                          width: 24px;
+                          height: 15px;
+                      }
+                    }
+                }
+
+                &--8 {
+                    svg {
+                        top: 3px;
+                        width: 18px;
+                        height: 18px;  
+                        
+                        @include to(1440px) {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+
+            &__icon {
+                position: relative;
+                width: 30px;
+                height: 22px;
+                margin-right: 13px;
+
+                &-active {
+                    opacity: 0;
+                    transition: all .4s;
+                }
+            }
+
+            &__name {
+                font-size: 14px;
+                line-height: 1.2em;
+
+                @include to(1440px) {
+                    font-size: 12px;
+                }
+            }
+       }
+    }
+}

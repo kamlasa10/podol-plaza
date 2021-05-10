@@ -1,0 +1,60 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Документи'
+    var id_page = 'documents-page'
+    var class_page = 'documents-page'
+    var breadcrumbsLink = 'documents'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Документи
+    .documents 
+        .big-container
+            .documents__list
+                .documents__item 
+                    a(href="#" target="_blank").documents__link
+                        +svg('pdf')
+                        .documents__wrap 
+                            .documents__date 02.03.2021
+                            .documents__title Договір оренди земельної ділянки від 12.06.2020р 
+                    a(href="#" target="_blank").documents__link
+                        +svg('pdf')
+                        .documents__wrap 
+                            .documents__date 02.03.2021
+                            .documents__title Експертиза проєкту 
+                .documents__item 
+                    a(href="#" target="_blank").documents__link
+                        +svg('pdf')
+                        .documents__wrap 
+                            .documents__date 02.03.2021
+                            .documents__title Витяг на земельный участок
+                                    .documents__item 
+                    a(href="#" target="_blank").documents__link
+                        +svg('pdf')
+                        .documents__wrap 
+                            .documents__date 02.03.2021
+                            .documents__title Дозвіл на будвництво ІУ023482350348 
+                        
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,114 @@
+#developer-page {
+    background-color: #F0F0F0;
+
+    .page__title {
+        margin-bottom: 30px;
+    }
+
+    .btn-go-top {
+        display: none;
+    }
+
+    .header {
+        position: absolute;
+        background-color: transparent;
+
+        .btn-round {
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            .btn-round-cirlce {
+                display: block;
+            }
+        }
+
+        .header__language,
+        .burger-btn {
+            &:hover {
+                .btn-round-cirlce {
+                    opacity: 0;
+                }
+            }
+        }
+
+    }
+
+    .developer {
+        padding-bottom: 70px;
+        &__content {
+            padding-top: 70px;
+            padding-right: 44px;
+            padding-left: 44px;
+            background-color: #fff;
+            box-shadow: 0px 100px 200px rgba(201, 117, 51, 0.1);
+            border-radius: 5px;
+
+            @include to(1370px) {
+                max-width: 1106px;
+            }
+
+            .builder {
+                max-width: 100%;
+                justify-content: center;
+                padding-left: 70px;
+                margin: 0;
+
+                &__left {
+                    padding-top: 137px;
+
+                    &::before {
+                        top: 0;
+
+                        @include to(1370px) {
+                            width: 109%;
+                            top: -10px;
+                        }
+                    }
+
+                    @include to(1370px) {
+                        padding-top: 112px;
+                    }
+                }
+
+                &__right {
+                    padding-left: 100px;
+                }
+
+                &__desc:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .objects {
+            margin: 0;
+
+            &::after {
+                height: 30px;
+                left: 0;
+                width: 100%;
+                background: url('../images/decor-section.svg') no-repeat center/cover;
+            }
+
+            &::before {
+                right: -44px;
+                background: url('../images/developer/bg-img.png') no-repeat no-repeat center/cover;
+            }
+        }
+
+        .object__decor {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .objects__content {
+            padding-bottom: 50px;
+            margin-top: 72px;
+            padding-top: 72px;
+            min-height: auto;
+        }
+    }
+}

@@ -1,0 +1,215 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Комерційна нерухомість'
+    var id_page = 'choise-flat-page'
+    var class_page = 'commercial-flat-page'
+    var breadcrumbsLink = 'commercial-flat'
+    var colorThemeBreadCrumbs = 'dark'
+    var noBg = true
+    var i = 0
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/choise-flat.js')
+block content
+    .big-container.gallery__wrapper-top
+      include ../includes/breadcrumbs.pug
+      .page__title Комерційна нерухомість
+      .choise-flat 
+        .choise-flat__filters 
+          .choise-flat__filters-block 
+            .choise-flat__filters-title Фільтр
+            .choise-flat__filters-item.choise-flat__filters-item--1
+              button(type="button").choise-flat__filters-btn.btn--res.choison.round-left Podil Plaza 1
+              button(type="button").choise-flat__filters-btn.btn--res.round-right Podil Plaza 2
+            .choise-flat__filters-item.choise-flat__filters-item--2 
+              button(type="button").choise-flat__filters-btn.commercial-active.btn--res Офісна
+        .choise-flat__list
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          a(href="#").choise-flat__item
+            .choise-flat__title Квартира 2А
+            +img('/choison-flat/1.jpg')
+            .choise-flat__wrap
+              .choise-flat__block 
+                .choise-flat__name Будинок:
+                .choise-flat__value 2
+              .choise-flat__block 
+                .choise-flat__name Загальна площа:
+                .choise-flat__value 23 м<sup>2</sup>
+              .choise-flat__block 
+                .choise-flat__name Житлова площа:
+                .choise-flat__value 34 м<sup>2</sup>
+              .btn.choise-flat__btn Дивитися планування
+          
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

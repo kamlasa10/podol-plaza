@@ -19,6 +19,7 @@
 @import './blocks/popup';
 @import './blocks/contacts.scss';
 @import './blocks/socials.scss';
+@import './blocks/pagination.scss';
 
 // sass dima
 @import './header';
@@ -29,4 +30,14 @@
 @import './pages/home.scss';
 @import './pages/gallery.scss';
 @import './pages/contacts.scss';
+@import './pages/single-news.scss';
+@import './pages/documents.scss';
+@import './pages/developer.scss';
+@import './pages/panorama.scss';
+@import './pages/building-progress.scss';
+@import './pages/choise-flat.scss';
+@import './pages/single-flat.scss';
+@import './pages/commercial-flat.scss';
+@import './pages/location.scss';
+
 @import './assets/templates'; // main style
