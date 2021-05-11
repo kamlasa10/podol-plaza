@@ -1,0 +1,94 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Переваги'
+    var id_page = 'features-page'
+    var class_page = 'features-page'
+    var breadcrumbsLink = 'features'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/features.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Переваги
+    .features 
+        .big-container
+            .features__list
+                .features__item.features__item--1
+                    .features__item-img 
+                        .features__item-block
+                            +img('/features/1.jpg')
+                        span.features__item-decor
+                            +img('/ui/features-page/1.svg')
+                    .features__item-desc Наявність офісного центу в комплексі дозволить вам вести свій бізнес.
+                .features__item.features__item--2
+                    .features__item-img 
+                        .features__item-block
+                            +img('/features/2.jpg')
+                        span.features__item-decor
+                            +img('/ui/features-page/2.svg')
+                    .features__item-desc Фітнес та SPA центри, салон краси, банк, ресторан, кав’ярня.
+        .features__block.features__block--1
+            .container 
+                span.features__item-decor
+                    +img('/ui/features-page/3.svg')
+                .features__block-text Закритий, повністю вільний від проїзду автомобілів двір з ландшафтним благоустроєм, зоною відпочинку та дитячим ігровим містечком преміального рівня для відпочинку та розваги мешканців будинку.
+        .big-container 
+            .features__list.features__list--2 
+                .features__item.features__item--3
+                    .features__item-img 
+                        .features__item-block
+                            +img('/features/4.jpg')
+                        span.features__item-decor
+                            +img('/ui/features-page/4.svg')
+                    .features__item-desc Наявність дворівневого підземного паркінгу.
+                .features__item.features__item--4
+                    .features__item-img 
+                        .features__item-block
+                            +img('/features/5.jpg')
+                        span.features__item-decor
+                            +img('/ui/features-page/5.svg')
+                    .features__item-desc Дитячий садок з авторськими розвиваючими програмами.
+        .features__block.features__block--2
+            .container 
+                span.features__item-decor
+                    +img('/ui/features-page/6.svg')
+                .features__block-text Наявність торговельного центру в комплексі, де буде абсолютно все,що необхідно для комфортного життя мешканців будинку,
+        .big-container 
+            .features__list
+                .features__item.features__item--5
+                    .features__item-img 
+                        .features__item-block
+                            +img('/features/7.jpg')
+                        span.features__item-decor
+                            +img('/ui/features-page/7.svg')
+                    .features__item-desc Цілодобова охорона, відеоспостереження за внутрішньою і прибудинковою територією.
+                .features__item.features__item--6
+                    .features__item-img 
+                        .features__item-block
+                            +img('/features/8.jpg')
+                        span.features__item-decor
+                            +img('/ui/features-page/8.svg')
+                    .features__item-desc Автономне опалення.
+                        
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,109 @@
+#video-page {
+    .page__title {
+        margin-bottom: 14px;
+    }
+
+    background-color: #f0f0f0;
+
+    .btn-go-top {
+        display: none;
+    }
+
+    .video {
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 80px;
+            align-items: flex-start;
+            row-gap: 30px;
+        }
+
+        &__item {
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+
+            &-preview {
+                position: relative;
+                position: relative;
+                margin-bottom: 20px;
+                width: 100%;
+                height: 300px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: 5px;
+                    width: 100%;
+                    transform: matrix(-1, 0, 0, 1, 0, 0);
+                    background: linear-gradient(180deg, rgba(3, 24, 38, 0) 0%, rgba(3, 24, 38, 0.7) 100%);
+                    height: 100%;
+                }
+
+                img {
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-play {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 150px;
+                height: 136px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 54%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 31%;
+                    transform: translate(115%, 78%) rotate(-23deg);
+                    height: 40px;
+                    background-color: #F6ED96;
+                    z-index: 10;
+                    clip-path: polygon(100% 67%, 1% 91%, 1% 86%);
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+
+                svg {
+                    width: 92px;
+                    height: 87px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    @include to(1440px) {
+                        width: 86px;
+                        height: 81px;
+                    }
+                }
+            }
+        }
+
+        &__desc {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.4em;
+            color: $blue;
+
+            @include to(1440px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

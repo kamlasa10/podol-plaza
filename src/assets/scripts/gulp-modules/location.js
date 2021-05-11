@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       position: { lat: 50.4624399, lng: 30.4996779 },
       icon: "assets/images/maps/complex.svg",
-      type: 'complex'
+      category: 'complex'
     },
     {
       position: { lat: 51.4624399, lng: 30.4996779 },
@@ -313,22 +313,22 @@ document.addEventListener('DOMContentLoaded', () => {
     park: [
       {
         position: { lat: 50.5480098, lng: 30.2170865 },
-        icon: "assets/images/marker.svg",
+        icon: "assets/images/maps/park.svg",
         category: 'park'
       },
     ],
     study: [
       {
         position: { lat: 49.4544399, lng: 29.4996779 },
-        icon: "assets/images/maps/sport.svg",
-        category: 'sport'
+        icon: "assets/images/maps/study.svg",
+        category: 'study'
       }
     ],
     complex: [
       {
         position: { lat: 50.4624399, lng: 30.4996779 },
         icon: "assets/images/maps/complex.svg",
-        type: 'complex'
+        category: 'complex'
       }
     ],
     restaraunt: [
@@ -347,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const marker = new google.maps.Marker(newMark);
       marker.setMap(map);
       marker.category = newMark.category;
+      console.log(marker)
       activeCategories.add(newMark.category)
       markersOnMap.push(marker);
     })
@@ -363,9 +364,9 @@ document.addEventListener('DOMContentLoaded', () => {
   $("[data-map]").each(function () {
     $(this).on("click", (e) => {
       e.preventDefault();
-      $(this).toggleClass('map__item--active')
+      $(this).toggleClass('infrastructure__item--active')
   
-      if ($(this).hasClass('map__item--active')) {
+      if ($(this).hasClass('infrastructure__item--active')) {
         markers[$(this).data('map')] = infrastructure[$(this).data('map')]
         activeCategories.add(this.dataset.map);
         // console.log(activeCategories)
@@ -374,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         activeCategories.delete(this.dataset.map);
       }
-  
+      console.log(activeCategories)
   
       delete markers[$(this).data('map')]
       newFilterMarkers(markersOnMap, activeCategories)
@@ -390,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mark.setVisible(false)
       }
     
-      if (!mark.category) mark.setVisible(true)
+      // if (!mark.category) mark.setVisible(true)
     })
   }
 

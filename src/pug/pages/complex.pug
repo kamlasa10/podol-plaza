@@ -1,0 +1,54 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Про комплекс'
+    var id_page = 'complex-page'
+    var class_page = 'complex-page'
+    var breadcrumbsLink = 'complex'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/complex.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Про комплекс
+    .intro 
+        .big-container 
+            .intro__title «PODIL PLAZA & RESIDENCE - 2» — це багатофункціональний престижний житловий комплекс преміум-класу, розташований у самому серці Подолу. 
+            .intro__desc Розкішне природне оточення біля підніжжя гори Щекавиця, статусне сусідство, ексклюзивна архітектура і дизайн, високоякісний сервіс — це правила життя у стилі преміум. Ваші правила! 
+    .architecture
+        .big-container 
+            .architecture__content 
+                .architecture__left
+                    +svg('logo')
+                    .architecture__left-wrap 
+                        .architecture__desc За кількістю історико-архітектурних пам’яток сучасний Поділ впевнено займає лідируючу позицію серед інших столичних районів. Незважаючи на появу нових сучасних об’єктів, Поділ зберіг свою чарівність та самобутність.
+                        .architecture__desc Сучасний Поділ - це основний культурний центр Києва, котрий приваблює городян і туристів старовинною архітектурою, історичними пам’ятками та богемною атмосферою.
+                .architecture__right 
+                    +img('/complex/2.jpg')
+    .complex-desc 
+        .big-container
+            .complex-desc__content 
+                .complex-desc__wrap
+                    +img('circle-decor.png')
+                    .complex-desc__title «PODIL PLAZA & RESIDENCE - 2» - це новий настрій класичного Подолу.
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,178 @@
+.complex-page {
+    .page__title {
+        margin-bottom: 20px;
+    }
+    background-color: #f0f0f0;
+
+    .btn-go-top {
+        display: none;
+    }
+
+    .intro {
+        position: relative;
+        min-height: 70vh;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        background: url('../images/complex/1.jpg') no-repeat center/cover;
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .big-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+            font-size: 26px;
+            line-height: 1.2em;
+            font-family: $forum;
+            max-width: 450px;
+
+            @include to(1440px) {
+                max-width: 400px;
+                font-size: 24px;
+            }
+        }
+
+        &__desc {
+            margin-left: 60px;
+            max-width: 350px;
+            color: #E8E6DF;
+
+            @include to(1440px) {
+                max-width: 290px;
+            }
+        }
+    }
+
+    .architecture {
+        padding: 70px 0;
+        position: relative;
+
+        .big-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            background: url('../images/complex/bg.png') no-repeat center/cover;
+        }
+
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 103px;
+            row-gap: 50px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__left {
+            display: flex;
+            align-items: flex-start;
+
+            svg {
+                margin-right: 64px;
+                min-width: 95px;
+                height: 88px;
+
+                @include to(1440px) {
+                    min-width: 90px;
+                    height: 83px;
+                }
+            }
+        }
+
+        &__right {
+            img {
+                object-fit: cover;
+            }
+        }
+
+        &__desc {
+            margin-bottom: 40px;
+        }
+    }
+
+    .complex-desc {
+        position: relative;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        background: url('../images/complex/3.jpg') no-repeat center/cover;
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            right: 0;
+            width: 70%;
+            background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+
+        .big-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        &__content {
+            color: #fff;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__wrap {
+            position: relative;
+            width: 420px;
+            height: 408px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include to(1440px) {
+                width: 400px;
+                height: 388px;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        &__title {
+            font-size: 26px;
+            font-family: $forum;
+            line-height: 1.2em;
+            max-width: 260px;
+            text-align: center;
+
+            @include to(1440px) {
+                font-size: 24px;
+            }
+        }
+    }
+}

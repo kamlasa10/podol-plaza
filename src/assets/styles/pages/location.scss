@@ -63,7 +63,7 @@
            overflow-y: scroll;
 
            @include to(1440px) {
-               width: 240px;
+               width: 250px;
            }
 
            &::-webkit-scrollbar-thumb {
@@ -110,6 +110,10 @@
                     left: 0;
                     fill: none;
                     transition: all .4s;
+
+                    @include to(1440px) {
+                        top: 1px;
+                    }
                 }
 
                 &--1 {

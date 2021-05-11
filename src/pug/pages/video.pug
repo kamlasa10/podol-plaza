@@ -1,0 +1,108 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Відео'
+    var id_page = 'video-page'
+    var class_page = 'vdeo-page'
+    var breadcrumbsLink = 'video'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/video.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Відео 
+        .video__list 
+          .video__item
+            .video__item-preview 
+              +img('/videos/1.jpg')
+              .video__item-play 
+                +img('circle-decor.png')
+                <svg width="78" height="74" viewBox="0 0 78 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_di)">
+                  <path d="M20 47.9068V18.0932C20 16.6419 21.4972 15.6738 22.8207 16.2693L55.947 31.1762C57.5194 31.8837 57.5194 34.1163 55.947 34.8238L22.8207 49.7307C21.4972 50.3262 20 49.3581 20 47.9068Z" fill="url(#paint0_linear)"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_di" x="0" y="0.0908203" width="77.1263" height="73.8182" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="10"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.788235 0 0 0 0 0.458824 0 0 0 0 0.2 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dy="-1"/>
+                  <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.966667 0 0 0 0 0.927835 0 0 0 0 0.588055 0 0 0 1 0"/>
+                  <feBlend mode="normal" in2="shape" result="effect2_innerShadow"/>
+                  </filter>
+                  <linearGradient id="paint0_linear" x1="20" y1="51" x2="61.7467" y2="48.8455" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FBBF65"/>
+                  <stop offset="0.14686" stop-color="#F2C37C"/>
+                  <stop offset="0.26016" stop-color="#F2CE7C"/>
+                  <stop offset="0.515428" stop-color="#FFE3A3"/>
+                  <stop offset="0.740421" stop-color="#F2CE7C"/>
+                  <stop offset="0.836515" stop-color="#F2C37C"/>
+                  <stop offset="1" stop-color="#FBBF65"/>
+                  </linearGradient>
+                  </defs>
+                  </svg>
+
+            .video__desc Назва для відео. Кожну прев’юшку для нього було б добре в ручну робити (підставляти фото), щоб сторінка гарно виглядала 
+          .video__item
+            .video__item-preview 
+              +img('/videos/2.jpg')
+              .video__item-play 
+                +img('circle-decor.png')
+                +svg('play-btn')
+            .video__desc Назва для відео
+          .video__item
+            .video__item-preview 
+              +img('/videos/1.jpg')
+              .video__item-play 
+                +img('circle-decor.png')
+                +svg('play-btn')
+            .video__desc Назва для відео. Кожну прев’юшку для нього було б добре в ручну робити (підставляти фото), щоб сторінка гарно виглядала 
+          .video__item
+            .video__item-preview 
+              +img('/videos/2.jpg')
+              .video__item-play 
+                +img('circle-decor.png')
+                +svg('play-btn')
+            .video__desc Назва для відео
+          .video__item
+            .video__item-preview 
+              +img('/videos/1.jpg')
+              .video__item-play 
+                +img('circle-decor.png')
+                +svg('play-btn')
+            .video__desc Назва для відео. Кожну прев’юшку для нього було б добре в ручну робити (підставляти фото), щоб сторінка гарно виглядала 
+          .video__item
+            .video__item-preview 
+              +img('/videos/2.jpg')
+              .video__item-play 
+                +img('circle-decor.png')
+                +svg('play-btn')
+            .video__desc Назва для відео
+                        
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
