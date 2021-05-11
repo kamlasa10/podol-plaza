@@ -16,9 +16,13 @@
             column-gap: 80px;
             align-items: flex-start;
             row-gap: 30px;
+            margin: 0 -15px;
         }
 
         &__item {
+            width: calc(50% - 35px);
+            margin: 0 15px;
+            margin-bottom: 30px;
             padding: 30px;
             background-color: #fff;
             border-radius: 5px;
