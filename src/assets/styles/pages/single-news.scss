@@ -22,6 +22,10 @@
             @include to(1440px) {
                 height: 425px;
             }
+
+            @include to(1125px) {
+                height: 355px;
+            }
         }
     
         &__back {
@@ -65,6 +69,10 @@
             background: #FFFFFF;
             box-shadow: 0px 100px 200px rgba(201, 117, 51, 0.1);
             border-radius: 5px;
+
+            @include to(1250px) {
+                padding-right: 50px;
+            }
         }
 
         &__date {

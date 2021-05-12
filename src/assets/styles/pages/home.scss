@@ -1,4 +1,8 @@
 #index-page {
+    .footer {
+      padding-top: 0;
+    }
+
     .hero {
         position: relative;
 
@@ -46,6 +50,7 @@
             line-height: 1.1em;
             max-width: 500px;
             margin-bottom: 32px;
+            font-family: $forum;
 
             @include to(1440px) {
                 font-size: 72px;
@@ -83,7 +88,7 @@
         content: "";
         position: absolute;
         top: 0;
-        left: 40px;
+        left: 0;
         right: 0;
         bottom: 0;
         background: url('../images/complex-name-bg.jpg') no-repeat center/cover;
@@ -126,6 +131,18 @@
         justify-content: space-between;
       }
 
+      .container {
+        @include to(1370px) {
+          max-width: 1170px;
+          margin-right: 50px;
+        }
+      }
+
+      &-info__item {
+        max-width: 430px;
+        margin-right: 66px;
+      }
+
       &__wrap {
         display: flex;
       }
@@ -140,11 +157,9 @@
 
       .about-complex__item:not(:last-child) {
         margin-right: 100px;
-      }
 
-      &-info {
-        &__item {
-          max-width: 430px;
+        @include to(1370px) {
+          margin-right: 85px;
         }
       }
     }
@@ -510,7 +525,7 @@
 
       @include to(1370px) {
         width: 117%;
-        top: -46px;
+        top: -33px;
       }
     }
   }
@@ -560,7 +575,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 40px;
+    left: 0;
     right: 0;
     bottom: 0;
     background: linear-gradient(180deg, rgba(240, 240, 240, 0) 0%, #F0F0F0 100%);

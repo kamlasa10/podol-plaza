@@ -382,11 +382,6 @@
       }
     }
 
-    @include to(1440px) {
-      width: 6px;
-      height: 6px;
-    }
-
     svg {
       position: relative;
       transform: rotate(-90deg) translateY(13px);
@@ -404,7 +399,7 @@
       }
 
       &.start-animate {
-        animation: offsettozero 12.1s linear forwards;
+        animation: offsettozero 12s linear forwards;
       }
     }
 

@@ -1,6 +1,9 @@
 @@include('./libs.js');
 
 document.addEventListener('DOMContentLoaded', () => {
+    $('.preloader').hide()
+
+	$(".ReactModal__Overlay").hide()
 	window.initCustomScroll = function () {
 		$(window).on('resize', () => {
 			if($(window).width() > 1025) {
@@ -41,6 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
 			  }, 1000)
 			}
 		  }).resize()
+
+		  const $header = $('.header')
+
+		  function animateScroll(offset) {
+			if(offset > 10) {
+				$header.addClass('move')
+			  } else {
+				$header.removeClass('move')
+			  }
+		  }
+
+		  if(window.locoScroll) {
+			  window.locoScroll.on('scroll', e => {
+				  animateScroll(e.delta.y)
+			  })
+
+			  return
+		  }
+
+		  document.addEventListener('scroll', e => {
+			  animateScroll(document.scrollTop)
+		  })
 	}
 
 	window.animateScrollTop = function () {
@@ -123,24 +148,46 @@ document.addEventListener('DOMContentLoaded', () => {
     (function() {
 	let hasThemeWhiteForHeader = false
 
+	const hideCustomCursor = (isOpenMenu) => {
+		try {
+			if(isOpenMenu) {
+				$('.js-gallery__slider-info').hide()
+			} else {
+				$('.js-gallery__slider-info').css('display', 'flex')
+			}
+		} catch(e) {}
+	}
+
     showPopupByType()
 		new window.Tabs(null, $('.js-gallery__tab-wrap'), 'active')
 		const currentLanguage = $('html').attr('lang')
+		const footerPhone = $('.js-footer-input')
 
         $('[name=phone]').each(function() {
             $(this).attr('placeholder', '+ (38) ___ - ___ - __')
             $(this).inputmask("+ (38) 999 - 999 - 99", { clearMaskOnLostFocus: false })
         })
 
+		footerPhone.attr('placeholder', '___ - ___ - __')
+		footerPhone.inputmask("999 - 999 - 99", { clearMaskOnLostFocus: false })
+
         $('.js-open-menu').on('click', e => {
             e.preventDefault()
+			const $logo = $('.header__logo img')[0]
 
-			if(hasThemeWhiteForHeader) $('.header').addClass('white')
+			if(hasThemeWhiteForHeader) {
+				$logo.src = './assets/images/logo-white.svg'
+				$('.header').addClass('white')
+				hasThemeWhiteForHeader = false
+			}
 			
 			if($('.header').hasClass('white') && !hasThemeWhiteForHeader) {
 				$('.header').removeClass('white')
+				$logo.src = './assets/images/logo.svg'
 				hasThemeWhiteForHeader = true
 			}
+
+			hideCustomCursor($('.header').hasClass('show-menu'))
 
             $('.header').toggleClass('show-menu')
             $('.js-menu').toggleClass('show')
@@ -168,17 +215,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		const msgWarnObj = {
             uk: {
                 email: 'Введіть коректний Email',
-                phone: 'Введіть коректний номер телефону',
+                phone: 'телефон повинен містити не менше 8 символів',
                 warn: "Це поле обов'язкове"
             },
             ru: {
                 email: 'Введите корректный Email',
-                phone: 'Введите корректный номер телефона',
+                phone: 'телефон повинен містити не менше 8 символів',
                 warn: 'Это поле обязательное'
             },
             en: {
                 email: 'Enter a valid Email',
-                phone: 'Enter the correct phone number',
+                phone: 'Phone must have not less 8 symbol',
                 warn: 'field is required'
             }
         }

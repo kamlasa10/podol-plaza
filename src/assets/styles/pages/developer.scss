@@ -67,8 +67,17 @@
                         }
                     }
 
+                    @include to(1440px) {
+                        padding-top: 92px;
+
+                        img {
+                          width: 139px;
+                          height: 60px;  
+                        }
+                    }
+
                     @include to(1370px) {
-                        padding-top: 112px;
+                        padding-top: 115px;
                     }
                 }
 

@@ -146,8 +146,9 @@
   }
 
   &__form {
+    display: grid;
+    grid-template-columns: 30% 70%;
     padding: 50px 0;
-    display: flex;
     justify-content: space-between;
     position: relative;
 
@@ -180,15 +181,18 @@
       font-size: 26px;
       line-height: 1em;
       color: $blue;
+      min-width: 337px;
       max-width: 337px;
 
       @include to(1440px) {
+        min-width: auto;
         font-size: 24px;
-        max-width: 250px;
+        min-width: 250px;
       }
 
       @include to(1180px) {
         margin-right: 40px;
+        min-width: auto;
       }
     }
 
@@ -197,20 +201,25 @@
       font-family: $forum;
       font-size: 66px;
       line-height: 1em;
-      color: $blue;
-      width: 62.5%;
+      color: #E8E6DF;
 
       @include to(1180px) {
         margin-right: 40px;
         font-size: 50px;
+        width: 100%;
       }
 
       @include placeholder {
-        color: #BBBEC2;
+        color: #E8E6DF;
       }
 
       @include to(1440px) {
         font-size: 64px;
+      }
+
+      @include to(1180px) {
+        font-size: 50px;
+        width: 100%;
       }
     }
 
@@ -219,6 +228,52 @@
       padding-left: 100px;
       padding-right: 100px;
       border-radius: 100px;
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-input-wrap {
+      position: relative;
+      width: 61%;
+      margin-left: 8px;
+      display: inline-flex;
+      flex-direction: column;
+
+      .popup__item-msg-warn {
+        position: absolute;
+        bottom: -5px;
+        transform: translateY(100%);
+      }
+    }
+
+    &-block {
+      width: 60.5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include to(1370px) {
+        width: 63.5%;
+      }
+
+      &-text {
+        font-family: $forum;
+        font-size: 66px;
+        line-height: 1em;
+        color: $blue;
+
+        @include to(1180px) {
+          font-size: 50px;
+        }
+      }
+
+      &.warn .popup__item-msg-warn {
+        opacity: 1;
+      }
     }
   }
 

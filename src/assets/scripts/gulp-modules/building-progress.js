@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     $('.building-gallery').toggleClass('show')
+    $('.building-gallery').toggleClass('js-gallery')
+    addListenerMouseTargetForNode($('.building-progress__top'), objWithMethodForEventMouse)
     initSlider()
   }
 

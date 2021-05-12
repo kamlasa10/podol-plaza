@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     isGallery = false
     document.onmousemove = null,
     document.onClick = null
-    console.log('rip onClick')
   }
 
   const prevCoord = document.documentElement.clientWidth / 1.8

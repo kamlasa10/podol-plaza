@@ -64,7 +64,11 @@ footer.footer
         .footer__form.footer-offset 
             .footer__form-title.medium-text Якщо у вас виникли запитання, залиште свій номер і ми передзвонимо вам:
             form.footer__form-wrap
-                input(type="text" name="phone").footer__form-input
+                div.footer__form-block
+                    .footer__form-block-text + (38)
+                    div.footer__form-input-wrap
+                        input(type="text" name="phone" data-required="true").footer__form-input.js-footer-input
+                        .popup__item-msg-warn              
                 button(type="submit").btn.footer__form-btn.btn--res Надіслати
         .footer__copyright.footer-offset  
             .footer__copyright-text © Усі права захищено <br>PODIL PLAZA & RESIDENCE - 2

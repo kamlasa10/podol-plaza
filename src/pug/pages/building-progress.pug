@@ -22,9 +22,10 @@ block head
 block scripts
   script(defer src='./assets/scripts/index.bundle.js')
   script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/gallery.js')
   script(defer src='./assets/scripts/building-progress.js')
 block content
-    .building-gallery
+    .building-gallery.js-building-gallery
       .gallery__slider-info.js-gallery__slider-info 
         span.gallery__slider-info-current 2/
         span.gallery__slider-info-total 5
