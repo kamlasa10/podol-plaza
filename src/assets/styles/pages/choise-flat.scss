@@ -18,6 +18,10 @@
                 padding-right: 0;
             }
 
+            @include to(1200px) {
+                justify-content: center;
+            }
+
             &-block {
                 display: flex;
                 flex-wrap: wrap;
@@ -31,15 +35,18 @@
                     margin-right: 30px;
                 }
 
+                @include to(1200px) {
+                    width: 100%;
+
+                    &:not(:last-child) {
+                        margin-bottom: 26px;
+                    }
+                }
+
                 
                 @include to(1100px) {
                     &:not(:last-child) {
                         margin-bottom: 30px;
-                    }
-
-                    .choise-flat__filters-item:not(:last-child) {
-                        margin-right: 0;
-                        justify-content: center;
                     }
                 }
             }

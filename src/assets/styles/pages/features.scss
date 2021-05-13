@@ -39,8 +39,19 @@
                 width: 100%;
                 margin-bottom: 60px;
                 height: 395px;
-
                 position: relative;
+
+                @include to(1440px) {
+                    height: 350px;
+                }
+
+                @include to(1250px) {
+                    height: 320px;
+                }
+
+                @include to(1180px) {
+                    height: 300px;
+                }
                 
                 img {
                     object-fit: cover;
@@ -138,7 +149,6 @@
         &__block {
             margin-bottom: 65px;
             position: relative;
-            margin-left: 40px;
             height: 60vh;
             display: flex;
             align-items: center;

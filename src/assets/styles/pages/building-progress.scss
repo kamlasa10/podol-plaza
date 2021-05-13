@@ -151,13 +151,9 @@
             margin-bottom: 50px;
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(47%, 47%));
+            grid-template-columns: repeat(2, minmax(280px, 500px));
             column-gap: 50px;
             row-gap: 29px;
-
-            @include to(1370px) {
-                grid-template-columns: repeat(auto-fit, minmax(46%, 46%));
-            }
 
             &-item {
                 cursor: pointer;
@@ -280,7 +276,8 @@
         &__top {
             position: absolute;
             z-index: 5;
-            top: 140px;
+            top: 100px;
+            padding-top: 40px;
             width: 100%;
             color: #fff;
 

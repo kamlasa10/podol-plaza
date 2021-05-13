@@ -24,21 +24,21 @@ block scripts
   script(defer src='./assets/scripts/index.js')
   script(defer src='./assets/scripts/home.js')
 block content
-  section.hero 
+  section.hero
     .swiper-container.js-hero-slider 
       .hero__slider.swiper-wrapper
         .hero__slide.swiper-slide(style="background-image: url('./assets/images/hero-bg.jpg')")
           .big-container 
             .hero__title Podil Plaza & Residence 2
-            a(href="#" class="btn hero__btn btn--res") Дізнатися більше
+            a(href="#complex-name" class="btn hero__btn btn--res animate-link") Дізнатися більше
         .hero__slide.swiper-slide(style="background-image: url('./assets/images/hero-bg.jpg')")
           .big-container 
             .hero__title Podil Plaza & Residence 2
-            a(href="#" class="btn hero__btn btn--res") Дізнатися більше
+            a(href="#complex-name" class="btn hero__btn btn--res animate-link") Дізнатися більше
         .hero__slide.swiper-slide(style="background-image: url('./assets/images/hero-bg.jpg')")
           .big-container 
             .hero__title Podil Plaza & Residence 2
-            a(href="#" class="btn hero__btn btn--res") Дізнатися більше
+            a(href="#complex-name" class="btn hero__btn btn--res animate-link") Дізнатися більше
       .hero__slider-pagination.slider-pagination.js-slider-pagination
     .hero__bottom 
       .nav__footer 
@@ -54,7 +54,7 @@ block content
                         +svg('metro')
                     .nav__footer-item-content
                         .nav__footer__text Контрактова площа
-  section.complex-name.section-padding
+  section.complex-name.section-padding(id="complex-name" data-scroll-call="bottom" data-scroll-direction="horizontal" data-scroll-speed="20").section
     .container
       .complex-name__content
         .complex-name__wrap
@@ -76,7 +76,7 @@ block content
           .container 
             .panorama__wrap
               h3.panorama__title.section-title Панорама з вікон житлового комплексу
-              a(href="#").panorama__btn.btn Показати на Google Maps
+              a(href="https://www.google.com.ua/maps/place/Podil+Plaza+%26+Residence/@50.4623238,30.4987173,17z/data=!4m5!3m4!1s0x40d4ce6f20e7438b:0xf01013acc3e6626c!8m2!3d50.4632151!4d30.5039694?hl=ru" target="_blank").panorama__btn.btn Показати на Google Maps
   section.about-complex.section-padding.about-complex-info
     .container
       .about-complex__content
@@ -85,7 +85,7 @@ block content
         .about-complex__wrap
           p.about-complex__item Сучасний Поділ - це основний культурний центр Києва, котрий приваблює городян і туристів старовинною архітектурою, історичними пам’ятками та богемною атмосферою.
           p.about-complex__item За кількістю історико-архітектурних пам’яток сучасний Поділ впевнено займає лідируючу позицію серед інших столичних районів. Незважаючи на появу нових сучасних об’єктів, Поділ зберіг свою чарівність та самобутність.
-  section.floor.section-padding
+  section.floor.section-padding.section
     .container
       .floor__content
         h3.floor__title.section-title Квартири
@@ -135,14 +135,14 @@ block content
             .features__img.btn-round
               +img('ui/features-icon8.svg')
             p.features__desc Наявність дворівневого підземного паркінгу.
-  section.section-padding.office-block
+  section.section-padding.office-block.section
     .container
       .office-block__content
         .office-block__wrap
           h3.section-title.office-block__title Торгові та офісні приміщення
           p.office-block__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
           a(href="#" class="btn office-block__btn") Обрати приміщення
-  section.section-padding.office-block.parking
+  section.section-padding.office-block.parking.section
     .container
       .office-block__content
         .office-block__wrap
@@ -261,7 +261,7 @@ block content
                 .btn-round.contacts__item-icon.contacts__item-icon--1
                   +svg('mark')
                 .contacts__item-text Київ, Шевченківський район, вул. Глибочицька, 77-79
-              a(href="#" target="_blank").contacts__item-btn.btn Показати на Google Maps
+              a(href="https://www.google.com.ua/maps/place/Podil+Plaza+%26+Residence/@50.4623238,30.4987173,17z/data=!4m5!3m4!1s0x40d4ce6f20e7438b:0xf01013acc3e6626c!8m2!3d50.4632151!4d30.5039694?hl=ru" target="_blank").contacts__item-btn.btn Показати на Google Maps
               .contacts__item-small-text Перегляд об’єкту (для покупців) триває щоденно за попередньою згодою з відділом продажів
             .contacts__item
               .contacts__item-title Відділ продажів:

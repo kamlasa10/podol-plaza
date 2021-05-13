@@ -2,7 +2,7 @@ extends ../layout/main
 block variable
 	-
 		var title_page = 'error'
-		var id_page = 'id-page-error'
+		var id_page = 'page-error'
 		var class_page = 'class-page-error'
 	
 block meta
@@ -14,16 +14,15 @@ block scripts
 	script(defer src='./assets/scripts/vendors.bundle.js')
 	script(defer src='./assets/scripts/index.bundle.js')
 	script(defer src='./assets/scripts/index.js')
+	script(defer src='./assets/scripts/404.js')
 
 block content
 	section(class="page404-wrap inner-page")
 		div(class="page404")
-			h1(class="page404__title title") 404
+			h1(class="page404__title title page__title") 404
 			p(class="page404__subtitle") Что-то пошло не так, страница не найдена
 			div(class="link-wrap")
-				a(href="/").btn--with-icon.page404__link На главную
-					span
-					+svg('round')
+				a(href="/").btn--with-icon.page404__link.btn На главную
 
 block footer
 	footer.footer

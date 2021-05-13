@@ -71,4 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   })
+
+  const animateObj = {}
+
+  function createScrollTrigger(opts, fn, scrub = true) {
+    ScrollTrigger.create({
+      scrub,
+      animation: fn(),
+      ...opts,
+      scroller: $(window).width() > 1025 ? "[data-scroll-container]" : ''
+    })
+  }
 })

@@ -1,7 +1,7 @@
 @@include('./libs.js');
 
 document.addEventListener('DOMContentLoaded', () => {
-    $('.preloader').hide()
+	$('.preloader').hide()
 
 	$(".ReactModal__Overlay").hide()
 	window.initCustomScroll = function () {
@@ -80,6 +80,20 @@ document.addEventListener('DOMContentLoaded', () => {
 			$('html, body').stop().animate({scrollTop: 0}, 1000)
 		})
 	}
+
+	$('.animate-link').each(function() {
+		$(this).on('click', e => {
+			e.preventDefault()
+			const hash = $(this).attr("href")
+			if(window.locoScroll) {
+				const el = $(hash)[0]
+				window.locoScroll.scrollTo(el)
+				return
+			}
+
+			$('html,body').animate({scrollTop: $(hash).offset().top})
+		})
+	})
 
 	// functions
 

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 
-  function stopMoveInCursor(e) {
+  window.stopMoveInCursor = function (e) {
     e.stopPropagation()
     $('.js-gallery').css({ cursor: 'default' })
     $('.js-gallery__slider-info').css({ opacity: 0 })
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentCord
   let isFirstForGallery = false
 
-  function startMoveInCursor(e) {
+  window.startMoveInCursor = function (e) {
     const customCursor = $('.js-gallery__slider-info')
     let directionName = ''
         
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function addListenerMouseTargetForNode($node, objWithMethod = {}) {
+  window.addListenerMouseTargetForNode = function ($node, objWithMethod = {}) {
     if (!$node || !Object.keys(objWithMethod).length) {
       throw new Error('you cant use method without required params')
     }
@@ -99,15 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
     $node.on('mouseleave', startMoveInCursor)
   }
 
-  const objWithMethodForEventMouse = {
+  window.objWithMethodForEventMouse = {
     startMoveInCursor, 
     stopMoveInCursor
   }
 
-  addListenerMouseTargetForNode($('.js-gallery'), objWithMethodForEventMouse)
-  addListenerMouseTargetForNode($('.header'), objWithMethodForEventMouse)
-  addListenerMouseTargetForNode($('.js-gallery__controls'), objWithMethodForEventMouse)
-  addListenerMouseTargetForNode($('.gallery__wrapper-top'), objWithMethodForEventMouse)
-  addListenerMouseTargetForNode($('.gallery__tabs'), objWithMethodForEventMouse)
-  $('.footer').on('mouseenter', stopMoveInCursor)
+  window.addListenerMouseTargetForNode($('.js-gallery'), window.objWithMethodForEventMouse)
+  window.addListenerMouseTargetForNode($('.header'), window.objWithMethodForEventMouse)
+  window.addListenerMouseTargetForNode($('.js-gallery__controls'), window.objWithMethodForEventMouse)
+  window.addListenerMouseTargetForNode($('.gallery__wrapper-top'), window.objWithMethodForEventMouse)
+  window.addListenerMouseTargetForNode($('.gallery__tabs'), window.objWithMethodForEventMouse)
+  $('.footer').on('mouseenter', window.stopMoveInCursor)
 })

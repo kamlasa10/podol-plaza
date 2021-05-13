@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
           modal.addClass("ReactModal__Overlay--video")
           document.body.style.overflowY = 'hidden'
           document.body.style.margingRight = '17px'
-          modal.show(300)
+          modal.show()
 
           videoContainer.appendChild(blockWithVideo)
 
@@ -52,8 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
       let player;
       window.YT.ready(function() {
           player = new YT.Player(whereSelector, {
-              height: "390",
-              width: "640",
               videoId: videId,
               events: {
                   onReady: onPlayerReady,

@@ -135,6 +135,7 @@
         height: 42px;
         margin-right: 15px;
         padding-right: 15px;
+        object-fit: contain;
         border-right: 1px solid #D9DBDF;
 
         @include to(1440px) {
@@ -148,16 +149,16 @@
   &__form {
     display: grid;
     grid-template-columns: 30% 70%;
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     justify-content: space-between;
     position: relative;
 
-    &-wrap {
-      @include to(1250px) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+    &-f {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     &::before,
@@ -228,12 +229,6 @@
       padding-left: 100px;
       padding-right: 100px;
       border-radius: 100px;
-    }
-
-    &-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
     &-input-wrap {

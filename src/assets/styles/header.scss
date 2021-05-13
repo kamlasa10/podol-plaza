@@ -206,6 +206,10 @@
 
   &__btn {
     margin-right: 35px;
+
+    @include to(1200px) {
+      display: none;
+    }
   }
 
   .btn-round {

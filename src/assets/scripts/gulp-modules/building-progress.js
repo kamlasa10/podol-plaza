@@ -80,10 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('.building-gallery').toggleClass('show')
     $('.building-gallery').toggleClass('js-gallery')
-    addListenerMouseTargetForNode($('.building-progress__top'), objWithMethodForEventMouse)
+    addListenerMouseTargetForNode($('.building-gallery__top'), objWithMethodForEventMouse)
     initSlider()
   }
-
   new window.Tabs(null, $('.js-building-progress__tab-wrap'), 'active')
 
   $('.js-gallery-close').on('click', (e) => {

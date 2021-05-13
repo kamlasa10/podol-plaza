@@ -52,7 +52,7 @@
         }
 
         &__list {
-            display: grid;
+            column-count: 2;
             grid-template-columns: repeat(auto-fit, minmax(45.5%, 45%));
             column-gap: 80px;
             flex-wrap: wrap;
