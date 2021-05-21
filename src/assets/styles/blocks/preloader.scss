@@ -9,6 +9,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.loading-data {
+      opacity: 0.5;
+    }
 }
 
 .lds-ring {

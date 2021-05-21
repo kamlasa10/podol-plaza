@@ -27,11 +27,12 @@ block content
     .big-container.gallery__wrapper-top
         include ../includes/breadcrumbs.pug
         .page__title Про комплекс
-    .intro 
+    .intro(data-section="first").with-animate-bg 
+        .complex-name__bg
         .big-container 
             .intro__title «PODIL PLAZA & RESIDENCE - 2» — це багатофункціональний престижний житловий комплекс преміум-класу, розташований у самому серці Подолу. 
             .intro__desc Розкішне природне оточення біля підніжжя гори Щекавиця, статусне сусідство, ексклюзивна архітектура і дизайн, високоякісний сервіс — це правила життя у стилі преміум. Ваші правила! 
-    .architecture
+    .architecture(data-section="second")
         .big-container 
             .architecture__content 
                 .architecture__left
@@ -41,7 +42,8 @@ block content
                         .architecture__desc Сучасний Поділ - це основний культурний центр Києва, котрий приваблює городян і туристів старовинною архітектурою, історичними пам’ятками та богемною атмосферою.
                 .architecture__right 
                     +img('/complex/2.jpg')
-    .complex-desc 
+    .complex-desc.with-animate-bg(data-section="three") 
+        .complex-name__bg
         .big-container
             .complex-desc__content 
                 .complex-desc__wrap

@@ -52,8 +52,7 @@
         justify-content: center;
         flex-grow: 1;
         
-        &::before,
-        &::after {
+        .nav__menu-decor {
             content: "";
             position: absolute;
             top: 0;
@@ -62,7 +61,7 @@
             background: linear-gradient(270deg, rgba(235, 199, 140, 0) 0%, #EBC78C 48.44%, rgba(235, 199, 140, 0) 100%);
         }
 
-        &::after {
+        .nav__menu-decor-bottom {
             top: auto;
             bottom: 0;
         }
@@ -141,7 +140,7 @@
             display: flex;
             justify-content: space-between;
 
-            &::before {
+            .nav__menu-decor-top {
                 content: "";
                 position: absolute;
                 top: -50px;

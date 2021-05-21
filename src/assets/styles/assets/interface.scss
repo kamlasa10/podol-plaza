@@ -284,6 +284,7 @@
   font-size: 20px;
   font-weight: 400;
   font-family: $forum;
+  text-decoration: none;
   transition: all .4s;
   box-shadow: 0px 4px 20px rgba(201, 117, 51, 0.25), inset 0px -1px 0px #F6ED96;
   transition: all .4s;
@@ -624,5 +625,28 @@
 
   @include to(1440px) {
     font-size: 10px;
+  }
+}
+
+.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.with-animate-bg {
+  overflow: hidden;
+  position: relative;
+
+  .complex-name__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .container,
+  .big-container {
+    position: relative;
+    z-index: 3;
   }
 }

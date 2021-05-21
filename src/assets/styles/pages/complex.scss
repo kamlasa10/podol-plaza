@@ -1,4 +1,4 @@
-.complex-page {
+#complex-page {
     .page__title {
         margin-bottom: 20px;
     }
@@ -14,7 +14,10 @@
         display: flex;
         color: #fff;
         align-items: center;
-        background: url('../images/complex/1.jpg') no-repeat center/cover;
+        
+        .complex-name__bg {
+            background: url('../images/complex/1.jpg') no-repeat center/cover;
+        }
 
         &::after {
             content: "";
@@ -24,11 +27,6 @@
             background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
             top: 0;
             left: 0;
-            z-index: 0;
-        }
-
-        .big-container {
-            position: relative;
             z-index: 1;
         }
 
@@ -118,7 +116,10 @@
         min-height: 70vh;
         display: flex;
         align-items: center;
-        background: url('../images/complex/3.jpg') no-repeat center/cover;
+
+        .complex-name__bg {
+            background: url('../images/complex/3.jpg') no-repeat center/cover;
+        }
 
         &::after {
             content: "";
@@ -128,11 +129,6 @@
             width: 70%;
             background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
             transform: matrix(-1, 0, 0, 1, 0, 0);
-        }
-
-        .big-container {
-            position: relative;
-            z-index: 1;
         }
 
         &__content {

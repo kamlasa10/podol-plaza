@@ -4,218 +4,225 @@
     .page__title {
         margin-bottom: 20px;
     }
+}
 
-    .choise-flat {
-        padding-bottom: 50px;
-        &__filters {
-            margin-bottom: 30px;
-            padding-right: 120px;
+.choise-flat {
+    padding-bottom: 50px;
+    &__filters {
+        margin-bottom: 30px;
+        padding-right: 120px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include to(1280px) {
+            padding-right: 0;
+        }
+
+        @include to(1200px) {
+            justify-content: center;
+        }
+
+        &-block {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
+            align-items: center;
 
-            @include to(1280px) {
-                padding-right: 0;
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            .choise-flat__filters-item:not(:last-child) {
+                margin-right: 30px;
             }
 
             @include to(1200px) {
-                justify-content: center;
-            }
-
-            &-block {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
+                width: 100%;
 
                 &:not(:last-child) {
-                    margin-right: 30px;
-                }
-
-                .choise-flat__filters-item:not(:last-child) {
-                    margin-right: 30px;
-                }
-
-                @include to(1200px) {
-                    width: 100%;
-
-                    &:not(:last-child) {
-                        margin-bottom: 26px;
-                    }
-                }
-
-                
-                @include to(1100px) {
-                    &:not(:last-child) {
-                        margin-bottom: 30px;
-                    }
+                    margin-bottom: 26px;
                 }
             }
 
-            &-btn {
-                position: relative;
-                min-height: 50px;
-                display: inline-flex;
-                font-family: $forum;
-                font-size: 20px;
-                align-items: center;
-                justify-content: center;
-                padding: 0 15px;
-                background: #FFFFFF;
-                transition: all .4s;
-                box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.25);
-
-                @include to(1440px) {
-                    font-size: 18px;
-                }
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    opacity: 0;
-                    z-index: -1;
-                    transition: all .4s;
-                    background: linear-gradient(87.34deg, #FBBF65 0%, #F2C37C 14.69%, #F2CE7C 26.02%, #FFE3A3 51.54%, #F2CE7C 74.04%, #F2C37C 83.65%, #FBBF65 100%);
-                    box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.25), inset 0px -1px 0px #F6ED96;
-                }
-
-                &.choison {
-                    background-color: transparent;
-
-                    &::before {
-                        opacity: 1;
-                    }
-                }
-
-                &:hover {
-                    transform: scale(0.9);
-                }
-            }
             
-            &-title {
-               margin-right: 20px;
-               font-size: 20px;
-               line-height: 1em;
-               font-family: $forum;
-               
-               @include to(1440px) {
-                   font-size: 18px;
-               }
-            }
-
-            &-item {
-                display: flex;
-                flex-wrap: wrap;
-            }
-
-            .round-left {
-                border-radius: 25px 0px 0px 25px;
-
-                &::before {
-                    border-radius: 25px 0px 0px 25px;
-                }
-            }
-
-            .round-right {
-                border-radius: 0px 25px 25px 0px;
-
-                &::before {
-                    border-radius: 0px 25px 25px 0px; 
-                }
-            }
-        }
-
-        &__list {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(230px, 1fr));
-            column-gap: 22px;
-            row-gap: 22px;
-        }
-
-        &__item {
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            padding: 20px 33px 40px;
-            padding-right: 77px;
-            background: #FFFFFF;
-            border-radius: 5px;
-            transition: all .4s;
-
-            @include to(1280px) {
-                padding-right: 33px;
-            }
-
             @include to(1100px) {
-                padding: 20px 20px 30px;
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &-btn {
+            position: relative;
+            min-height: 50px;
+            display: inline-flex;
+            font-family: $forum;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+            padding: 0 15px;
+            color: #000;
+            text-decoration: none;
+            background: #FFFFFF;
+            transition: all .4s;
+            box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.25);
+
+            @include to(1440px) {
+                font-size: 18px;
             }
 
-            img {
-                width: 100%;
-                margin: 0 auto;
-                height: auto;
-                padding-left: 44px;
-                margin-bottom: 11px;
-                object-fit: contain;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                z-index: -1;
                 transition: all .4s;
+                background: linear-gradient(87.34deg, #FBBF65 0%, #F2C37C 14.69%, #F2CE7C 26.02%, #FFE3A3 51.54%, #F2CE7C 74.04%, #F2C37C 83.65%, #FBBF65 100%);
+                box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.25), inset 0px -1px 0px #F6ED96;
+            }
 
-                @include to(1280px) {
-                    padding-left: 30px;
-                    padding-right: 30px;
+            &.choison {
+                background-color: transparent;
+
+                &::before {
+                    opacity: 1;
                 }
             }
 
             &:hover {
-                box-shadow: 0px 20px 80px rgba(201, 117, 51, 0.15);
-
-                img {
-                    transform: scale(1.1);
-                }
+                transform: scale(0.9);
             }
         }
-
-        &__wrap {
-            margin-top: auto;
+        
+        &-title {
+           margin-right: 20px;
+           font-size: 20px;
+           line-height: 1em;
+           font-family: $forum;
+           
+           @include to(1440px) {
+               font-size: 18px;
+           }
         }
 
-        &__title {
-            margin-bottom: 23px;
-            font-size: 26px;
-            line-height: 1em;
-            color: $black;
-            text-align: center;
-            font-family: $forum;
-
-            @include to(1440px) {
-                font-size: 24px;
-            }
-        }
-
-        &__block {
-            color: $black;
+        &-item {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
-        &__value {
-            width: 20%;
+        .round-left {
+            border-radius: 25px 0px 0px 25px;
 
-            @include to(1370px) {
-                width: 23%;
+            &::before {
+                border-radius: 25px 0px 0px 25px;
             }
         }
 
-        &__btn {
-            margin-top: 20px;
-            padding: 0;
-            width: calc(100% + 42px);
+        .round-right {
+            border-radius: 0px 25px 25px 0px;
 
-            @include to(1280px) {
-                width: 100%;
+            &::before {
+                border-radius: 0px 25px 25px 0px; 
             }
         }
     }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(230px, 1fr));
+        column-gap: 22px;
+        row-gap: 22px;
+    }
+
+    &__item {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 33px 40px;
+        padding-right: 50px;
+        background: #FFFFFF;
+        border-radius: 5px;
+        transition: all .4s;
+
+        @include to(1280px) {
+            padding-right: 33px;
+        }
+
+        @include to(1100px) {
+            padding: 20px 20px 30px;
+        }
+
+        img {
+            width: 100%;
+            margin: 0 auto;
+            height: auto;
+            padding-left: 0;
+            height: 185px;
+            margin-bottom: 14px;
+            object-fit: contain;
+            transition: all .4s;
+
+            @include to(1280px) {
+                padding: 0;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 20px 80px rgba(201, 117, 51, 0.15);
+
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__wrap {
+        margin-top: auto;
+    }
+
+    &__title {
+        margin-bottom: 23px;
+        font-size: 26px;
+        line-height: 1em;
+        color: $black;
+        text-align: center;
+        font-family: $forum;
+
+        @include to(1440px) {
+            font-size: 24px;
+        }
+    }
+
+    &__block {
+        color: $black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__value {
+        width: 30%;
+
+        // @include to(1370px) {
+        //     width: 33%;
+        // }
+    }
+
+    &__btn {
+        margin-top: 20px;
+        padding: 0;
+        width: calc(100% + 15px);
+
+        @include to(1280px) {
+            width: 100%;
+        }
+    }
+}
+
+.choise-filter-status-search {
+    display: none;
 }

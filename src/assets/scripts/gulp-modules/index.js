@@ -4,6 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.preloader').hide()
 
 	$(".ReactModal__Overlay").hide()
+
+	window.animateBg = function(blockName) {
+        return () => {
+            const tl = gsap.timeline()
+            tl.fromTo(`${blockName} .complex-name__bg`, {
+            scale: 1.3
+            }, {
+            scale: 1
+            })
+
+            return tl
+        }
+    }
+
+	window.createScrollTrigger = function(opts, fn, scrub = true) {
+        ScrollTrigger.create({
+          scrub,
+          animation: fn(),
+          immediateRender: scrub && false,
+          ...opts,
+          scroller: $(window).width() > 1025 ? "[data-scroll-container]" : '',
+        })
+      }
+
 	window.initCustomScroll = function () {
 		$(window).on('resize', () => {
 			if($(window).width() > 1025) {
@@ -176,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		new window.Tabs(null, $('.js-gallery__tab-wrap'), 'active')
 		const currentLanguage = $('html').attr('lang')
 		const footerPhone = $('.js-footer-input')
+		let menuTl
 
         $('[name=phone]').each(function() {
             $(this).attr('placeholder', '+ (38) ___ - ___ - __')
@@ -188,20 +213,64 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.js-open-menu').on('click', e => {
             e.preventDefault()
 			const $logo = $('.header__logo img')[0]
+			menuTl = gsap.timeline()
+
+			gsap.fromTo('.nav__menu-decor', {
+				width: 0
+			}, {
+				width: '100%',
+				duration: 1.6
+			})
+
+			menuTl.fromTo('.nav__left', {
+				y: 35,
+				opacity: 0
+			}, {
+				opacity: 1,
+				y: 0,
+				duration: 1
+			})
+			.fromTo('.nav__right-block', {
+				y: 35,
+				opacity: 0
+			}, {
+				stagger: 0.2,
+				y: 0,
+				opacity: 1,
+				duration: 1
+			}, 0)
 
 			if(hasThemeWhiteForHeader) {
-				$logo.src = './assets/images/logo-white.svg'
+				$logo.src = './wp-content/themes/podolplaza/assets/images/logo-white.svg'
 				$('.header').addClass('white')
 				hasThemeWhiteForHeader = false
 			}
 			
 			if($('.header').hasClass('white') && !hasThemeWhiteForHeader) {
 				$('.header').removeClass('white')
-				$logo.src = './assets/images/logo.svg'
+				$logo.src = './wp-content/themes/podolplaza/assets/images/logo.svg'
 				hasThemeWhiteForHeader = true
 			}
 
 			hideCustomCursor($('.header').hasClass('show-menu'))
+
+			if($('.header').hasClass('show-menu')) {
+				menuTl.clear()
+				$('.burger-btn__text').text('Меню')
+
+				if(window.locoScroll) {
+					window.locoScroll.start()
+				} else {
+					document.body.style.overflow = 'visible'
+				}
+			} else {
+				if(window.locoScroll) {
+					window.locoScroll.stop()
+				} else {
+					document.body.style.overflow = 'hidden'
+				}
+				$('.burger-btn__text').text('Закрити')
+			}
 
             $('.header').toggleClass('show-menu')
             $('.js-menu').toggleClass('show')
@@ -218,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(document).on('click', e => {
 			if(e.target === $('.overlay')[0]) {
 				hidePopup()
+				menuTl.clear()
 			}
 		})
 

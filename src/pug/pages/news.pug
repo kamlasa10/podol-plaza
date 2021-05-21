@@ -113,16 +113,14 @@ block content
                 .pagination.news__pagination
                     a(href="#").pagination__prev.pagination__arrow
                         +svg('arrow')
-                    ul.pagination__list 
-                        li.pagination__item 
-                            a(href="#").pagination__link.pagination__link--active 1
-                        li.pagination__item 
-                            a(href="#").pagination__link 2
-                        li.pagination__item 
+                    .pagination__list 
+                        .pagination__item.pagination__link--active.pagination__link 1
+                        .pagination__item.pagination__link  2
+                        .pagination__item 
                             a(href="#").pagination__link 3
-                        li.pagination__item 
+                        .pagination__item 
                             a(href="#").pagination__link 4
-                        li.pagination__item 
+                        .pagination__item 
                             a(href="#").pagination__link 10
                     a(href="#").pagination__next.pagination__arrow
                         +svg('arrow')

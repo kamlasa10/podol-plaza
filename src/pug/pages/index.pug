@@ -54,14 +54,15 @@ block content
                         +svg('metro')
                     .nav__footer-item-content
                         .nav__footer__text Контрактова площа
-  section.complex-name.section-padding(id="complex-name" data-scroll-call="bottom" data-scroll-direction="horizontal" data-scroll-speed="20").section
+  section.complex-name.section-padding(id="complex-name" data-section="first" data-scroll-delay="15" data-scroll-call="bottom" data-scroll-direction="horizontal" data-scroll-speed="5").section
+    .complex-name__bg
     .container
       .complex-name__content
         .complex-name__wrap
           p.complex-name__desc Назва комплексу — не просто гарне поєднання слів.
           p.complex-name__desc Це відображення особливого статусу та способу життя.
 
-  section.about-complex.section-padding
+  section.about-complex.section-padding(data-section="second")
     .container
       .about-complex__content
         .about-complex__item
@@ -69,7 +70,7 @@ block content
         .about-complex__wrap
           p.about-complex__item «PODIL PLAZA & RESIDENCE - 2» — це багатофункціональний престижний житловий комплекс преміум-класу, розташований у самому серці Подолу.
           p.about-complex__item Розкішне природне оточення біля підніжжя гори Щекавиця, статусне сусідство, ексклюзивна архітектура і дизайн, високоякісний сервіс — це правила життя у стилі преміум. Ваші правила!.
-  section.section-padding.panorama 
+  section.section-padding.panorama(data-section="three") 
       .panorama__content 
         +img('panorama-bg.jpg')
         .panorama__info 
@@ -78,20 +79,21 @@ block content
               h3.panorama__title.section-title Панорама з вікон житлового комплексу
               a(href="https://www.google.com.ua/maps/place/Podil+Plaza+%26+Residence/@50.4623238,30.4987173,17z/data=!4m5!3m4!1s0x40d4ce6f20e7438b:0xf01013acc3e6626c!8m2!3d50.4632151!4d30.5039694?hl=ru" target="_blank").panorama__btn.btn Показати на Google Maps
   section.about-complex.section-padding.about-complex-info
-    .container
+    .container(data-section="four")
       .about-complex__content
         .about-complex-info__item
           h3.about-complex__title.section-title «PODIL PLAZA & RESIDENCE - 2» - це новий настрій класичного Подолу.
         .about-complex__wrap
           p.about-complex__item Сучасний Поділ - це основний культурний центр Києва, котрий приваблює городян і туристів старовинною архітектурою, історичними пам’ятками та богемною атмосферою.
           p.about-complex__item За кількістю історико-архітектурних пам’яток сучасний Поділ впевнено займає лідируючу позицію серед інших столичних районів. Незважаючи на появу нових сучасних об’єктів, Поділ зберіг свою чарівність та самобутність.
-  section.floor.section-padding.section
+  section.floor.section-padding.section(data-section="five")
+    .complex-name__bg
     .container
       .floor__content
         h3.floor__title.section-title Квартири
         p.floor__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
         a(href="#").btn.floor__btn Обрати квартиру
-  section.features.section-padding
+  section.features.section-padding(data-section="six")
     .container
       .features__top
         h3.features__title.section-title Переваги
@@ -135,21 +137,23 @@ block content
             .features__img.btn-round
               +img('ui/features-icon8.svg')
             p.features__desc Наявність дворівневого підземного паркінгу.
-  section.section-padding.office-block.section
+  section.section-padding.office-block.section(data-section="seven")
+    .complex-name__bg
     .container
       .office-block__content
         .office-block__wrap
           h3.section-title.office-block__title Торгові та офісні приміщення
           p.office-block__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
           a(href="#" class="btn office-block__btn") Обрати приміщення
-  section.section-padding.office-block.parking.section
+  section.section-padding.parking.section(data-section="eight")
+    .complex-name__bg
     .container
       .office-block__content
         .office-block__wrap
           h3.section-title.office-block__title Паркінг
           p.office-block__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
           a(href="#" class="btn office-block__btn") Дізнатися більше
-  section.section-padding.builder
+  section.section-padding.builder(data-section="nine")
     .container
       .builder__content
         .builder__left
@@ -158,7 +162,7 @@ block content
           h3.section-title.builder__title Забудовник
           p.builder__intro STATUS GROUP — стабільна і перспективна компанія, яка працює з 2005 року і представляє нове покоління в будівельному бізнесі, де стиль роботи базується на інноваційних рішеннях, величезному практичному досвіді і прагненні до досконалості.
           p.builder__desc Компанія STATUS GROUP здійснює функції забудовника, замовника, інвестора, генерального підрядника і девелопера. Усі наші проекти – це новий формат житлової нерухомості з унікальною архітектурою, безпечною та упорядкованою територією і власною соціальною інфраструктурою, в яких враховані всі потреби покупців.
-  section.objects.section-padding
+  section.objects.section-padding(data-section="ten")
     .container
       .object__decor
         +img('decor-section.svg')
@@ -213,7 +217,7 @@ block content
                 .objects__info.objects__info--2
                   +svg('mark-fill')
                   span вул. Центральна 19
-  section.section-padding.team
+  section.section-padding.team(data-section="eleven")
     .container
       .features__top
         h3.features__title.section-title Наша команда
@@ -249,7 +253,7 @@ block content
             .team__img
               +img('team/6.jpg')
             .team__name Здоренко Марина
-  section.section-padding.contacts
+  section.section-padding.contacts(data-section="twelve")
     .container
       .contacts__wrap
         h3.section-title.contacts__title Контакти

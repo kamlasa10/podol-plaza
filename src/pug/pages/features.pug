@@ -29,7 +29,7 @@ block content
         .page__title Переваги
     .features 
         .big-container
-            .features__list
+            .features__list(data-section="three")
                 .features__item.features__item--1
                     .features__item-img 
                         .features__item-block
@@ -44,13 +44,14 @@ block content
                         span.features__item-decor
                             +img('/ui/features-page/2.svg')
                     .features__item-desc Фітнес та SPA центри, салон краси, банк, ресторан, кав’ярня.
-        .features__block.features__block--1
+        .features__block.features__block--1(data-section="first")
+            .complex-name__bg
             .container 
                 span.features__item-decor
                     +img('/ui/features-page/3.svg')
                 .features__block-text Закритий, повністю вільний від проїзду автомобілів двір з ландшафтним благоустроєм, зоною відпочинку та дитячим ігровим містечком преміального рівня для відпочинку та розваги мешканців будинку.
         .big-container 
-            .features__list.features__list--2 
+            .features__list.features__list--2(data-section="four") 
                 .features__item.features__item--3
                     .features__item-img 
                         .features__item-block
@@ -65,14 +66,15 @@ block content
                         span.features__item-decor
                             +img('/ui/features-page/5.svg')
                     .features__item-desc Дитячий садок з авторськими розвиваючими програмами.
-        .features__block.features__block--2
+        .features__block.features__block--2(data-section="second")
+            .complex-name__bg
             .container 
                 span.features__item-decor
                     +img('/ui/features-page/6.svg')
                 .features__block-text Наявність торговельного центру в комплексі, де буде абсолютно все,що необхідно для комфортного життя мешканців будинку,
         .big-container 
             .features__list
-                .features__item.features__item--5
+                .features__item.features__item--5(data-section="five")
                     .features__item-img 
                         .features__item-block
                             +img('/features/7.jpg')

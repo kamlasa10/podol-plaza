@@ -1,4 +1,10 @@
-#choise-flat-page.commercial-flat-page {
+#commercial-flat-page {
+    background-color: #F0F0F0;
+
+    .page__title {
+        margin-bottom: 20px;
+    }
+
     .commercial-active {
         background: linear-gradient(87.34deg, #FBBF65 0%, #F2C37C 14.69%, #F2CE7C 26.02%, #FFE3A3 51.54%, #F2CE7C 74.04%, #F2C37C 83.65%, #FBBF65 100%);
         box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.25), inset 0px -1px 0px #F6ED96;
