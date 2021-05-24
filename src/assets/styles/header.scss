@@ -4,12 +4,16 @@
   background: rgba(255, 255, 255, 0.95);
   padding-top: 25px;
   padding-bottom: 25px;
-  
   display: flex;
   z-index: 100;
   align-items: center;
   width: 100%;
   transition: all .4s;
+
+  @include to(480px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
   .btn-round-cirlce {
     display: none;
@@ -19,6 +23,11 @@
   &.move {
     padding-top: 15px;
     padding-bottom: 15px;
+
+    @include to(480px) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
   }
 
   &.no-bg {
@@ -156,6 +165,14 @@
     @include to(1440px) {
       height: calc(var(--header-h) - 60px);
     }
+
+    @include to(480px) {
+      height: calc(var(--header-h) - 66px);
+    }
+
+    @include to(320px) {
+      height: calc(var(--header-h) - 72px);
+    }
   }
 
   &__right {
@@ -165,12 +182,20 @@
 
   &__language {
     margin-right: 35px;
+
+    @include to(414px) {
+      margin-right: 15px;
+    }
   }
 
   &__links {
     margin-right: 35px;
     display: flex;
     align-items: center;
+
+    @include to(950px) {
+      display: none;
+    }
   }
 
   &__link {
@@ -201,6 +226,10 @@
     @include to(1440px) {
       font-size: 18px;
       text-decoration: none;
+    }
+
+    @include to(570px) {
+      display: none;
     }
   }
 

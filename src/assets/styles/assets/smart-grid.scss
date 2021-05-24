@@ -53,12 +53,17 @@ $fields_sm: 15px;
     padding: 0 20px;
   }
 
-  @include to(920px) {
+  @include to(1200px) {
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+
+  @include to(770px) {
       padding: 0 30px;
   }
 
   @include to(480px) {
-      padding: 0 16px;
+      padding: 0 15px;
   }
 }
 

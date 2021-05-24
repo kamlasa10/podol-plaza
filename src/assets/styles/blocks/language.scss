@@ -32,6 +32,11 @@
             z-index: 2;
             padding-right: 10px;
 
+            @include to(480px) {
+                font-size: 13px;
+                padding-right: 9px;
+            }
+
             &::before {
                 content: "";
                 top: 8px;
@@ -44,6 +49,10 @@
                 
                 border-top: 4px solid $black;
                 transition: all .4s;
+
+                @include to(480px) {
+                    top: 7px;
+                }
             }
 
             &::after {

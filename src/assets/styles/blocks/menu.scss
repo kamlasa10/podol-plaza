@@ -170,16 +170,30 @@
             @include to(1440px) {
                 grid-template-columns: repeat(auto-fit, minmax(160px, 185px));
             }
+
+            @include to(480px) {
+                grid-template-columns: repeat(2, minmax(120px, 160px));
+                column-gap: 15px;
+            }
         }
 
         &-item {
             display: flex;
             align-items: center;
 
+            @include to(480px) {
+                flex-direction: column;
+            }
+
             .btn-round {
                 margin-right: 20px;
                 min-width: 50px;
                 background-color: transparent;
+
+                @include to(480px) {
+                    min-width: 40px;
+                    margin-bottom: 10px;
+                }
 
                 &::after {
                     background: rgba($black, .2);
@@ -206,6 +220,11 @@
                 svg {
                     min-width: 13px;
                     height: 18px;
+
+                    @include to(480px) {
+                        height: 16px;
+                        min-width: 10px;
+                    }
                 }
             }
 
@@ -213,6 +232,11 @@
                 svg {
                     width: 21px;
                     height: 14px;
+
+                    @include to(480px) {
+                        width: 19px;
+                        height: 12px;
+                    }
                 }
             }
 

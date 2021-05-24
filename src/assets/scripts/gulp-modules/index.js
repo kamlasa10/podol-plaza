@@ -104,14 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (window.locoScroll) {
       window.locoScroll.on('scroll', e => {
-        animateScroll(e.delta.y)
+        animateScroll(e.scroll.y)
       })
 
       return
     }
 
     document.addEventListener('scroll', e => {
-      animateScroll(document.scrollTop)
+      animateScroll(window.pageYOffset)
     })
   }
 

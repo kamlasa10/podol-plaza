@@ -28,10 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let buldingGallerySlider
   const currentShowHome = document.body.dataset.buildPage
-  let progressItems = 
-  	progressItemsAll
+  let progressItems = progressItemsAll
   	.filter(item => item.dataset.build === currentShowHome)
-  let progressItemsCopy = [...progressItems]
+  const progressItemsCopy = [...progressItems]
   const COUNT_SHOW_PROGRESS_ITEMS_DEFAULT = 2
   let currentShowGalleryIdx = 0
 
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function startLoadingImgByChangeCountItems() {
   	progressItems = progressItems.filter((item, i) => {
-  		if(i < COUNT_SHOW_PROGRESS_ITEMS_DEFAULT) {
+  		if (i < COUNT_SHOW_PROGRESS_ITEMS_DEFAULT) {
   			const img = item.querySelector('img')
 
   			img.src = img.dataset.srs
@@ -54,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   		return item
   	})
 
-  	if(!progressItems.length) {
+  	if (!progressItems.length) {
   		$('.js-loading-more').hide()
   	}
 
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function createGalleryItems(imgs) {
   	let fragment = ''
 
-  	imgs.forEach(imgUrl => {
+  	imgs.forEach((imgUrl) => {
   		fragment += `
   			<div class="swiper-slide building-gallery__item">
   				<img src=${imgUrl} alt="photo" />
@@ -113,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setDisabledNode(node, attr) {
   	console.log(node.data(attr))
-  	if(node.data(attr) <= 0) {
+  	if (node.data(attr) <= 0) {
  		node.addClass('disabled')
  		return
   	} 
@@ -121,7 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
   	node.removeClass('disabled')
   }
 
-  function setGalleryInfo({date, text, next, prev}) {
+  function setGalleryInfo({
+    date, text, next, prev 
+  }) {
   	const galleryPrev = $('[data-gallery-prev]')
   	const galleryNext = $('[data-gallery-next]')
 
@@ -133,11 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
   	galleryPrev.removeClass('disabled')
   	galleryNext.removeClass('disabled')
 
-  	if(!currentShowGalleryIdx) {
+  	if (!currentShowGalleryIdx) {
   		galleryPrev.addClass('disabled')
   	}
 
-  	if(currentShowGalleryIdx + 1 >= progressItemsCopy.length) {
+  	if (currentShowGalleryIdx + 1 >= progressItemsCopy.length) {
   		galleryNext.addClass('disabled')
   	}
 
@@ -152,7 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
   	} = data
 
   	
-  	setGalleryInfo({date, text, next, prev})
+  	setGalleryInfo({
+      date, text, next, prev 
+    })
   	initGallery(false, slider)
   }
 
@@ -166,17 +169,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // 		},
   		// }).then(res => console.log(res))
 
-        $.ajax({
-            type: "post",
-            url: "/wp-admin/admin-ajax.php",
-            data: data,
-            dataType: "json",
-            beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
-				$('.preloader').addClass('loading-data')
-				$('.preloader').fadeIn(200)
-			},
-            success: function(data) {
-            	if(!fn) {
+    $.ajax({
+      type: "post",
+      url: "/wp-admin/admin-ajax.php",
+      data,
+      dataType: "json",
+      beforeSend() { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+        $('.preloader').addClass('loading-data')
+        $('.preloader').fadeIn(200)
+      },
+      success(data) {
+            	if (!fn) {
             		return
             	}
 
@@ -184,49 +187,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
             	$('.preloader').removeClass('loading-data')
             	$('.preloader').fadeOut(200)
-                fn(data);
-            },
-            error: function(data) {
+        fn(data);
+      },
+      error(data) {
             	console.log(data)
-                console.warn(data);
-            },
-        });
-}
+        console.warn(data);
+      },
+    });
+  }
 
-function disabledScroll(disabled) {
-	if(window.locoScroll) {
-		if(disabled) {
-			window.locoScroll.stop()
-			return
-		}
+  function disabledScroll(disabled) {
+    if (window.locoScroll) {
+      if (disabled) {
+        window.locoScroll.stop()
+        return
+      }
 
-		window.locoScroll.start()
-	}
-}
+      window.locoScroll.start()
+    }
+  }
 
-$('.js-loading-more').on('click', e => {
-	e.preventDefault()
+  $('.js-loading-more').on('click', (e) => {
+    e.preventDefault()
 
-	startLoadingImgByChangeCountItems()
-})
+    startLoadingImgByChangeCountItems()
+  })
 
-$('.js-bulding-progress-report').on('click', e => {
-	e.preventDefault()
-	const postId = e.currentTarget.dataset.galletyId
-	const idPrev = e.currentTarget.dataset.prev || ''
-	const idNext = e.currentTarget.dataset.next || ''
+  $('.js-bulding-progress-report').on('click', (e) => {
+    e.preventDefault()
+    const postId = e.currentTarget.dataset.galletyId
+    const idPrev = e.currentTarget.dataset.prev || ''
+    const idNext = e.currentTarget.dataset.next || ''
 
-	currentShowGalleryIdx = findIdxEl(e.currentTarget)
-	fetchData(`action=progress&id=${postId}&next=${idNext}&prev=${idPrev}`, createGallery)
-})
+    currentShowGalleryIdx = findIdxEl(e.currentTarget)
+    fetchData(`action=progress&id=${postId}&next=${idNext}&prev=${idPrev}`, createGallery)
+  })
 
-$('.js-gallery__tab-wrap').on('click', e => {
-	destoryGallery()
-	currentShowGalleryIdx = e.currentTarget.dataset.direction === 'next' ? currentShowGalleryIdx + 1 : currentShowGalleryIdx - 1
-	const postId = progressItemsCopy[currentShowGalleryIdx].dataset.galletyId
+  $('.js-gallery__tab-wrap').on('click', (e) => {
+    destoryGallery()
+    currentShowGalleryIdx = e.currentTarget.dataset.direction === 'next' ? currentShowGalleryIdx + 1 : currentShowGalleryIdx - 1
+    const postId = progressItemsCopy[currentShowGalleryIdx].dataset.galletyId
 
-	fetchData(`action=progress&id=${postId}`, createGallery)
-})
+    fetchData(`action=progress&id=${postId}`, createGallery)
+  })
 
   function destoryGallery() {
     initGallery(true)
@@ -246,9 +249,9 @@ $('.js-gallery__tab-wrap').on('click', e => {
     if (destory) {
       $nodeLogo.attr('src', '/wp-content/themes/podolplaza/assets/images/logo.svg')
       return
-    } else {
-      $nodeLogo.attr('src', '/wp-content/themes/podolplaza/assets/images/logo-white.svg')
-    }
+    } 
+    $nodeLogo.attr('src', '/wp-content/themes/podolplaza/assets/images/logo-white.svg')
+    
 
     initSlider(sliderImgs)
   }

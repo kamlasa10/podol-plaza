@@ -57,7 +57,7 @@ block content
   section.complex-name.section-padding(id="complex-name" data-section="first" data-scroll-delay="15" data-scroll-call="bottom" data-scroll-direction="horizontal" data-scroll-speed="5").section
     .complex-name__bg
     .container
-      .complex-name__content
+      .complex-name__content.block-with-height
         .complex-name__wrap
           p.complex-name__desc Назва комплексу — не просто гарне поєднання слів.
           p.complex-name__desc Це відображення особливого статусу та способу життя.
@@ -89,7 +89,7 @@ block content
   section.floor.section-padding.section(data-section="five")
     .complex-name__bg
     .container
-      .floor__content
+      .floor__content.block-with-height
         h3.floor__title.section-title Квартири
         p.floor__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
         a(href="#").btn.floor__btn Обрати квартиру
@@ -140,7 +140,7 @@ block content
   section.section-padding.office-block.section(data-section="seven")
     .complex-name__bg
     .container
-      .office-block__content
+      .office-block__content.block-with-height
         .office-block__wrap
           h3.section-title.office-block__title Торгові та офісні приміщення
           p.office-block__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
@@ -148,7 +148,7 @@ block content
   section.section-padding.parking.section(data-section="eight")
     .complex-name__bg
     .container
-      .office-block__content
+      .office-block__content.block-with-height
         .office-block__wrap
           h3.section-title.office-block__title Паркінг
           p.office-block__desc Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум.
@@ -165,8 +165,11 @@ block content
   section.objects.section-padding(data-section="ten")
     .container
       .object__decor
-        +img('decor-section.svg')
-      .objects__content
+        +img('vector.svg').object__decor-main
+        +img('object-decor-left.svg').object__decor-img.object__decor-left
+        .object__decor-wrap
+          +img('object-decor-right.svg').object__decor-img.object__decor-right
+      .objects__content.block-with-height
         .objects__title.section-title Об’єкти які знаходяться на стадії на будівництва:
         ul.objects__list
           li.objects__item.objects__item--1.objects__item--top

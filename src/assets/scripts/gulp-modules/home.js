@@ -44,6 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiperFeatures = new Swiper('.js-feature-slider', {
     spaceBetween: 30,
     slidesPerView: 4.3,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      },
+      750: {
+        slidesPerView: 2.3,
+        spaceBetween: 20
+      },
+      900: {
+        slidesPerView: 3,
+      },
+      1200: {
+        spaceBetween: 30,
+        slidesPerView: 4.3
+      }
+    },
     navigation: {
       nextEl: '.js-controls-features-slider-next',
       prevEl: '.js-controls-features-slider-prev',
@@ -58,16 +75,28 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.js-controls-team-slider-prev',
     },
     breakpoints: {
-      1440: {
-        slidesPerView: 5.2,
+      320: {
+        slidesPerView: 1.3,
+        spaceBetween: 15
+      },
+      667: {
+        slidesPerView: 2,
+        spaceBetween: 25
+      },
+      770: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1000: {
+        slidesPerView: 3.1,
+        spaceBetween: 20,
       },
       1250: {
         slidesPerView: 4.2,
         spaceBetween: 30
       },
-      1020: {
-        slidesPerView: 3.2,
-        spaceBetween: 25
+      1440: {
+        slidesPerView: 5.2,
       }
     }
   })
@@ -97,10 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     tl.fromTo('.complex-name__wrap', {
-        y: 150,
-      }, {
-        y: 0,
-      }, 0.1)
+      y: 150,
+    }, {
+      y: 0,
+    }, 0.1)
 
     return tl
   }
@@ -148,15 +177,15 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity: 1,
       duration: 1
     })
-    .fromTo('.features__item', {
-      y: 40,
-      opacity: 0
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1.3,
-      stagger: 0.2
-    }, 0.1)
+      .fromTo('.features__item', {
+        y: 40,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1.3,
+        stagger: 0.2
+      }, 0.1)
 
     return tl
   }
@@ -196,14 +225,14 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: 1,
       y: 0
     })
-    .fromTo('.builder__right', {
-      y: -30,
-      opacity: 0
-    }, {
-      y: 0,
-      duration: 1,
-      opacity: 1
-    }, 0.3)
+      .fromTo('.builder__right', {
+        y: -30,
+        opacity: 0
+      }, {
+        y: 0,
+        duration: 1,
+        opacity: 1
+      }, 0.3)
 
     return tl
   }
@@ -219,23 +248,23 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: 1,
       y: 0
     })
-    .fromTo('.objects__title', {
-      y: 30,
-      opacity: 0
-    }, {
-      y: 0,
-      duration: 1,
-      opacity: 1
-    }, 0.3)
-    .fromTo('.objects__item', {
-      y: 25,
-      opacity: 0,
-    }, {
-      stagger: 0.15,
-      y: 0,
-      duration: 1,
-      opacity: 1
-    }, 0)
+      .fromTo('.objects__title', {
+        y: 30,
+        opacity: 0
+      }, {
+        y: 0,
+        duration: 1,
+        opacity: 1
+      }, 0.3)
+      .fromTo('.objects__item', {
+        y: 25,
+        opacity: 0,
+      }, {
+        stagger: 0.15,
+        y: 0,
+        duration: 1,
+        opacity: 1
+      }, 0)
 
     return tl
   }
@@ -251,15 +280,15 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity: 1,
       duration: 1
     })
-    .fromTo('.team__item', {
-      y: 30,
-      opacity: 0
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1.2,
-      stagger: 0.2
-    })
+      .fromTo('.team__item', {
+        y: 30,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.2
+      })
 
     return tl
   }
@@ -275,21 +304,21 @@ document.addEventListener('DOMContentLoaded', () => {
       opacity: 1,
       duration: 1
     })
-    .fromTo('.contacts__left', {
-      y: 50,
-      opacity: 0
-    }, {
-      y: 0,
-      opacity: 1
-    }, 0)
-    .fromTo('.contacts__right', {
-      y: 50,
-      opacity: 0
-    }, {
-      y: 0,
-      opacity: 1,
-      duration: 1
-    }, 0.3)
+      .fromTo('.contacts__left', {
+        y: 50,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1
+      }, 0)
+      .fromTo('.contacts__right', {
+        y: 50,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1
+      }, 0.3)
 
     return tl
   }
@@ -309,11 +338,11 @@ document.addEventListener('DOMContentLoaded', () => {
     twelve: animateSection12
   }
 
-  gsap.utils.toArray('[data-section]').forEach(sec => {
+  gsap.utils.toArray('[data-section]').forEach((sec) => {
     const animateName = sec.dataset.section
     const fn = animateObj[animateName]
 
-    switch(animateName) {
+    switch (animateName) {
       case 'first':
         createScrollTrigger({
           trigger: sec,
@@ -346,39 +375,39 @@ document.addEventListener('DOMContentLoaded', () => {
           trigger: sec,
         }, fn, false)
         break
-        case 'seven':
-          createScrollTrigger({
-            trigger: sec,
-            end: () => `+=${document.documentElement.clientWidth / 2.5}`,
-          }, fn)
-          break
-        case 'eight':
-          createScrollTrigger({
-            trigger: sec,
-            markers: true,
-            end: () => `+=${document.documentElement.clientWidth / 2.5}`,
-          }, fn)
-          break
-        case 'nine':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-        case 'ten':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-          case 'eleven':
-            createScrollTrigger({
-              trigger: sec,
-            }, fn, false)
-            break
-          case 'twelve':
-            createScrollTrigger({
-              trigger: sec,
-            }, fn, false)
-            break
+      case 'seven':
+        createScrollTrigger({
+          trigger: sec,
+          end: () => `+=${document.documentElement.clientWidth / 2.5}`,
+        }, fn)
+        break
+      case 'eight':
+        createScrollTrigger({
+          trigger: sec,
+          markers: true,
+          end: () => `+=${document.documentElement.clientWidth / 2.5}`,
+        }, fn)
+        break
+      case 'nine':
+        createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'ten':
+        createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'eleven':
+        createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'twelve':
+        createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
     }
   })
 
@@ -388,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
       animation: fn(),
       immediateRender: scrub && false,
       ...opts,
-      scroller: $(window).width() > 1025 ? "[data-scroll-container]" : '',
+      scroller: "[data-scroll-container]",
     })
   }
 })
