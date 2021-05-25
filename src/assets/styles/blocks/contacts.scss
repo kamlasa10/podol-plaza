@@ -1,25 +1,66 @@
 .contacts {
     background-color: #F0F0F0;
-    padding-left: 40px;
+
+    &__socials {
+        @include to(820px) {
+            margin-top: 20px;
+        }
+
+        @include to(720px) {
+            margin-top: 0;
+        }
+    }
 
     &__wrap {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include to(770px) {
+            min-height: auto;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @include to(480px) {
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
     }
 
     &__title {
         margin-bottom: 50px;
+
+        @include to(770px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__content {
         display: flex;
         justify-content: space-between;
+
+        @include to(700px) {
+            justify-content: flex-start;
+            flex-direction: column;
+        }
     }
 
     &__left {
         width: 35%;
+
+        @include to(1025px) {
+            width: 47%;
+        }
+
+        @include to(770px) {
+            width: 48%;
+        }
+
+        @include to(700px) {
+            width: 100%;
+        }
     }
 
     &__right {
@@ -27,6 +68,10 @@
 
         .popup__form {
             width: 100%;
+
+            @include to(850px) {
+                padding-right: 0;
+            }
         }
 
         .popup__footer {
@@ -36,11 +81,57 @@
         @include to(1440px) {
             width: 42%;
         }
+
+        @include to(1025px) {
+            width: 47%;
+        }
+
+        @include to(992px) {
+            .popup__footer-left {
+                margin-bottom: 15px;
+            }
+        }
+
+        @include to(770px) {
+            width: 50%;
+        }
+
+        @include to(700px) {
+            width: 100%;
+        }
     }
 
     &__item {
         width: 100%;
         margin-bottom: 50px;
+
+        @include to(770px) {
+            margin-bottom: 35px;
+        }
+
+        &--margin {
+            @include to(770px) {
+                .contacts__item-icon {
+                    margin-bottom: 15px;
+                }
+
+                .contacts__item-block {
+                    flex-wrap: initial;
+                }
+            }
+
+            @include to(720px) {
+                .contacts__item-icon {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include to(480px) {
+                .contacts__item-block {
+                    flex-wrap: initial;
+                }
+            }
+        }
 
         &-title {
             margin-bottom: 20px;
@@ -57,11 +148,23 @@
             display: flex;
             margin-bottom: 20px;
 
+            @include to(800px) {
+                flex-wrap: wrap;
+            }
+
+            @include to(720px) {
+                align-items: center;
+            }
+
             &--align {
                 align-items: center;
 
                 .contacts__item-text {
                     margin-right: 20px;
+                }
+
+                @include to(820px) {
+                    flex-wrap: wrap;
                 }
             }
         }
@@ -141,6 +244,64 @@
             @include to(1440px) {
                 font-size: 10px;
             }
+
+            @include to(700px) {
+                width: 100%;
+            }
+        }
+    }
+
+    @include to(770px) {
+        .popup__item {
+            margin-bottom: 18px;
+        }
+    }
+
+    @include to(480px) {
+        .popup__item-title {
+            margin-bottom: 15px;
+        }
+
+        .popup__item {
+            margin-bottom: 15px;
+        }
+
+        .contacts__item-title {
+            margin-bottom: 15px;
+        }
+
+        .contacts__item {
+            margin-bottom: 25px;
+        }
+
+        .contacts__item-icon {
+            min-width: 40px;
+        }
+
+        .contacts__title {
+            margin-bottom: 20px;
+        }
+
+        .contacts__item-title {
+            font-size: 22px;
+        }
+
+        .contacts__item-icon {
+            margin-right: 15px;
+        }
+
+        .contacts__item-block {
+            margin-bottom: 15px;
+        }
+    }
+
+    @include to(320px) {
+        .contacts__item-title {
+            font-size: 21px;
+        }
+
+        .contacts__socials {
+            margin-top: 15px;
         }
     }
 }

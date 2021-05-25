@@ -5,6 +5,18 @@
         display: none;
     }
 
+    .breadcrumbs {
+        padding-top: 130px;
+
+        @include to(770px) {
+            padding-top: 110px;
+        }
+
+        @include to(480px) {
+            padding-top: 100px;
+        }
+    }
+
     .header {
         background-color: transparent;
 
@@ -20,5 +32,13 @@
         margin-bottom: 111px;
         min-height: auto;
         justify-content: flex-start;
+
+        @include to(770px) {
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+        @include to(667px) {
+            margin-top: 20px;
+        }
     }
 }

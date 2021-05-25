@@ -308,7 +308,6 @@
   align-items: center;
   justify-content: center;
   display: inline-flex;
-  
 
   @include to(1440px) {
     font-size: 18px;
@@ -700,6 +699,10 @@
   margin-bottom: 15px;
   padding-top: 158px;
 
+  @include to(1025px) {
+    margin-bottom: 10px;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -770,6 +773,18 @@
 
   @include to(1440px) {
     font-size: 36px;
+  }
+
+  @include to(770px) {
+    font-size: 33px;
+  }
+
+  @include to(480px) {
+    font-size: 31px;
+  }
+
+  @include to(320px) {
+    font-size: 30px;
   }
 }
 

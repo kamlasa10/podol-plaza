@@ -31,7 +31,7 @@ footer.footer
                             a(href="#").btn-with-animate інвесторам
                         li.footer__nav-item-block 
                             a(href="#").btn-with-animate відео
-                .footer__nav-item.footer__nav-item--correct 
+                .footer__nav-item.footer__nav-item--correct.js-mobile-position 
                     .footer__nav-title Podil Plaza 1
                     ul.footer__nav-item-list
                         li.footer__nav-item-block 
@@ -53,14 +53,15 @@ footer.footer
                             a(href="#").btn-with-animate галерея
                         li.footer__nav-item-block 
                             a(href="#").btn-with-animate будівництво
-                .footer__nav-item.footer__contacts 
+                .footer__nav-item.footer__contacts.js-mobile-position 
                     .footer__nav-title.footer__contacts-title Про проект
-                    .footer__contacts-desc Київ, Шевченківський район, вул. Глубочицька, 77-79
-                    a(href="tel:0443645051").footer__contacts-phone 044 364-50-51
-                    .footer__contacts-desc пн-пт: 09:00-19:00,<br>сб: 09:00-17:00,<br>вс: вихідний
-                    .footer__contacts-wrap 
+                    .footer__contacts-desc.footer__nav-item--m Київ, Шевченківський район, вул. Глубочицька, 77-79
+                    a(href="tel:0443645051").footer__contacts-phone.footer__nav-item--m 044 364-50-51
+                    .footer__contacts-desc.footer__nav-item--m пн-пт: 09:00-19:00,<br>сб: 09:00-17:00,<br>вс: вихідний
+                    .footer__contacts-wrap.footer__nav-item--m 
                         +img('footer-logo.svg')
                         .footer__contacts-desc девелопер проєкту
+        .footer__nav-mobile.js-footer__nav-mobile
         .footer__form.footer-offset 
             .footer__form-title.medium-text Якщо у вас виникли запитання, залиште свій номер і ми передзвонимо вам:
             form.footer__form-wrap
