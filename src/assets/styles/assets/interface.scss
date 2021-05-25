@@ -357,6 +357,10 @@
       font-size: 10px;
     }
 
+    @include to(850px) {
+      display: none;
+    }
+
     @include to(480px) {
       margin-right: 15px;
     }
@@ -553,11 +557,6 @@
     @include to(480px) {
       max-width: 16px;
       height: 17px;
-    }
-  }
-
-  &:hover {
-    svg {
     }
   }
 }

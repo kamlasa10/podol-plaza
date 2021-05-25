@@ -54,12 +54,7 @@ $fields_sm: 15px;
   }
 
   @include to(1200px) {
-<<<<<<< HEAD
-      padding-left: 50px;
-      padding-right: 50px;
-=======
       padding: 0 50px;
->>>>>>> 037e64e75a149486433080db1485f53840daaefb
   }
 
   @include to(770px) {
