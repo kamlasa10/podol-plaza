@@ -309,78 +309,80 @@ document.addEventListener('DOMContentLoaded', () => {
     twelve: animateSection12
   }
 
-  gsap.utils.toArray('[data-section]').forEach(sec => {
-    const animateName = sec.dataset.section
-    const fn = animateObj[animateName]
-
-    switch(animateName) {
-      case 'first':
-        createScrollTrigger({
-          trigger: sec,
-        }, fn)
-        break
-      case 'second': 
-        createScrollTrigger({
-          trigger: sec,
-        }, fn, false)
-        break
-      case 'three':
-        createScrollTrigger({
-          trigger: sec,
-          end: () => `+=${document.documentElement.clientHeight}`
-        }, fn)
-        break
-      case 'four':
-        createScrollTrigger({
-          trigger: sec,
-        }, fn, false)
-        break
-      case 'five':
-        createScrollTrigger({
-          trigger: sec,
-          end: () => `+=${document.documentElement.clientWidth / 1.6}`,
-        }, fn)
-        break
-      case 'six':
-        createScrollTrigger({
-          trigger: sec,
-        }, fn, false)
-        break
-        case 'seven':
+  if(document.documentElement.clientWidth > 1025) {
+    gsap.utils.toArray('[data-section]').forEach(sec => {
+      const animateName = sec.dataset.section
+      const fn = animateObj[animateName]
+  
+      switch(animateName) {
+        case 'first':
           createScrollTrigger({
             trigger: sec,
-            end: () => `+=${document.documentElement.clientWidth / 2.5}`,
           }, fn)
           break
-        case 'eight':
-          createScrollTrigger({
-            trigger: sec,
-            markers: true,
-            end: () => `+=${document.documentElement.clientWidth / 2.5}`,
-          }, fn)
-          break
-        case 'nine':
+        case 'second': 
           createScrollTrigger({
             trigger: sec,
           }, fn, false)
           break
-        case 'ten':
+        case 'three':
+          createScrollTrigger({
+            trigger: sec,
+            end: () => `+=${document.documentElement.clientHeight}`
+          }, fn)
+          break
+        case 'four':
           createScrollTrigger({
             trigger: sec,
           }, fn, false)
           break
-          case 'eleven':
+        case 'five':
+          createScrollTrigger({
+            trigger: sec,
+            end: () => `+=${document.documentElement.clientWidth / 1.6}`,
+          }, fn)
+          break
+        case 'six':
+          createScrollTrigger({
+            trigger: sec,
+          }, fn, false)
+          break
+          case 'seven':
+            createScrollTrigger({
+              trigger: sec,
+              end: () => `+=${document.documentElement.clientWidth / 2.5}`,
+            }, fn)
+            break
+          case 'eight':
+            createScrollTrigger({
+              trigger: sec,
+              markers: true,
+              end: () => `+=${document.documentElement.clientWidth / 2.5}`,
+            }, fn)
+            break
+          case 'nine':
             createScrollTrigger({
               trigger: sec,
             }, fn, false)
             break
-          case 'twelve':
+          case 'ten':
             createScrollTrigger({
               trigger: sec,
             }, fn, false)
             break
-    }
-  })
+            case 'eleven':
+              createScrollTrigger({
+                trigger: sec,
+              }, fn, false)
+              break
+            case 'twelve':
+              createScrollTrigger({
+                trigger: sec,
+              }, fn, false)
+              break
+      }
+    })
+  }
 
   function createScrollTrigger(opts, fn, scrub = true) {
     ScrollTrigger.create({

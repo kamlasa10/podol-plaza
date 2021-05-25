@@ -486,6 +486,23 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       });
     }
+
+    // adaptive 
+    $(window).on('resize', () => {
+
+      if($(window).width() < 965) {
+        $('.js-nav__menu-laptop').append($('.js-nav-item-laptop'))
+        $('.nav__top').append($('.js-nav__menu-laptop'))
+      } else {
+        $('.nav__right').append($('.js-nav-item-laptop'))
+      }
+
+      if($(window).width() < 480) {
+        $('.js-footer__nav-mobile').append($('.js-mobile-position'))
+      } else {
+        $('.footer__top-right').append($('.js-mobile-position'))
+      }
+    }).resize()
   })()
 })
 

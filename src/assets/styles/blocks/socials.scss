@@ -20,6 +20,12 @@
             height: 40px;
         }
 
+        @include to(480px) {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+
         svg {
             fill: none;
         }

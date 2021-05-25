@@ -7,6 +7,18 @@
         color: #fff;
     }
 
+    .breadcrumbs {
+        padding-top: 130px;
+
+        @include to(770px) {
+            padding-top: 110px;
+        }
+
+        @include to(480px) {
+            padding-top: 100px;
+        }
+    }
+
     .header {
         position: absolute;
     }
@@ -77,6 +89,16 @@
         cursor: pointer;
         transition: all .4s;
 
+        @include to(480px) {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include to(320px) {
+            width: 36px;
+            height: 36px;
+        }
+
         img {
             min-width: 12px;
             max-width: 22px;
@@ -85,6 +107,16 @@
 
             @include to(1440px) {
                 max-width: 20px;
+            }
+
+            @include to(480px) {
+                max-width: 17px;
+                height: 15px;
+            }
+
+            @include to(320px) {
+                max-width: 15px;
+                height: 13px;
             }
         }
 
@@ -132,6 +164,10 @@
         height: 80px;
         font-size: 18px;
     }
+
+    @include to(1025px) {
+        display: none !important;
+    }
 }
 
 .gallery__tabs {
@@ -142,6 +178,14 @@
     padding-bottom: 50px;
     display: flex;
     justify-content: center; 
+
+    @include to(480px) {
+        padding-bottom: 35px;
+    }
+
+    @include to(320px) {
+        padding-bottom: 30px;
+    }
 }
 
 .gallery__tab {
@@ -187,6 +231,10 @@
         background: linear-gradient(180deg, #703221 0%, #000000 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @include to(480px) {
+            font-size: 19px;
+        }
     }
 
     &.active {
@@ -195,5 +243,10 @@
         &::before {
             opacity: 1;
         }
+    }
+
+    @include to(320px) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
