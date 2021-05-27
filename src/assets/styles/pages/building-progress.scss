@@ -5,8 +5,67 @@
         display: none;
     }
 
+    @include to(1025px) {
+        .gallery__tabs {
+            padding-bottom: 30px;
+        }
+    }
+
+    @include to(850px) {
+        .gallery__tab {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    @include to(770px) {
+        .gallery__tabs {
+            padding-bottom: 20px;
+            align-self: center;
+        }
+    }
+
+    @include to(720px) {
+        .gallery__tabs {
+            padding-bottom: 0;
+            margin-top: 20px;
+        }
+
+        .building-progress__top {
+            flex-direction: column;
+            justify-content: flex-start;
+
+            &-right {
+                align-self: center;
+            }
+        }
+    }
+
+    @include to(320px) {
+        .gallery__tab {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            &-btn {
+                font-size: 18px;
+            }
+        }
+    } 
+
     .building-progress {
         padding-bottom: 100px;
+
+        @include to(1025px) {
+            padding-bottom: 80px;
+        } 
+
+        @include to(770px) {
+            padding-bottom: 70px;
+        }
+
+        @include to(480px) {
+            padding-bottom: 45px;
+        }
 
         .gallery__tabs {
             position: static;
@@ -24,6 +83,11 @@
         &__content {
             display: flex;
             justify-content: space-between;
+
+            @include to(830px) {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
         }
 
         &__info {
@@ -42,6 +106,24 @@
                 width: 34%;
             }
 
+            @include to(1025px) {
+                width: 42%;
+            }
+
+            @include to(920px) {
+                width: 48%;
+            }
+
+            @include to(830px) {
+                width: 100%;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+
+            @include to(480px) {
+                padding: 20px 15px;
+            }
+
             &-title {
                 margin-bottom: 20px;
                 font-size: 22px;
@@ -51,6 +133,10 @@
 
                 @include to(1440px) {
                     font-size: 20px;
+                }
+
+                @include to(480px) {
+                    font-size: 19px;
                 }
             }
 
@@ -63,6 +149,16 @@
                     &:not(:last-child) {
                         margin-right: 23px;
                     }
+                }
+
+                @include to(480px) {
+                    &:not(:last-child) {
+                        margin-right: 12px;
+                    }
+                }
+
+                @include to(320px) {
+                    margin-bottom: 15px;
                 }
             }
 
@@ -107,6 +203,10 @@
                 @include to(1440px) {
                     font-size: 20px;
                 }
+
+                @include to(375px) {
+                    font-size: 18px;
+                }
             }
 
             &-desc {
@@ -116,6 +216,15 @@
             &-list {
                 display: flex;
                 justify-content: space-between;
+
+                @include to(830px) {
+                    max-width: 370px;
+                    margin: 0 auto;
+                }
+
+                @include to(480px) {
+                    flex-wrap: wrap;
+                }
             }
 
             &-item {
@@ -145,6 +254,18 @@
             @include to(1440px) {
                 width: calc(67% - 50px);
             }
+
+            @include to(1025px) {
+                width: calc(58% - 50px);
+            }
+
+            @include to(950px) {
+                width: calc(53% - 50px);
+            }
+
+            @include to(830px) {
+                width: 100%;
+            }
         }
 
         &__report {
@@ -154,6 +275,23 @@
             grid-template-columns: repeat(2, minmax(280px, 500px));
             column-gap: 50px;
             row-gap: 29px;
+
+            @include to(1025px) {
+                grid-template-columns: 1fr;
+            }
+
+            @include to(830px) {
+                grid-template-columns: repeat(2, minmax(280px, 500px));
+                column-gap: 30px;
+            }
+
+            @include to(650px) {
+                grid-template-columns: 1fr;
+            }
+
+            @include to(480px) {
+                margin-bottom: 30px;
+            }
 
             &-item {
                 cursor: pointer;
@@ -168,6 +306,10 @@
                 margin-bottom: 32px;
                 height: 260px;
                 overflow: hidden;
+
+                @include to(1025px) {
+                    margin-bottom: 25px;
+                }
 
                 &::before {
                     content: "";

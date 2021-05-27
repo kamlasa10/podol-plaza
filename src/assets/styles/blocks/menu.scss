@@ -99,6 +99,14 @@
         display: flex;
         flex-wrap: wrap;
 
+        @media screen and (-webkit-min-device-pixel-ratio: 2) and ( max-width: 1445px) {
+            transform: translateY(-11%);
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 2) and ( max-width: 1370px) {
+            transform: translateY(0);
+        }
+
         @include to(965px) {
             height: 85%;
             transform: translateY(-3%);
@@ -284,6 +292,10 @@
                 @include to(480px) {
                     min-width: 40px;
                     margin-bottom: 10px;
+                }
+
+                @include to(320px) {
+                    min-width: 36px;
                 }
 
                 &::after {

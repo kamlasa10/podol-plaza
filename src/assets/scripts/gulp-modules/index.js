@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  window.initCustomScroll = function () {
+  window.initCustomScroll = function (needSmothScroll = true) {
     $(window).on('resize', () => {
-      if ($(window).width() > 1025) {
+      if ($(window).width() > 1025 && needSmothScroll) {
         if (window.locoScroll) return
 
         window.locoScroll = new LocomotiveScroll({
@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const $header = $('.header')
 
     function animateScroll(offset) {
+      console.log(offset)
       if (offset > 10) {
         $header.addClass('move')
       } else {
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return
     }
 
-    document.addEventListener('scroll', e => {
+    window.addEventListener('scroll', e => {
       animateScroll(window.pageYOffset)
     })
   }
@@ -267,9 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $logo.src = './wp-content/themes/podolplaza/assets/images/logo-white.svg'
         $('.header').addClass('white')
         hasThemeWhiteForHeader = false
-      }
-
-      if ($('.header').hasClass('white') && !hasThemeWhiteForHeader) {
+      } else if($('.header').hasClass('white') && !hasThemeWhiteForHeader) {
         $('.header').removeClass('white')
         $logo.src = './wp-content/themes/podolplaza/assets/images/logo.svg'
         hasThemeWhiteForHeader = true

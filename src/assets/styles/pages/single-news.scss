@@ -7,9 +7,22 @@
         display: flex;
         margin-right: 60px;
 
+        @include to(1025px) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        @include to(480px) {
+            flex-direction: column;
+        }
+
         p {
             color: #758BA2;
             margin-bottom: 20px;
+
+            @include to(480px) {
+                margin-bottom: 12px;
+            }
         }
 
         img {
@@ -26,12 +39,40 @@
             @include to(1125px) {
                 height: 355px;
             }
+
+            @include to(850px) {
+                height: 300px;
+            }
+
+            @include to(567px) {
+                height: 260px;
+            }
+
+            @include to(480px) {
+                height: 32vh;
+                margin-bottom: 12px;
+            }
+
+            @include to(320px) {
+                height: 34vh;
+            }
         }
     
         &__back {
             margin-top: 32px;
             min-width: 50px;
             margin-right: 10px;
+
+            @include to(480px) {
+                margin-top: 0;
+                margin-bottom: 17px;
+                margin-right: 0;
+                min-width: 40px;
+            }
+
+            @include to(320px) {
+                min-width: 36px;
+              }
             
             svg {
                 position: relative;
@@ -43,6 +84,16 @@
 
                 @include to(1440px) {
                     width: 19px;
+                }
+
+                @include to(480px) {
+                    width: 17px;
+                    height: 16px;
+                  }
+            
+                @include to(320px) {
+                width: 15px;
+                height: 15px;
                 }
             }
 
@@ -73,6 +124,22 @@
             @include to(1250px) {
                 padding-right: 50px;
             }
+
+            @include to(850px) {
+                flex-direction: column;
+            }
+
+            @include to(667px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            @include to(480px) {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
         }
 
         &__date {
@@ -85,6 +152,12 @@
             @include to(1440px) {
                 font-size: 10px;
             }
+
+            @include to(850px) {
+                margin-top: 0;
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
         }
 
         &__title {
@@ -95,6 +168,19 @@
 
             @include to(1440px) {
                 font-size: 36px;
+            }
+
+            @include to(770px) {
+                font-size: 30px;
+            }
+
+            @include to(480px) {
+                margin-bottom: 12px;
+                font-size: 28px;
+            }
+
+            @include to(320px) {
+                font-size: 27px;
             }
         }
         &__block {
@@ -108,9 +194,22 @@
         margin-left: 57px;
         margin-right: 60px;
 
+        @include to(1025px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        @include to(480px) {
+            margin-bottom: 45px;
+        }
+
         &__title {
             margin-bottom: 50px;
             text-align: center;
+
+            @include to(1025px) {
+                margin-bottom: 30px;
+            }
         }
     }
 }

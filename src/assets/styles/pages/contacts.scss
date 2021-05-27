@@ -1,6 +1,10 @@
 #contacts-page {
     background-color: #F0F0F0;
 
+    .header {
+        position: absolute;
+    }
+
     .btn-go-top {
         display: none;
     }
@@ -13,7 +17,7 @@
         }
 
         @include to(480px) {
-            padding-top: 100px;
+            padding-top: 85px;
         }
     }
 
@@ -39,6 +43,10 @@
         }
         @include to(667px) {
             margin-top: 20px;
+        }
+
+        @include to(480px) {
+            margin-top: 15px;
         }
     }
 }

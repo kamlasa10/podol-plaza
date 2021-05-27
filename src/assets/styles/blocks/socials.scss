@@ -20,6 +20,11 @@
             height: 40px;
         }
 
+        @include to(320px) {
+            min-width: 36px;
+            height: 36px;
+        }
+
         @include to(480px) {
             &:not(:last-child) {
                 margin-right: 15px;

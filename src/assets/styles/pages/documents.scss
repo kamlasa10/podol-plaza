@@ -5,6 +5,18 @@
         display: none;
     }
 
+    .breadcrumbs {
+        padding-top: 130px;
+
+        @include to(770px) {
+            padding-top: 110px;
+        }
+
+        @include to(480px) {
+            padding-top: 85px;
+        }
+    }
+
     .header {
         position: absolute;
         background-color: transparent;
@@ -43,11 +55,31 @@
             margin-right: 0;
         }
 
+        @include to(1025px) {
+            padding-bottom: 90px;
+        }
+
+        @include to(770px) {
+            padding-bottom: 70px;
+        }
+
+        @include to(480px) {
+            padding-bottom: 30px;
+        }
+
         .big-container {
             padding-left: 138px;
 
             @include to(1100px) {
                 padding-left: 50px;
+            }
+
+            @include to(770px) {
+                padding-left: 30px;
+            }
+
+            @include to(480px) {
+                padding-left: 15px;
             }
         }
 
@@ -61,6 +93,15 @@
             @include to(1440px) {
                 grid-template-columns: repeat(auto-fit, minmax(46%, 45%));
             }
+
+            @include to(850px) {
+                column-gap: 41px;
+            }
+
+            @include to(667px) {
+                display: block;
+                column-count: 1;
+            }
         }
     
         &__link {
@@ -73,11 +114,40 @@
             color: $blue;
             text-decoration: none;
             transition: all .4s;
+
+            @include to(850px) {
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 20px 30px;
+            }
+
+            @include to(667px) {
+                flex-direction: row;
+            }
+
+            @include to(480px) {
+                padding: 25px 15px;
+            }
     
             svg {
                 width: 46px;
                 height: 50px;
                 margin-right: 27px;
+
+                @include to(850px) {
+                    margin-bottom: 15px;
+                    margin-right: 0;
+                    justify-self: center;
+                }
+
+                @include to(667px) {
+                    margin-right: 27px;
+                    margin-bottom: 0;
+                }
+
+                @include to(480px) {
+                    margin-right: 15px;
+                }
             }
 
             &:hover {
@@ -86,6 +156,12 @@
                 .documents__title {
                     text-decoration: underline;
                 }
+            }
+        }
+
+        &__wrap {
+            @include to(850px) {
+                width: 100%;
             }
         }
     
@@ -107,6 +183,14 @@
     
             @include to(1440px) {
                 font-size: 20px;
+            }
+
+            @include to(480px) {
+                font-size: 18px;
+            }
+
+            @include to(320px) {
+                font-size: 17px;
             }
         }
     }

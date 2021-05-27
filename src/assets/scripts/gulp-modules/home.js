@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiperFeatures = new Swiper('.js-feature-slider', {
     spaceBetween: 30,
     slidesPerView: 4.3,
+    autoHeight: true,
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -338,7 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
     twelve: animateSection12
   }
 
-  if (document.documentElement.clientWidth > 1025) {
     gsap.utils.toArray('[data-section]').forEach((sec) => {
       const animateName = sec.dataset.section
       const fn = animateObj[animateName]
@@ -411,7 +411,6 @@ document.addEventListener('DOMContentLoaded', () => {
           break
       }
     })
-  }
   
   function createScrollTrigger(opts, fn, scrub = true) {
     ScrollTrigger.create({
@@ -419,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
       animation: fn(),
       immediateRender: scrub && false,
       ...opts,
-      scroller: "[data-scroll-container]",
+      scroller: $(window).window() > 1025 ? "[data-scroll-container]": '' ,
     })
   }
 })

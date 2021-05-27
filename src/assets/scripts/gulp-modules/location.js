@@ -400,4 +400,14 @@ document.addEventListener('DOMContentLoaded', () => {
     markers[$(this).data('map')] = infrastructure[$(this).data('map')]
     setMapOnAll(map)
   })
+
+  $('.js-location__btn-infra').click(e => {
+    e.preventDefault
+
+    $('.js-location__map-info').addClass('active')
+  })
+
+  $('.js-location__close').click(() => {
+    $('.js-location__map-info').removeClass('active')
+  })
 })

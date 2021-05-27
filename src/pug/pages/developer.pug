@@ -31,12 +31,18 @@ block content
             section.section-padding.builder
                 .builder__content
                     .builder__left
-                        +img('footer-logo.svg')
+                        +img('circle-decor.png').builder__decor
+                        +img('footer-logo.svg').builder__logo
                     .builder__right
                         p.builder__intro STATUS GROUP — стабільна і перспективна компанія, яка працює з 2005 року і представляє нове покоління в будівельному бізнесі, де стиль роботи базується на інноваційних рішеннях, величезному практичному досвіді і прагненні до досконалості.
                         p.builder__desc Компанія STATUS GROUP здійснює функції забудовника, замовника, інвестора, генерального підрядника і девелопера. Усі наші проекти – це новий формат житлової нерухомості з унікальною архітектурою, безпечною та упорядкованою територією і власною соціальною інфраструктурою, в яких враховані всі потреби покупців.
             section.objects.section-padding
-                .objects__content
+                .object__decor
+                    +img('vector.svg').object__decor-main
+                    +img('object-decor-left.svg').object__decor-img.object__decor-left
+                    .object__decor-wrap
+                        +img('object-decor-right.svg').object__decor-img.object__decor-right
+                .objects__content.block-with-height
                     .objects__title.section-title Об’єкти які знаходяться на стадії на будівництва:
                     ul.objects__list
                         li.objects__item.objects__item--1.objects__item--top

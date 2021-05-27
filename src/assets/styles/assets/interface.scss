@@ -230,6 +230,11 @@
     height: 40px;
   }
 
+  @include to(320px) {
+    width: 36px;
+    height: 36px;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -291,7 +296,7 @@
 }
 
 .btn {
-  background: $gold;
+  position: relative;
   min-height: 50px;
   border-radius: 25px;
   padding: 0 50px;
@@ -302,12 +307,33 @@
   transition: all .4s;
   box-shadow: 0px 4px 20px rgba(201, 117, 51, 0.25), inset 0px -1px 0px #F6ED96;
   transition: all .4s;
-  text-shadow: 0px 1px 1px #EEE6A0;
-  color: $black;
   text-decoration: none;
   align-items: center;
   justify-content: center;
   display: inline-flex;
+
+  span {
+    background: linear-gradient(180deg, #703221 0%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    display: block;
+    position: relative;
+    z-index: 2;
+
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    background: linear-gradient(87.34deg, #FBBF65 0%, #F2C37C 14.69%, #F2CE7C 26.02%, #FFE3A3 51.54%, #F2CE7C 74.04%, #F2C37C 83.65%, #FBBF65 100%);
+  }
 
   @include to(1440px) {
     font-size: 18px;
@@ -346,6 +372,10 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  @include to(480px) {
+    padding: 0;
+  }
 
   &__text {
     margin-right: 20px;
@@ -541,6 +571,11 @@
     height: 40px;
   }
 
+  @include to(320px) {
+    width: 36px;
+    height: 36px;
+  }
+
   img {
     min-width: 18px;
     max-width: 22px;
@@ -557,6 +592,11 @@
     @include to(480px) {
       max-width: 16px;
       height: 17px;
+    }
+
+    @include to(320px) {
+      max-width: 14px;
+      height: 15px;
     }
   }
 }
@@ -652,6 +692,11 @@
       height: 40px;
     }
 
+    @include to(320px) {
+      width: 36px;
+      height: 36px;
+    }
+
     svg {
       width: 19px;
       height: 18px;
@@ -662,6 +707,11 @@
       @include to(480px) {
         width: 17px;
         height: 16px;
+      }
+
+      @include to(320px) {
+        width: 15px;
+        height: 15px;
       }
     }
 
@@ -702,15 +752,25 @@
     margin-bottom: 10px;
   }
 
+  @include to(770px) {
+    padding-top: 135px;
+  }
+
+  @include to(480px) {
+    padding-top: 100px;
+  }
+
   &__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__item {
     position: relative;
     font-size: 12px;
     line-height: 1em;
+    margin-bottom: 10px;
     padding-right: 10px;
     margin-right: 10px;
 
@@ -817,5 +877,16 @@
   .big-container {
     position: relative;
     z-index: 3;
+  }
+}
+
+.sec-with-bg {
+  @include to(850px) {
+    min-height: 45vh !important;
+    max-height: 500px !important;
+  }
+
+  @include to(480px) {
+    padding: 45px 0;
   }
 }

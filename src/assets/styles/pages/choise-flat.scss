@@ -4,6 +4,18 @@
     .page__title {
         margin-bottom: 20px;
     }
+
+    .breadcrumbs {
+        padding-top: 130px;
+
+        @include to(770px) {
+            padding-top: 110px;
+        }
+
+        @include to(480px) {
+            padding-top: 85px;
+        }
+    }
 }
 
 .choise-flat {
@@ -21,6 +33,19 @@
 
         @include to(1200px) {
             justify-content: center;
+        }
+
+        @include to(850px) {
+            margin-bottom: 10px;
+        }
+
+        @include to(680px) {
+            margin-bottom: 30px;
+            justify-content: flex-start;
+        }
+
+        @include to(480px) {
+            margin-bottom: 10px;
         }
 
         &-block {
@@ -50,6 +75,36 @@
                     margin-bottom: 30px;
                 }
             }
+
+            @include to(992px) {
+                justify-content: center;
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+
+            @include to(680px) {
+                justify-content: flex-start;
+            }
+            @include to(480px) {
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+
+                .choise-flat__filters-item:not(:last-child) {
+                    margin-right: 0;
+                }
+
+                .choise-flat__filters-item--1 .choise-flat__filters-btn:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+                .choise-flat__filters-item--3 .choise-flat__filters-btn:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
         }
 
         &-btn {
@@ -71,6 +126,14 @@
                 font-size: 18px;
             }
 
+            @include to(650px) {
+                margin-bottom: 15px;
+            }
+
+            @include to(480px) {
+                border-radius: 25px;
+            }
+
             &::before {
                 content: "";
                 position: absolute;
@@ -81,8 +144,12 @@
                 opacity: 0;
                 z-index: -1;
                 transition: all .4s;
-                background: linear-gradient(87.34deg, #FBBF65 0%, #F2C37C 14.69%, #F2CE7C 26.02%, #FFE3A3 51.54%, #F2CE7C 74.04%, #F2C37C 83.65%, #FBBF65 100%);
+                background: linear-gradient(343.46deg,#ebba8c 0,#ebc78c 17.56%,#ffe9b8 78.41%);
                 box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.25), inset 0px -1px 0px #F6ED96;
+
+                @include to(480px) {
+                    border-radius: 25px;
+                }
             }
 
             &.choison {
@@ -107,11 +174,75 @@
            @include to(1440px) {
                font-size: 18px;
            }
+
+           &--laptop {
+               display: none;
+
+               @include to(992px) {
+                   display: block;
+               }
+
+               @include to(680px) {
+                   display: none;
+               }
+           }
+
+           &--desk {
+               @include to(992px) {
+                   display: none;
+               }
+
+               @include to(680px) {
+                   display: block;
+               }
+           }
+
+           @include to(480px) {
+               margin-bottom: 13px;
+           }
         }
 
         &-item {
             display: flex;
             flex-wrap: wrap;
+
+            &--laptop {
+                display: none;
+            }
+
+            @include to(992px) {
+                &--2{
+                    margin-top: 30px;
+                }
+
+                &--laptop {
+                    display: flex;
+                }
+
+                &--3 {
+                    display: none;
+                }
+            }
+
+            @include to(680px) {
+                &--laptop {
+                    display: none;
+                }
+
+                &--3 {
+                    display: flex;
+                }
+            }
+
+            @include to(480px) {
+                &--2 {
+                    width: 100%;
+                    margin-top: 10px;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                    column-gap: 10px;
+                }
+            }
         }
 
         .round-left {
@@ -119,6 +250,14 @@
 
             &::before {
                 border-radius: 25px 0px 0px 25px;
+            }
+
+            @include to(650px) {
+                border-radius: 25px;
+
+                &::before {
+                    border-radius: 25px;
+                }
             }
         }
 
@@ -128,6 +267,14 @@
             &::before {
                 border-radius: 0px 25px 25px 0px; 
             }
+
+            @include to(650px) {
+                border-radius: 25px;
+
+                &::before {
+                    border-radius: 25px;
+                }
+            }
         }
     }
 
@@ -136,6 +283,18 @@
         grid-template-columns: repeat(4, minmax(230px, 1fr));
         column-gap: 22px;
         row-gap: 22px;
+
+        @include to(1025px) {
+            grid-template-columns: repeat(3, minmax(230px, 293px));
+        }
+
+        @include to(850px) {
+            grid-template-columns: repeat(2, minmax(180px, 400px));
+        }
+
+        @include to(480px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -154,6 +313,10 @@
 
         @include to(1100px) {
             padding: 20px 20px 30px;
+        }
+
+        @include to(480px) {
+            padding: 20px 15px;
         }
 
         img {
@@ -182,6 +345,11 @@
 
     &__wrap {
         margin-top: auto;
+
+        @include to(480px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__title {
@@ -194,6 +362,14 @@
 
         @include to(1440px) {
             font-size: 24px;
+        }
+
+        @include to(480px) {
+            font-size: 22px;
+        }
+
+        @include to(320px) {
+            font-size: 21px;
         }
     }
 
@@ -219,6 +395,12 @@
 
         @include to(1280px) {
             width: 100%;
+        }
+
+        @include to(480px) {
+            margin-top: 12px;
+            width: 230px;
+            align-self: center;
         }
     }
 }

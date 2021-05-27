@@ -7,6 +7,10 @@
         color: #fff;
     }
 
+    .language__current {
+        padding: 0;
+    }
+
     .breadcrumbs {
         padding-top: 130px;
 
@@ -15,7 +19,7 @@
         }
 
         @include to(480px) {
-            padding-top: 100px;
+            padding-top: 85px;
         }
     }
 

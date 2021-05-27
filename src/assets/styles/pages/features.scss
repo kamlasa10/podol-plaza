@@ -13,6 +13,22 @@
         margin-bottom: 100px;
         color: $blue;
 
+        @include to(1025px) {
+            margin-bottom: 80px;
+        }
+
+        @include to(770px) {
+            margin-bottom: 70px;
+        }
+
+        @include to(650px) {
+            margin-bottom: 55px;
+        }
+
+        @include to(480px) {
+            margin-bottom: 45px;
+        }
+
         &__list {
             margin-bottom: 54px;
             display: grid;
@@ -20,8 +36,27 @@
             column-gap: 80px;
             row-gap: 40px;
 
+            @include to(1025px) {
+                column-gap: 40px;
+            }
+
+            @include to(650px) {
+                grid-template-columns: 1fr;
+                row-gap: 25px;
+                margin-bottom: 30px;
+            }
+            
+
             &--2 {
                 margin-bottom: 78px;
+
+                @include to(1025px) {
+                    margin-bottom: 50px;
+                }
+
+                @include to(770px) {
+                    margin-bottom: 35px;
+                }
             }
         }
 
@@ -51,6 +86,26 @@
 
                 @include to(1180px) {
                     height: 300px;
+                }
+
+                @include to(1025px) {
+                    height: 260px;
+                }
+
+                @include to(770px) {
+                    height: 210px;
+                    margin-bottom: 45px;
+                }
+
+                @include to(650px) {
+                    max-height: 230px;
+                    height: 38vh;
+                }
+
+                @include to(480px) {
+                    min-height: 190px;
+                    margin-bottom: 35px;
+                    max-height: 215px;
                 }
                 
                 img {
@@ -84,6 +139,16 @@
                 @include to(1440px) {
                     width: 70px;
                     height: 70px;
+
+                    @include to(770px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    @include to(480px) {
+                        width: 50px;
+                        height: 50px;
+                    }
                 }
 
                 img {
@@ -155,6 +220,24 @@
             align-items: center;
             color: #fff;
 
+            @include to(1025px) {
+                margin-bottom: 50px;
+                max-height: 370px;
+            }
+
+            @include to(770px) {
+                max-height: 350px;
+            }
+
+            @include to(770px) {
+                margin-bottom: 40px;
+            }
+
+            @include to(480px) {
+                max-height: 320px;
+                padding: 45px 0;
+            }
+
             .complex-name__bg {
                 position: absolute;
                 width: 100%;
@@ -165,6 +248,21 @@
 
             &--2 {
                 margin-bottom: 120px;
+
+                @include to(1025px) {
+                    margin-bottom: 90px;
+                }
+
+                @include to(770px) {
+                    margin-bottom: 70px;
+                }
+
+                @include to(650px) {
+                    margin-bottom: 45px;
+                }
+                @include to(480px) {
+                    margin-bottom: 35px;
+                }
                 
                 .complex-name__bg {
                     background: url('../images/features/6.jpg') no-repeat center/cover;
@@ -185,12 +283,21 @@
                 width: 70%;
                 z-index: 1;
                 background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+
+                @include to(480px) {
+                    width: 100%;
+                    background: rgba(#000, 0.7);
+                }
             }
 
             .features__item-decor {
                 margin-bottom: 20px;
                 position: static;
                 transform: translate(0, 0);
+
+                @include to(650px) {
+                    margin-bottom: 10px;
+                }
             }
 
             &--1 {

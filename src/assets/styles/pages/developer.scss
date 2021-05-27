@@ -37,6 +37,11 @@
 
     .developer {
         padding-bottom: 70px;
+
+        @include to(480px) {
+            padding-bottom: 45px;
+        }
+
         &__content {
             padding-top: 70px;
             padding-right: 44px;
@@ -49,40 +54,89 @@
                 max-width: 1106px;
             }
 
+            @include to(770px) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            @include to(480px) {
+                padding-top: 45px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
             .builder {
                 max-width: 100%;
                 justify-content: center;
                 padding-left: 70px;
                 margin: 0;
+                @include to(770px) {
+                    padding-left: 0;
+                }
 
                 &__left {
                     padding-top: 137px;
 
-                    &::before {
-                        top: 0;
+                    // &::before {
+                    //     top: 0;
 
-                        @include to(1370px) {
-                            width: 109%;
-                            top: -10px;
-                        }
-                    }
+                    //     @include to(1370px) {
+                    //         width: 109%;
+                    //         top: -10px;
+                    //     }
+
+                    //     @include to(1025px) {
+                    //         top: -43px;
+                    //     }
+
+                    //     @include to(920px) {
+                    //         top: -23px;
+                    //     }
+                    // }
 
                     @include to(1440px) {
-                        padding-top: 92px;
+                        padding-top: 105px;
 
-                        img {
-                          width: 139px;
-                          height: 60px;  
+                        .builder__decor {
+                            width: 83%;
                         }
                     }
 
                     @include to(1370px) {
+                        padding-top: 110px;
+
+                        .builder__decor {
+                            width: 100%;
+                        }
+                    }
+
+                    @include to(1025px) {
                         padding-top: 115px;
+                    }
+
+                    @include to(920px) {
+                        padding-top: 100px;
+                    }
+
+                    @include to(770px) {
+                        padding-top: 90px;
+                    }
+
+                    @include to(720px) {
+                        padding-top: 0;
                     }
                 }
 
                 &__right {
                     padding-left: 100px;
+
+                    @include to(770px) {
+                        padding-left: 50px;
+                    }
+
+                    @include to(720px) {
+                        padding-left: 0;
+                    }
                 }
 
                 &__desc:last-child {
@@ -93,17 +147,18 @@
 
         .objects {
             margin: 0;
-
+            
             &::after {
-                height: 30px;
-                left: 0;
-                width: 100%;
-                background: url('../images/decor-section.svg') no-repeat center/cover;
+                display: none;
             }
 
             &::before {
                 right: -44px;
                 background: url('../images/developer/bg-img.png') no-repeat no-repeat center/cover;
+
+                @include to(720px) {
+                    display: none;
+                }
             }
         }
 
@@ -111,13 +166,21 @@
             position: relative;
             z-index: 2;
             width: 100%;
+            margin-top: 72px;
         }
 
         .objects__content {
             padding-bottom: 50px;
-            margin-top: 72px;
             padding-top: 72px;
             min-height: auto;
+
+            @include to(770px) {
+                padding-top: 50px;
+            }
+
+            @include to(480px) {
+                padding: 45px 0;
+            }
         }
     }
 }

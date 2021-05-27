@@ -30,25 +30,27 @@ document.addEventListener('DOMContentLoaded', () => {
     second: window.animateBg('.features__block--2'),
   }
 
-  gsap.utils.toArray('[data-section]').forEach((sec) => {
-    const animateName = sec.dataset.section
-    const fn = animateObj[animateName]
-
-    if (!fn) return
-
-    switch (animateName) {
-      case 'first':
-        window.createScrollTrigger({
-          trigger: sec,
-          end: () => '-=100'
-        }, fn)
-        break
-      case 'second':
-        window.createScrollTrigger({
-          trigger: sec,
-          end: () => '-=100'
-        }, fn)
-        break
-    }
-  })
+  if($(window).width() > 1025) {
+    gsap.utils.toArray('[data-section]').forEach((sec) => {
+      const animateName = sec.dataset.section
+      const fn = animateObj[animateName]
+  
+      if (!fn) return
+  
+      switch (animateName) {
+        case 'first':
+          window.createScrollTrigger({
+            trigger: sec,
+            end: () => '-=100'
+          }, fn)
+          break
+        case 'second':
+          window.createScrollTrigger({
+            trigger: sec,
+            end: () => '-=100'
+          }, fn)
+          break
+      }
+    })
+  }
 })

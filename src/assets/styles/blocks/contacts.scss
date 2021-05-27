@@ -142,6 +142,14 @@
             @include to(1440px) {
                 font-size: 24px;
             }
+
+            @include to(480px) {
+                font-size: 22px;
+            }
+
+            @include to(320px) {
+                font-size: 21px;
+            }
         }
 
         &-block {
@@ -154,6 +162,10 @@
 
             @include to(720px) {
                 align-items: center;
+            }
+
+            @include to(480px) {
+                margin-bottom: 15px;
             }
 
             &--align {
@@ -175,8 +187,15 @@
             height: 45px;
 
             @include to(1440px) {
+                min-width: 40px;
                 width: 40px;
                 height: 40px;
+            }
+
+            @include to(320px) {
+                min-width: 36px;
+                width: 36px;
+                height: 36px;
             }
 
             &::after {
@@ -276,6 +295,10 @@
 
         .contacts__item-icon {
             min-width: 40px;
+
+            @include to(320px) {
+                min-width: 36px;
+            }
         }
 
         .contacts__title {

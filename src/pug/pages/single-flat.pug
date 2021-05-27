@@ -38,18 +38,18 @@ block content
                 .contacts__item-text Київ, Шевченківський район, вул. Глибочицька, 77-79
             .contacts__item
               .contacts__item-title Відділ продажів:
-              .contacts__item-block.contacts__item-block--align
+              .contacts__item-block.contacts__item-block--align.correct
                 a(href="tel:0443382727").btn-round.contacts__item-icon.contacts__item-icon--2
                   +svg('phone')
                 a(href="tel:0443382727").contacts__item-text 044 338 27 27
-              .socials.contacts__socials
+              .socials.contacts__socials.correct
                 a(href="#").socials__link.socials__link--1
                   +svg('whatsapp')
                 a(href="#").socials__link.socials__link--2
                   +svg('telegram')
                 a(href="#").socials__link.socials__link--3
                   +svg('viber')
-              .contacts__item-block
+              .contacts__item-block.correct
                 .btn-round.contacts__item-icon.contacts__item-icon--3
                   +svg('clock')
                 .contacts__item-icon-text пн-пт: 09:00-19:00 <br> сб-нд: 10:00-17:00
@@ -86,8 +86,10 @@ block content
             .single-flat__info-item 
               .single-flat__info-name Ванна кімната:
               .single-flat__info-value 23 м<sup>2</sup>
-          a(href="#").single-flat__btn.btn Записатися на перегляд
-          a(href="#" download).single-flat__btn.btn Завантажити планування
+          a(href="#").single-flat__btn.btn 
+            span Записатися на перегляд
+          a(href="#" download).single-flat__btn.btn 
+            span Завантажити планування
           
 block footer
   include ../includes/footer.pug

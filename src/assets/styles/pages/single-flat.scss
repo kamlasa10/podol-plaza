@@ -11,6 +11,18 @@
 
     .breadcrumbs {
         padding-top: 130px;
+
+        @include to(770px) {
+            padding-top: 110px;
+        }
+
+        @include to(480px) {
+            padding-top: 85px;
+        }
+    }
+
+    .contacts__item-block {
+        align-items: center;
     }
 
     .single-flat {
@@ -27,6 +39,25 @@
             grid-template-columns: 28% 43% 27%;
         }
 
+        @include to(1025px) {
+            grid-template-columns: 31% 38% 31%;
+        }
+
+        @include to(920px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include to(720px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 25px;
+        }
+
+        @include to(480px) {
+            padding-bottom: 45px;
+        }
+
         &__left,
         &__img,
         &__right {
@@ -39,6 +70,22 @@
 
             @include to(1440px) {
                 padding-right: 26px;
+            }
+
+            @include to(920px) {
+                width: 100%;
+                margin-top: 40px;
+                order: 1;
+                display: flex;
+            }
+
+            @include to(770px) {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            @include to(720px) {
+                margin-top: 0;
             }
         }
 
@@ -63,6 +110,26 @@
                 @include to(1320px) {
                     width: 50%;
                 }
+
+                @include to(720px) {
+                    width: 100%;
+                }
+            }
+
+            @include to(920px) {
+                width: 57%;
+            }
+
+            @include to(770px) {
+                width: calc(57% - 20px);
+                margin-right: 20px;
+            }
+
+            @include to(720px) {
+                padding: 20px 0;
+                width: 100%;
+                max-height: 300px;
+                margin-right: 0;
             }
         }
 
@@ -71,6 +138,17 @@
 
             @include to(1200px) {
                 padding: 50px 15px;
+            }
+
+            @include to(920px) {
+                width: 40%;
+            }
+
+            @include to(770px) {
+                padding: 30px 15px;
+            }
+            @include to(720px) {
+                width: 100%;
             }
         }
 
@@ -98,6 +176,11 @@
             @include to(1200px) {
                 margin-left: 0;
                 margin-right: 0;
+            }
+
+            @include to(770px) {
+                padding-right: 15px;
+                margin-bottom: 30px;
             }
 
             &::-webkit-scrollbar-thumb {
@@ -143,10 +226,47 @@
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
+
+            @include to(720px) {
+                max-width: 250px;
+                align-self: center;
+
+               margin-right: 15px;
+            }
+
+            @include to(567px) {
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+            }
+
+            @include to(480px) {
+                max-width: 220px;
+            }
         }
 
         .contacts__left {
             width: 100%;
+            
+            @include to(770px) {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% calc(45% - 50px);
+                column-gap: 50px;
+
+                .contacts__item-block {
+                    flex-wrap: nowrap;
+                }
+            }
+
+            @include to(620px) {
+                grid-template-columns: 1fr;
+                row-gap: 25px;
+            }
+
+            @include to(480px) {
+                row-gap: 10px;
+            }
         }
 
         .contacts__item {
