@@ -226,7 +226,7 @@
             }
 
             @include to(770px) {
-                max-height: 350px;
+                max-height: 40vh;
             }
 
             @include to(770px) {
@@ -234,7 +234,7 @@
             }
 
             @include to(480px) {
-                max-height: 320px;
+                max-height: 60vh;
                 padding: 45px 0;
             }
 

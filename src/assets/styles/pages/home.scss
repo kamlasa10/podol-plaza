@@ -753,6 +753,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
+
+      @include to(480px) {
+        align-items: flex-start;
+      }
     }
     
     &__title {
@@ -1441,7 +1445,7 @@
     }
 
     @include to(770px) {
-      padding-left: 50px;
+      padding-left: 30px;
     }
 
     @include to(720px) {

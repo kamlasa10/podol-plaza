@@ -126,12 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
       scale: 1
     })
 
-    tl.fromTo('.complex-name__wrap', {
-      y: 150,
-    }, {
-      y: 0,
-    }, 0.1)
-
     return tl
   }
 
@@ -152,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function animateSection4() {
-    return animateTextBlock('.about-complex__content')
+    return animateTextBlock('.about-complex-info .about-complex__content')
   }
 
   function animateSection5() {
@@ -324,6 +318,49 @@ document.addEventListener('DOMContentLoaded', () => {
     return tl
   }
 
+  function getAdaptiveHeightTriggerForAnimateScroll(secName) {
+    let offsetScroll
+
+    switch (secName) {
+      case 'five':
+        offsetScroll = document.documentElement.clientWidth / 1.6
+
+        if ($(window).width() <= 1025) {
+          offsetScroll = document.documentElement.clientWidth / 1.3
+        }
+
+        if ($(window).width() <= 770) {
+          offsetScroll = document.documentElement.clientWidth / 1
+        }
+
+        if ($(window).width() <= 480) {
+          offsetScroll = document.documentElement.clientWidth * 1.4
+        }
+
+        break;
+      case 'seven':
+      case 'eight':
+        offsetScroll = document.documentElement.clientWidth / 2.5
+
+        if ($(window).width() < 1025) {
+          offsetScroll = document.documentElement.clientWidth / 1.5
+        }
+
+        if ($(window).width() <= 770) {
+          offsetScroll = document.documentElement.clientWidth / 1
+        }
+
+        if ($(window).width() <= 480) {
+          offsetScroll = document.documentElement.clientWidth * 1.4
+        }
+
+      default:
+        break;
+    }
+
+    return offsetScroll
+  }
+
   const animateObj = {
     first: animateSection1,
     second: animateSection2,
@@ -339,86 +376,80 @@ document.addEventListener('DOMContentLoaded', () => {
     twelve: animateSection12
   }
 
-    gsap.utils.toArray('[data-section]').forEach((sec) => {
-      const animateName = sec.dataset.section
-      const fn = animateObj[animateName]
+  gsap.utils.toArray('[data-section]').forEach((sec) => {
+    const animateName = sec.dataset.section
+    const fn = animateObj[animateName]
+    let offsetScrollTriggerSec
   
-      switch (animateName) {
-        case 'first':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn)
-          break
-        case 'second': 
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-        case 'three':
-          createScrollTrigger({
-            trigger: sec,
-            end: () => `+=${document.documentElement.clientHeight}`
-          }, fn)
-          break
-        case 'four':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-        case 'five':
-          createScrollTrigger({
-            trigger: sec,
-            end: () => `+=${document.documentElement.clientWidth / 1.6}`,
-          }, fn)
-          break
-        case 'six':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-        case 'seven':
-          createScrollTrigger({
-            trigger: sec,
-            end: () => `+=${document.documentElement.clientWidth / 2.5}`,
-          }, fn)
-          break
-        case 'eight':
-          createScrollTrigger({
-            trigger: sec,
-            markers: true,
-            end: () => `+=${document.documentElement.clientWidth / 2.5}`,
-          }, fn)
-          break
-        case 'nine':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-        case 'ten':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-        case 'eleven':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-        case 'twelve':
-          createScrollTrigger({
-            trigger: sec,
-          }, fn, false)
-          break
-      }
-    })
-  
-  function createScrollTrigger(opts, fn, scrub = true) {
-    ScrollTrigger.create({
-      scrub,
-      animation: fn(),
-      immediateRender: scrub && false,
-      ...opts,
-      scroller: $(window).window() > 1025 ? "[data-scroll-container]": '' ,
-    })
-  }
+    switch (animateName) {
+      case 'first':
+        window.createScrollTrigger({
+          trigger: sec,
+        }, fn)
+        break
+      case 'second': 
+        window.createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'three':
+        window.createScrollTrigger({
+          trigger: sec,
+          end: () => `+=${document.documentElement.clientHeight}`
+        }, fn)
+        break
+      case 'four':
+        window.createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'five':
+        offsetScrollTriggerSec = getAdaptiveHeightTriggerForAnimateScroll(animateName)
+        window.createScrollTrigger({
+          trigger: sec,
+          end: () => `+=${offsetScrollTriggerSec}`,
+        }, fn)
+        break
+      case 'six':
+        window.createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'seven':
+        offsetScrollTriggerSec = getAdaptiveHeightTriggerForAnimateScroll(animateName)
+        window.createScrollTrigger({
+          trigger: sec,
+          end: () => `+=${offsetScrollTriggerSec}`,
+        }, fn)
+        break
+      case 'eight':
+        offsetScrollTriggerSec = getAdaptiveHeightTriggerForAnimateScroll(animateName)
+        window.createScrollTrigger({
+          trigger: sec,
+          markers: true,
+          end: () => `+=${offsetScrollTriggerSec}`,
+        }, fn)
+        break
+      case 'nine':
+        window.createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'ten':
+        window.createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'eleven':
+        window.createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+      case 'twelve':
+        window.createScrollTrigger({
+          trigger: sec,
+        }, fn, false)
+        break
+    }
+  })
 })

@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fnForAnimateFooter()
 
   gsap.utils.toArray('[data-section]').forEach((sec) => {
-    console.log(sec)
     const animateName = sec.dataset.section
     const fn = animateObj[animateName]
 
@@ -43,14 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
         window.createScrollTrigger({
           trigger: sec,
           start: () => '-=350',
-          end: () => '+=300',
+          end: () => ($(window).width() >= 480 ? '+=300' : `+=${document.documentElement.clientHeight}`),
           markers: true,
         }, fn)
         break
       case 'second':
         window.createScrollTrigger({
           trigger: sec,
-          start: () => '-=500',
+          start: () => ($(window).width() >= 480 ? '-=500' : '-=350'),
         }, fn, false)
     }
   })

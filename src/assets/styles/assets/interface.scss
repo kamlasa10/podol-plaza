@@ -646,7 +646,7 @@
   }
 
   @include to(480px) {
-    min-height: 65vh;
+    min-height: 85vh !important;
   }
 }
 

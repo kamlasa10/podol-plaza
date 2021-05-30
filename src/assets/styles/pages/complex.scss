@@ -1,332 +1,338 @@
 #complex-page {
-    .page__title {
+  .page__title {
+    margin-bottom: 20px;
+  }
+
+  background-color: #f0f0f0;
+
+  .btn-go-top {
+    display: none;
+  }
+
+  .intro {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    color: #fff;
+    align-items: center;
+
+    @include to(480px) {
+      min-height: 85vh !important;
+    }
+
+    .complex-name__bg {
+      background: url('../images/complex/1.jpg') no-repeat center/cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      @include to(480px) {
+        background: rgba(#000, 0.7);
+      }
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 1.2em;
+      font-family: $forum;
+      max-width: 450px;
+
+      @include to(1440px) {
+        max-width: 400px;
+        font-size: 24px;
+      }
+
+      @include to(667px) {
         margin-bottom: 20px;
-    }
-    background-color: #f0f0f0;
+        font-size: 22px;
+      }
 
-    .btn-go-top {
+      @include to(480px) {
+        font-size: 20px;
+      }
+
+      @include to(320px) {
+        font-size: 19px;
+      }
+    }
+
+    &__desc {
+      margin-left: 60px;
+      max-width: 350px;
+      color: #E8E6DF;
+
+      @include to(1440px) {
+        max-width: 290px;
+      }
+
+      @include to(480px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .architecture {
+    padding: 70px 0;
+    position: relative;
+
+    @include to(480px) {
+      padding: 45px 0;
+    }
+
+    .big-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      background: url('../images/complex/bg.png') no-repeat center/cover;
+
+      @include to(480px) {
         display: none;
+      }
     }
 
-    .intro {
-        position: relative;
-        min-height: 70vh;
-        display: flex;
-        color: #fff;
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 103px;
+      row-gap: 50px;
+      justify-content: space-between;
+      align-items: center;
+
+      @include to(1150px) {
+        align-items: flex-start;
+      }
+
+      @include to(1025px) {
+        column-gap: 70px;
+      }
+
+      @include to(920px) {
         align-items: center;
-               
-        .complex-name__bg {
-            background: url('../images/complex/1.jpg') no-repeat center/cover;
-        }
+        column-gap: 30px;
+      }
 
-        &::after {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-            top: 0;
-            left: 0;
-            z-index: 1;
+      @include to(770px) {
+        grid-template-columns: 1fr 1.2fr;
+      }
 
-            @include to(480px) {
-                background: rgba(#000, 0.7);
-            }
-        }
+      @include to(700px) {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+      }
 
-        &__title {
-            margin-bottom: 30px;
-            font-size: 26px;
-            line-height: 1.2em;
-            font-family: $forum;
-            max-width: 450px;
-
-            @include to(1440px) {
-                max-width: 400px;
-                font-size: 24px;
-            }
-
-            @include to(667px) {
-                margin-bottom: 20px;
-                font-size: 22px;
-            }
-
-            @include to(480px) {
-                font-size: 20px;
-            }
-
-            @include to(320px) {
-                font-size: 19px;
-            }
-        }
-
-        &__desc {
-            margin-left: 60px;
-            max-width: 350px;
-            color: #E8E6DF;
-
-            @include to(1440px) {
-                max-width: 290px;
-            }
-
-            @include to(480px) {
-                margin-left: 0;
-            }
-        }
+      @include to(480px) {
+        row-gap: 25px;
+      }
     }
 
-    .architecture {
-        padding: 70px 0;
-        position: relative;
+    &__right {
+      @include to(700px) {
+        order: -1;
+        height: 38vh;
+        min-height: 220px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @include to(480px) {
+        height: 29vh;
+      }
+
+      @include to(320px) {
+        min-height: 190px;
+      }
+    }
+
+    &__left {
+      display: flex;
+      align-items: flex-start;
+
+      @include to(920px) {
+        flex-direction: column;
+
+        &-wrap {
+          margin-top: 20px;
+        }
+      }
+
+      svg {
+        margin-right: 64px;
+        min-width: 95px;
+        height: 88px;
+
+        @include to(1440px) {
+          min-width: 90px;
+          height: 83px;
+        }
+
+        @include to(1025px) {
+          min-width: 75px;
+          height: 75px;
+          margin-right: 40px;
+        }
+
+        @include to(850px) {
+          margin-right: 0;
+          min-width: auto;
+          height: 62px;
+        }
+
+        @include to(700px) {
+          width: 70px;
+        }
 
         @include to(480px) {
-            padding: 45px 0;
+          height: 52px;
         }
-
-        .big-container {
-            position: relative;
-            z-index: 1;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            z-index: 0;
-            bottom: 0;
-            right: 0;
-            width: 50%;
-            background: url('../images/complex/bg.png') no-repeat center/cover;
-
-            @include to(480px) {
-                display: none;
-            }
-        }
-
-
-        &__content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: 103px;
-            row-gap: 50px;
-            justify-content: space-between;
-            align-items: center;
-
-            @include to(1150px) {
-                align-items: flex-start;
-            }
-
-            @include to(1025px) {
-                column-gap: 70px;
-            }
-
-            @include to(920px) {
-                align-items: center;
-                column-gap: 30px;
-            }
-
-            @include to(770px) {
-                grid-template-columns: 1fr 1.2fr;
-            }
-
-            @include to(700px) {
-                grid-template-columns: 1fr;
-                row-gap: 30px;
-            }
-
-            @include to(480px) {
-                row-gap: 25px;
-            }
-        }
-        
-        &__right {
-            @include to(700px) {
-                order: -1;
-                height: 38vh;
-                min-height: 220px;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            @include to(480px) {
-                height: 29vh;
-            }
-
-            @include to(320px) {
-                min-height: 190px;
-            }
-        }
-
-        &__left {
-            display: flex;
-            align-items: flex-start;
-
-            @include to(920px) {
-                flex-direction: column;
-
-                &-wrap {
-                    margin-top: 20px;
-                }
-            }
-
-            svg {
-                margin-right: 64px;
-                min-width: 95px;
-                height: 88px;
-
-                @include to(1440px) {
-                    min-width: 90px;
-                    height: 83px;
-                }
-
-                @include to(1025px) {
-                    min-width: 75px;
-                    height: 75px;
-                    margin-right: 40px;
-                }
-
-                @include to(850px) {
-                    margin-right: 0;
-                    min-width: auto;
-                    height: 62px;
-                }
-
-                @include to(700px) {
-                    width: 70px;
-                }
-
-                @include to(480px) {
-                    height: 52px;
-                }
-            }
-        }
-
-        &__right {
-            img {
-                object-fit: cover;
-            }
-        }
-
-        &__desc {
-            margin-bottom: 40px;
-
-            @include to(1025px) {
-                margin-bottom: 30px;
-            }
-
-            @include to(700px) {
-                margin-bottom: 20px;
-            }
-
-            @include to(480px) {
-                margin: 0;
-
-                &:not(:last-child) {
-                    margin-bottom: 15px;
-                }
-            }
-        }
+      }
     }
 
-    .complex-desc {
-        position: relative;
-        min-height: 70vh;
-        display: flex;
-        align-items: center;
-
-        @include to(480px) {
-            padding: 45px 0;
-        }
-
-        .complex-name__bg {
-            background: url('../images/complex/3.jpg') no-repeat center/cover;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            height: 100%;
-            right: 0;
-            width: 70%;
-            background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-            transform: matrix(-1, 0, 0, 1, 0, 0);
-
-            @include to(480px) {
-                width: 100%;
-                background: rgba(#000, 0.7);
-            }
-        }
-
-        &__content {
-            color: #fff;
-            display: flex;
-            justify-content: flex-end;
-
-            @include to(480px) {
-                justify-content: center;
-            }
-        }
-
-        &__wrap {
-            position: relative;
-            width: 420px;
-            height: 408px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include to(1440px) {
-                width: 400px;
-                height: 388px;
-            }
-
-            @include to(1025px) {
-                width: 370px;
-                height: 360px;
-            }
-
-            @include to(850px) {
-                width: 350px;
-                height: 335px;
-            }
-
-            @include to(480px) {
-                width: 315px;
-                height: 307px;
-            }
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-            }
-        }
-
-        &__title {
-            font-size: 26px;
-            font-family: $forum;
-            line-height: 1.2em;
-            max-width: 260px;
-            text-align: center;
-
-            @include to(1440px) {
-                font-size: 24px;
-            }
-
-            @include to(480px) {
-                font-size: 20px;
-                transform: translateX(7px);
-            }
-
-            @include to(320px) {
-                font-size: 19px;
-                max-width: 240px;
-            }
-        }
+    &__right {
+      img {
+        object-fit: cover;
+      }
     }
+
+    &__desc {
+      margin-bottom: 40px;
+
+      @include to(1025px) {
+        margin-bottom: 30px;
+      }
+
+      @include to(700px) {
+        margin-bottom: 20px;
+      }
+
+      @include to(480px) {
+        margin: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .complex-desc {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+
+    @include to(480px) {
+      min-height: 85vh !important;
+      padding: 45px 0;
+    }
+
+    .complex-name__bg {
+      background: url('../images/complex/3.jpg') no-repeat center/cover;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      right: 0;
+      width: 70%;
+      background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+
+      @include to(480px) {
+        width: 100%;
+        background: rgba(#000, 0.7);
+      }
+    }
+
+    &__content {
+      color: #fff;
+      display: flex;
+      justify-content: flex-end;
+
+      @include to(480px) {
+        justify-content: center;
+      }
+    }
+
+    &__wrap {
+      position: relative;
+      width: 420px;
+      height: 408px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include to(1440px) {
+        width: 400px;
+        height: 388px;
+      }
+
+      @include to(1025px) {
+        width: 370px;
+        height: 360px;
+      }
+
+      @include to(850px) {
+        width: 350px;
+        height: 335px;
+      }
+
+      @include to(480px) {
+        width: 315px;
+        height: 307px;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &__title {
+      font-size: 26px;
+      font-family: $forum;
+      line-height: 1.2em;
+      max-width: 260px;
+      text-align: center;
+
+      @include to(1440px) {
+        font-size: 24px;
+      }
+
+      @include to(480px) {
+        font-size: 20px;
+        transform: translateX(7px);
+      }
+
+      @include to(320px) {
+        font-size: 19px;
+        max-width: 240px;
+      }
+    }
+  }
 }
