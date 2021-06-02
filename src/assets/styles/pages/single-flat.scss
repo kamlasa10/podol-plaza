@@ -99,17 +99,10 @@
             }
 
             img {
-                width: 50%;
+                width: 85%;
                 object-fit: contain;
                 height: auto;
-
-                @include to(1370px) {
-                    width: 45%;
-                }
-
-                @include to(1320px) {
-                    width: 50%;
-                }
+                max-height: 400px;
 
                 @include to(720px) {
                     width: 100%;
@@ -166,11 +159,12 @@
         &__info {
             padding-right: 25px;
             overflow-y: scroll;
-            height: 270px;
+            max-height: 270px;
+            height: auto;
             margin-bottom: 45px;
 
             @include to(1370px) {
-                height: 217px;
+                max-height: 217px;
             }
 
             @include to(1200px) {
@@ -215,7 +209,7 @@
             }
 
             &-value {
-                width: 20%;
+                width: 30%;
             }
         }
 

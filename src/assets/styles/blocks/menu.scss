@@ -27,8 +27,9 @@
         }
 
         @include to(730px) {
-            margin-top: 10px;
+            margin-top: 25px;
         }
+        
     }
 
     &.show {
@@ -98,6 +99,7 @@
     &__top {
         display: flex;
         flex-wrap: wrap;
+        transform: translateY(-7%);
 
         @media screen and (-webkit-min-device-pixel-ratio: 2) and ( max-width: 1445px) {
             transform: translateY(-11%);

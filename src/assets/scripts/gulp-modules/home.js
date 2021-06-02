@@ -59,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       1200: {
         spaceBetween: 30,
+        slidesPerView: 3.5
+      },
+      1440: {
+        spaceBetween: 30,
         slidesPerView: 4.3
       }
     },
@@ -66,6 +70,13 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.js-controls-features-slider-next',
       prevEl: '.js-controls-features-slider-prev',
     },
+    on: {
+      init(e) {
+        if($(window).width() <= 1370) {
+          console.log(e)
+        }
+      }
+    }
   })
 
   const swiperTeam = new Swiper('.js-team-slider', {
@@ -93,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 20,
       },
       1250: {
-        slidesPerView: 4.2,
+        slidesPerView: 'auto',
         spaceBetween: 30
       },
       1440: {

@@ -4,6 +4,12 @@
     .btn-go-top {
         display: none;
     }
+    
+    .breadcrumbs {
+        @include to(480px) {
+            padding-top: 85px;
+        }
+    }
 }
 
 .news {

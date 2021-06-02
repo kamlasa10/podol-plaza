@@ -25,6 +25,10 @@
 
     &__prev {
         margin-right: 40px;
+
+        @include to(480px) {
+            margin-right: 15px;
+        }
     }
 
     &__next {
@@ -46,6 +50,12 @@
         cursor: pointer;
         &:not(:last-child) {
             margin-right: 40px;
+        }
+
+        @include to(480px) {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
         }
     }
 

@@ -83,6 +83,7 @@
             @include to(700px) {
                 text-align: center;
                 font-size: 22px;
+                margin-right: 0;
             }
 
             @include to(320px) {

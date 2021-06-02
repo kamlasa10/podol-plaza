@@ -413,6 +413,13 @@
             &::before {
                 display: none;
             }
+
+            &-btn {
+                background: linear-gradient(180deg, #703221 0%, #000000 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-decoration: none;
+            }
         }
 
         &__top {
