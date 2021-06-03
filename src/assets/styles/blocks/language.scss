@@ -27,6 +27,11 @@
         color: $black;
         cursor: pointer;
 
+        @include to(480px) {
+            display: flex;
+            align-items: center;
+        }
+
         span {
             position: relative;
             z-index: 2;
@@ -51,7 +56,7 @@
                 transition: all .4s;
 
                 @include to(480px) {
-                    top: 7px;
+                    top: 10px;
                 }
             }
 

@@ -81,6 +81,12 @@
                     .nav__footer-item-content
                         .nav__footer__text пн-пт: 09:00-18:00 сб-нд: 10:00-18:00
 .overlay
+    .popup.popup-thanks.popup-callback.js-popup(data-popup="popup" data-popup-name="thanks")
+        .popup__top
+            button(type="button").js-close-popup.popup__close-btn.btn-round.btn--res
+                +svg('cross')
+        .popup__title.popup-thanks__title ДЯКУЄМО!
+        .popup__desc Ваша заявка успішно відправлена. Менеджер обов′язково зв′яжеться з вами у робочий час.
     .popup.js-popup.popup-callback(data-popup="popup" data-popup-name="callback") 
         .popup__top
             button(type="button").js-close-popup.popup__close-btn.btn-round.btn--res

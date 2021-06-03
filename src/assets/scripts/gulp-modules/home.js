@@ -43,26 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const swiperFeatures = new Swiper('.js-feature-slider', {
     spaceBetween: 30,
-    slidesPerView: 4.3,
     autoHeight: true,
+    slidesPerView: 3.9,
     breakpoints: {
       320: {
-        slidesPerView: 1,
-        spaceBetween: 0
+        slidesPerView: 1.1,
+        spaceBetween: 10
       },
-      750: {
-        slidesPerView: 2.3,
-        spaceBetween: 20
+      480: {
+        slidesPerView: 1.4,
+        spaceBetween: 15
       },
-      900: {
-        slidesPerView: 3,
+      650: {
+        slidesPerView: 2.2,
+        spaceBetween: 20,
+      },
+      850: {
+        spaceBetween: 30,
+        slidesPerView: 3.3
       },
       1200: {
-        spaceBetween: 30,
-        slidesPerView: 3.5
+        slidesPerView: 4.3
       },
-      1440: {
-        spaceBetween: 30,
+      1650: {
         slidesPerView: 4.3
       }
     },
@@ -108,6 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 30
       },
       1440: {
+        slidesPerView: 4.7
+      },
+      1650: {
+        slidesPerView: 4.8
+      },
+      1700: {
         slidesPerView: 5.2,
       }
     }

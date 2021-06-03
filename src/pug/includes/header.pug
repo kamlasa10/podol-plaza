@@ -9,7 +9,20 @@ header(class=`header ${headerColor} ${noBg && 'no-bg'}`)
       .header__right 
         .language.header__language.btn-round
           span.language__current
-            +svg('circle-gradient').btn-round-cirlce
+            <svg class="btn-round-cirlce" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear)"/>
+            <defs>
+            <linearGradient id="paint0_linear" x1="-1.71657e-06" y1="-0.000120926" x2="50" y2="49.9999" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FBBF65"/>
+            <stop offset="0.182292" stop-color="#F2C37C"/>
+            <stop offset="0.354167" stop-color="#F2CE7C"/>
+            <stop offset="0.510417" stop-color="#FFE3A3"/>
+            <stop offset="0.6875" stop-color="#F2CE7C"/>
+            <stop offset="0.84375" stop-color="#F2C37C"/>
+            <stop offset="0.994792" stop-color="#FBBF65"/>
+            </linearGradient>
+            </defs>
+            </svg>
             span ук
           ul.language__list 
             li.language__item 
@@ -25,7 +38,20 @@ header(class=`header ${headerColor} ${noBg && 'no-bg'}`)
         button(type="button").burger-btn.btn--res.js-open-menu 
           span.burger-btn__text Меню
           span.burger-btn__block.btn-round
-            +svg('circle-gradient').btn-round-cirlce
+            <svg class="btn-round-cirlce" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="24.5" stroke="url(#paint1_linear)"/>
+            <defs>
+            <linearGradient id="paint1_linear" x1="-1.71657e-06" y1="-0.000120926" x2="50" y2="49.9999" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FBBF65"/>
+            <stop offset="0.182292" stop-color="#F2C37C"/>
+            <stop offset="0.354167" stop-color="#F2CE7C"/>
+            <stop offset="0.510417" stop-color="#FFE3A3"/>
+            <stop offset="0.6875" stop-color="#F2CE7C"/>
+            <stop offset="0.84375" stop-color="#F2C37C"/>
+            <stop offset="0.994792" stop-color="#FBBF65"/>
+            </linearGradient>
+            </defs>
+            </svg>
             span.burger-btn__decor
             span.burger-btn__decor
 

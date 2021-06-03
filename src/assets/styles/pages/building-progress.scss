@@ -41,6 +41,12 @@
         }
     }
 
+    @include to(480px) {
+        .gallery__tabs {
+            padding-bottom: 25px;
+        }
+    }
+
     @include to(320px) {
         .gallery__tab {
             padding-left: 20px;
@@ -74,6 +80,12 @@
         &__top {
             margin-bottom: 30px;
             align-items: flex-start;
+
+            @include to(480px) {
+                & .gallery__tabs {
+                    padding-bottom: 0;
+                }
+            }
         }
 
         .gallery__tab:nth-child(2) {
@@ -287,6 +299,7 @@
 
             @include to(650px) {
                 grid-template-columns: 1fr;
+                row-gap: 0;
             }
 
             @include to(480px) {
@@ -299,6 +312,10 @@
                 border-radius: 5px;
                 background-color: #fff;
                 padding: 15px 15px 23px;
+
+                @include to(667px) {
+                    margin-bottom: 23px;
+                }
             }
 
             &-img {
@@ -389,6 +406,10 @@
         z-index: -10;
         transition: all .4s;
 
+        &__btn {
+            padding: 0;
+        }
+
         &.show {
             opacity: 1;
             z-index: 20;
@@ -405,20 +426,37 @@
         }
 
         .gallery__tab {
-            border-radius: 25px;
-            margin-right: 20px;
-            background: linear-gradient(87.34deg, #FBBF65 0%, #F2C37C 14.69%, #F2CE7C 26.02%, #FFE3A3 51.54%, #F2CE7C 74.04%, #F2C37C 83.65%, #FBBF65 100%);
-            box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.55), inset 0px -1px 0px #F6ED96;
-    
+            background: transparent;
+            padding: 0;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            @include to(480px) {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+
             &::before {
                 display: none;
             }
 
             &-btn {
-                background: linear-gradient(180deg, #703221 0%, #000000 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                text-decoration: none;
+                border-radius: 25px;
+                background: transparent;
+                box-shadow: 0px 4px 15px rgba(201, 117, 51, 0.55), inset 0px -1px 0px #F6ED96;
+
+                @include to(480px) {
+                    padding-left: 22px;
+                    padding-right: 22px;
+                }
+
+                @include to(320px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
             }
         }
 
@@ -460,6 +498,11 @@
                 justify-content: center;
                 align-items: center;
                 transition: all .4s;
+
+                @include to(480px) {
+                    width: 40px;
+                    height: 40px;
+                }
 
                 svg {
                     width: 16px;

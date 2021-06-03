@@ -221,6 +221,11 @@
             transition: all .4s;
             border-radius: 50%;
             cursor: pointer;
+
+            @include to(1440px) {
+                width: 8px !important;
+                height: 8px !important;
+            }
         }
 
         input:checked + .popup__checkbox-indicator {
@@ -275,6 +280,15 @@
 
             @include to(1440px) {
                 font-size: 10px;
+            }
+        }
+    }
+
+    &-thanks {
+        @include to(480px) {
+            &__title {
+                text-transform: uppercase;
+                margin-bottom: 15px;
             }
         }
     }

@@ -180,7 +180,7 @@ function styles() {
 		return gulp.src(paths.styles.main)
 		.pipe(sourcemaps.init()) // инциализация sourcemap'ов
 		.pipe(sass({
-				outputStyle: 'compressed' // компиляции в CSS с отступами
+				//outputStyle: 'compressed' // компиляции в CSS с отступами
 		}))
 		.on('error', notify.onError({
 				title: 'SCSS',

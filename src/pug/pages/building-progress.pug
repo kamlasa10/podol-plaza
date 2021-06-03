@@ -67,9 +67,11 @@ block content
             +img('ui/gallery-arrow.svg')
       .gallery__tabs 
         .gallery__tab.js-gallery__tab-wrap.btn 
-          button(type="button").gallery__tab-btn.btn--res.js-building-gallery__tab(data-gallery-next="1") Попередній місяць
+          button(type="button").gallery__tab-btn.btn.btn--res.js-building-gallery__tab(data-gallery-next="1") 
+            span Попередній місяць
         .gallery__tab.js-gallery__tab-wrap.btn
-          button(type="button").gallery__tab-btn.btn--res.js-building-gallery__tab(data-gallery-prev="2") Наступний місяць
+          button(type="button").gallery__tab-btn.btn.btn--res.js-building-gallery__tab(data-gallery-prev="2") 
+            span Наступний місяць
     .building-progress
         .big-container.gallery__wrapper-top
             include ../includes/breadcrumbs.pug

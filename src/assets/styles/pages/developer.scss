@@ -130,6 +130,10 @@
                 &__right {
                     padding-left: 100px;
 
+                    @include to(1440px) {
+                        padding-left: 80px;
+                    }
+
                     @include to(770px) {
                         padding-left: 50px;
                     }

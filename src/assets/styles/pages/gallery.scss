@@ -31,6 +31,11 @@
         position: relative;
         min-height: 100vh;
 
+        @include to(480px) {
+            min-height: auto;
+            height: 100vh;
+        }
+
         &::before,
         &::after {
             content: "";
@@ -184,11 +189,11 @@
     justify-content: center; 
 
     @include to(480px) {
-        padding-bottom: 35px;
+        padding-bottom: 40px;
     }
 
     @include to(320px) {
-        padding-bottom: 30px;
+        padding-bottom: 45px;
     }
 }
 
@@ -258,6 +263,11 @@
         &::before {
             opacity: 1;
         }
+    }
+
+    @include to(480px) {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     @include to(320px) {
