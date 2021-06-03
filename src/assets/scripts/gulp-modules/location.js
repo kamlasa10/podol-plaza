@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setMapOnAll(map)
   })
 
-  $('.js-location__btn-infra').click(e => {
+  $('.js-location__btn-infra').click((e) => {
     e.preventDefault
 
     $('.js-location__map-info').addClass('active')

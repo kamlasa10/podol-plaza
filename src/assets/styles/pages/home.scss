@@ -1,751 +1,744 @@
 #index-page {
-    .footer {
-      padding-top: 0;
-    }
+  .footer {
+    padding-top: 0;
+  }
 
-    .hero {
-        position: relative;
+  .hero {
+    position: relative;
 
-        &__slide {
-            background-position: center;
-            object-fit: cover;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            background-size: cover;
-            position: relative;
-            display: flex;
-            align-items: center;
-
-            .big-container{
-                position: relative;
-                z-index: 10;
-            }
-
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              z-index: 2;
-              bottom: 0;
-              background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
-          }
-
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 50%;
-                height: 100%;
-                background: url('../images/slider-decor.png') no-repeat center/cover;
-
-                @include to(1025px) {
-                  width: 100%;
-                }
-            }
-        }
-
-        &__title {
-            font-size: 75px;
-            line-height: 1.1em;
-            max-width: 500px;
-            margin-bottom: 32px;
-            font-family: $forum;
-
-            @include to(1440px) {
-                font-size: 72px;
-                max-width: 420px;
-            }
-
-            @include to(770px) {
-              margin-bottom: 25px;
-              line-height: 1em;
-              font-size: 70px;
-            }
-
-            @include to(767px) {
-              font-size: 50px;
-              margin-bottom: 15px;
-            }
-
-            @include to(480px) {
-              font-size: 48px;
-            }
-
-            @include to(320px) {
-              font-size: 42px;
-            }
-        }
-
-        &__slider-pagination {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            left: calc(100% - 63px);
-            z-index: 20;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
-            flex-direction: column;
-            justify-content: center;
-
-            @include to(1025px) {
-              left: calc(100% - 86px);
-            }
-
-            @include to(770px) {
-              left: calc(100% - 66px);
-            }
-
-            @include to(770px) {
-              left: calc(100% - 51px);
-            }
-        }
-
-        &__bottom {
-          .big-container::before {
-            display: none;
-          }
-
-          .nav__footer-content {
-            @include to(700px) {
-              width: 100%;
-            }
-
-            @include to(375px) {
-              display: block;
-              width: calc(100% - 60px);
-            }
-          }
-
-          .nav__footer-item .btn-round {
-            @include to(375px) {
-              margin-bottom: 0;
-            }
-          }
-
-          .nav__footer {
-            @include to(375px) {
-              bottom: 15px;
-            }
-          }
-
-          .nav__footer-item {
-            @include to(375px) {
-              margin-bottom: 15px;
-              flex-direction: row;
-            }
-          }
-        }
-    }
-
-    .complex-name {
+    &__slide {
+      background-position: center;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      background-size: cover;
       position: relative;
-      color: #fff;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
 
-      &__bg {
-        content: "";
+      .big-container {
+        position: relative;
+        z-index: 10;
+      }
+
+      &::after {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
-        background: url('../images/complex-name-bg.jpg') no-repeat center/cover;
-      }
-
-      &__content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      &__wrap {
-        max-width: 450px;
-        padding: 100px 75px ;
-        text-align: center;
-        position: relative;
-        background: url('../images/circle-decor.png') no-repeat center/contain;
-
-        @include to(770px) {
-          padding: 88px 75px;
-        }
-
-        @include to(1440px) {
-          max-width: 400px;
-        }
-
-        @include to(480px) {
-          padding: 92px 75px;
-        }
-
-        @include to(375px) {
-          padding: 75px;
-        }
-
-        @include to(320px) {
-          padding: 59px;
-        }
-      }
-
-      &__desc {
-        margin-bottom: 30px;
-        font-family: $forum;
-        font-size: 26px;
-        line-height: 1.1em;
-
-        @include to(1440px) {
-          font-size: 24px;
-        }
-
-        @include to(770px) {
-          font-size: 22px;
-        }
-
-        @include to(480px) {
-          font-size: 19px;
-          margin-bottom: 20px;
-          transform: translateX(10px);
-        }
-
-        @include to(320px) {
-          font-size: 17px;
-          transform: translateX(6px);
-        }
-      }
-    }
-
-    .about-complex {
-      &__content {
-        display: flex;
-        justify-content: space-between;
-
-        @include to(480px) {
-          flex-direction: column;
-          justify-content: flex-start
-        }
-      }
-
-      &__title {
-        @include to(1025px) {
-          font-size: 45px;
-        }
-      }
-
-      .container {
-        @include to(1370px) {
-          max-width: 1170px;
-          margin-right: 50px;
-        }
-      }
-
-      &-info__item {
-        max-width: 430px;
-        margin-right: 66px;
-
-        @include to(1025px) {
-          margin-right: 35px;
-        }
-      }
-
-      &__wrap {
-        display: flex;
-
-        @include to(800px) {
-          flex-direction: column;
-          padding-left: 35px;
-          width: 60%;
-        }
-
-        @include to(667px) {
-          width: 75%;
-        }
-
-        @include to(480px) {
-          width: 100%;
-          padding-left: 0;
-        }
-      }
-
-      &__item {
-        max-width: 320px;
-
-        @include to(1440px) {
-          max-width: 290px;
-        }
-
-        @include to(800px) {
-          max-width: none;
-        }
-      }
-
-      .about-complex__item:not(:last-child) {
-        margin-right: 100px;
-
-        @include to(1370px) {
-          margin-right: 85px;
-        }
-
-        @include to(1025px) {
-          margin-right: 63px;
-        }
-
-        @include to(900px) {
-          margin-right: 35px;
-        }
-
-        @include to(800px) {
-          margin-bottom: 25px;
-          margin-right: 0;
-        }
-
-        @include to(480px) {
-          margin-bottom: 20px;
-        }
-      }
-
-      &-info {
-        @include to(1025px) {
-          .about-complex__wrap {
-            flex-direction: column;
-            width: 55%;
-          }
-
-          .about-complex__item {
-            &:not(:last-child) {
-              margin-bottom: 25px;
-            }
-            margin-right: 0;
-            max-width: 100%;
-          }
-        }
-
-        @include to(770px) {
-          margin-top: -20px;
-
-          .about-complex__content {
-            flex-direction: column;
-            justify-content: flex-start;
-          }
-
-          .about-complex-info__item {
-            margin-right: 0;
-            max-width: 100%;
-          }
-
-          .about-complex__title {
-            max-width: 100%;
-            margin-bottom: 20px;
-          }
-
-          .about-complex__wrap{
-            width: 100%;
-            padding-left: 0;
-          }
-        }
-
-        @include to(480px) {
-          margin-top: 0;
-
-          .about-complex__title {
-            font-size: 37px;
-          }
-
-          .about-complex__item:not(:last-child) {
-            margin-bottom: 20px;
-          }
-        }
-
-        @include to(320px) {
-          .about-complex__title {
-            font-size: 35px;
-          }
-        }
-      }
-    }
-
-    .panorama {
-      position: relative;
-      overflow: hidden;
-
-      &__title {
-        font-size: 35px;
-        margin-bottom: 0;
-        margin-right: 30px;
-        max-width: 500px;
-
-        @include to(1250px) {
-          max-width: auto;
-        }
-
-        @include to(850px) {
-          text-align: center;
-          max-width: 100%;
-        }
-
-        @include to(480px) {
-          font-size: 30px;
-          margin-bottom: 15px;
-        }
-      }
-
-      &__content {
-        min-height: 55vh;
-
-        @include to(850px) {
-          min-height: 20vh;
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-
-      &__info {
-        padding: 32px 30px;
-        position: absolute;
-        bottom: 20px;
-        border-radius: 5px;
-        right: 0;
-        width: 42%;
-        background-color: #fff;
-
-        @include to(1440px) {
-          padding: 20px 0;
-          width: 39%;
-
-          .container {
-            padding-left: 30px;
-            padding-right: 30px;
-          }
-        }
-
-        @include to(1250px) {
-          width: 55%;
-        }
-
-        @include to(1025px) {
-          padding-top: 30px;
-          padding-bottom: 30px;
-        }
-
-        @include to(850px) {
-          position: static;
-          width: 100%;
-          padding-left: 0;
-          padding-right: 0;
-          padding-bottom: 0;
-        }
-
-        @include to(480px) {
-          padding-bottom: 0;
-
-          .container {
-            padding-left: 15px;
-            padding-right: 15px;
-          }
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          width: 70%;
-          right: 0;
-          background: url("../images/panorama-decor.jpg") no-repeat center/cover;
-
-          @include to(1440px) {
-            width: 84%;
-          }
-
-          @include to(1370px) {
-            width: 100%;
-          }
-
-          @include to(850px) {
-            display: none;
-          }
-        }
-      }
-
-      &__wrap {
-        position: relative;
         z-index: 2;
-        display: flex;
-        align-items: center;
-
-        @include to(850px) {
-          display: flex;
-          justify-content: center;
-        }
-
-        @include to(480px) {
-          flex-direction: column;
-          justify-content: flex-start;
-        }
-      }
-    }
-
-    .floor {
-      overflow: hidden;
-      position: relative;
-      color: #fff;
-      
-      .complex-name__bg {
-        background: url('../images/floor-home-bg.jpg') no-repeat center/cover;
+        bottom: 0;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
       }
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
         bottom: 0;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
-      }
-
-      & .container,
-      &.parking .container {
-        position: relative;
-        z-index: 3;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: url('../images/slider-decor.png') no-repeat center/cover;
 
         @include to(1025px) {
-          padding-left: 50px;
-          padding-right: 50px;
+          width: 100%;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 75px;
+      line-height: 1.1em;
+      max-width: 500px;
+      margin-bottom: 32px;
+      font-family: $forum;
+
+      @include to(1440px) {
+        font-size: 72px;
+        max-width: 420px;
+      }
+
+      @include to(770px) {
+        margin-bottom: 25px;
+        line-height: 1em;
+        font-size: 70px;
+      }
+
+      @include to(767px) {
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
+
+      @include to(480px) {
+        font-size: 48px;
+      }
+
+      @include to(320px) {
+        font-size: 42px;
+      }
+    }
+
+    &__slider-pagination {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      left: calc(100% - 63px);
+      z-index: 20;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      flex-direction: column;
+      justify-content: center;
+
+      @include to(1025px) {
+        left: calc(100% - 86px);
+      }
+
+      @include to(770px) {
+        left: calc(100% - 66px);
+      }
+
+      @include to(770px) {
+        left: calc(100% - 51px);
+      }
+    }
+
+    &__bottom {
+      .big-container::before {
+        display: none;
+      }
+
+      .nav__footer-content {
+        @include to(700px) {
+          width: 100%;
         }
 
-        @include to(770px) {
-          padding-left: 30px;
-          padding-right: 30px;
-        }
-
-        @include to(480px) {
-          padding-left: 15px;
-          padding-right: 15px;
+        @include to(375px) {
+          display: block;
+          width: calc(100% - 60px);
         }
       }
 
-      &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 380px;
+      .nav__footer-item .btn-round {
+        @include to(375px) {
+          margin-bottom: 0;
+        }
       }
 
-      &__title {
+      .nav__footer {
+        @include to(375px) {
+          bottom: 15px;
+        }
+      }
+
+      .nav__footer-item {
+        @include to(375px) {
+          margin-bottom: 15px;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  .complex-name {
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+
+    &__bg {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('../images/complex-name-bg.jpg') no-repeat center/cover;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__wrap {
+      max-width: 450px;
+      padding: 100px 75px;
+      text-align: center;
+      position: relative;
+      background: url('../images/circle-decor.png') no-repeat center/contain;
+
+      @include to(770px) {
+        padding: 88px 75px;
+      }
+
+      @include to(1440px) {
+        max-width: 400px;
+      }
+
+      @include to(480px) {
+        padding: 92px 75px;
+      }
+
+      @include to(375px) {
+        padding: 75px;
+      }
+
+      @include to(320px) {
+        padding: 59px;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 30px;
+      font-family: $forum;
+      font-size: 26px;
+      line-height: 1.1em;
+
+      @include to(1440px) {
+        font-size: 24px;
+      }
+
+      @include to(770px) {
+        font-size: 22px;
+      }
+
+      @include to(480px) {
+        font-size: 19px;
         margin-bottom: 20px;
-        color: #fff;
+        transform: translateX(10px);
+      }
 
-        @include to(480px) {
-          margin-bottom: 13px;
+      @include to(320px) {
+        font-size: 17px;
+        transform: translateX(6px);
+      }
+    }
+  }
+
+  .about-complex {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+
+      @include to(480px) {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+
+    &__title {
+      @include to(1025px) {
+        font-size: 45px;
+      }
+    }
+
+    .container {
+      @include to(1370px) {
+        max-width: 1170px;
+        margin-right: 50px;
+      }
+    }
+
+    &-info__item {
+      max-width: 430px;
+      margin-right: 66px;
+
+      @include to(1025px) {
+        margin-right: 35px;
+      }
+    }
+
+    &__wrap {
+      display: flex;
+
+      @include to(800px) {
+        flex-direction: column;
+        padding-left: 35px;
+        width: 60%;
+      }
+
+      @include to(667px) {
+        width: 75%;
+      }
+
+      @include to(480px) {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    &__item {
+      max-width: 320px;
+
+      @include to(1440px) {
+        max-width: 290px;
+      }
+
+      @include to(800px) {
+        max-width: none;
+      }
+    }
+
+    .about-complex__item:not(:last-child) {
+      margin-right: 100px;
+
+      @include to(1370px) {
+        margin-right: 85px;
+      }
+
+      @include to(1025px) {
+        margin-right: 63px;
+      }
+
+      @include to(900px) {
+        margin-right: 35px;
+      }
+
+      @include to(800px) {
+        margin-bottom: 25px;
+        margin-right: 0;
+      }
+
+      @include to(480px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-info {
+      @include to(1025px) {
+        .about-complex__wrap {
+          flex-direction: column;
+          width: 55%;
+        }
+
+        .about-complex__item {
+          &:not(:last-child) {
+            margin-bottom: 25px;
+          }
+          margin-right: 0;
+          max-width: 100%;
         }
       }
 
-      &__desc {
-        margin-bottom: 30px;
+      @include to(770px) {
+        margin-top: -20px;
 
-        @include to(480px) {
+        .about-complex__content {
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+
+        .about-complex-info__item {
+          margin-right: 0;
+          max-width: 100%;
+        }
+
+        .about-complex__title {
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .about-complex__wrap {
+          width: 100%;
+          padding-left: 0;
+        }
+      }
+
+      @include to(480px) {
+        margin-top: 0;
+
+        .about-complex__title {
+          font-size: 37px;
+        }
+
+        .about-complex__item:not(:last-child) {
           margin-bottom: 20px;
         }
       }
 
-      &__btn {
-        align-self: flex-start;
+      @include to(320px) {
+        .about-complex__title {
+          font-size: 35px;
+        }
       }
     }
+  }
 
-    .features {
+  .panorama {
+    position: relative;
+    overflow: hidden;
 
-      &__top {
-        margin-bottom: 40px;
-        display: flex;
-        justify-content: space-between;
+    &__title {
+      font-size: 35px;
+      margin-bottom: 0;
+      margin-right: 30px;
+      max-width: 500px;
 
-        @include to(480px) {
-          margin-bottom: 30px;
-        }
+      @include to(1250px) {
+        max-width: auto;
       }
 
-      .features__content {
-        @media (min-width: 2000px) {
-          max-width: 1920px;
-          margin: 0 auto;
-        }
-
-        @include to(480px) {
-          padding-right: 15px;
-          padding-left: 15px;
-        }
-
-        .swiper-container {
-          width: 100%;
-          padding-left: 17.2vw;
-
-          @include to(1650px) {
-            padding-left: 11.7vw;
-          }
-
-          @include to(1445px) {
-            padding-left: 6.3vw;
-          }
-
-          @include to(1370px) {
-            padding-left: 11vw;
-          }
-
-          @include to(1280px) {
-            padding-left: 8vw;
-          }
-
-          @include to(1025px) {
-            padding-left: 50px;
-          }
-
-          @include to(770px) {
-            padding-left: 30px;
-          }
-
-         @include to(480px){
-           padding-left: 0;
-         }
-        }
-
-        .swiper-wrapper {
-          padding-top: 2px;
-          margin: 0 auto;
-          // width: 100%;
-
-          @include to(1370px) {
-            max-width: 100%;
-            padding-left: 0;
-          }
-        }
+      @include to(850px) {
+        text-align: center;
+        max-width: 100%;
       }
 
-      &__img {
+      @include to(480px) {
+        font-size: 30px;
         margin-bottom: 15px;
-        background-color: transparent;
+      }
+    }
 
-        @include to(480px) {
-          margin-left: 1px;
-        }
+    &__content {
+      min-height: 55vh;
 
-        img {
-          position: relative;
-          z-index: 3;
+      @include to(850px) {
+        min-height: 20vh;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      padding: 32px 30px;
+      position: absolute;
+      bottom: 20px;
+      border-radius: 5px;
+      right: 0;
+      width: 42%;
+      background-color: #fff;
+
+      @include to(1440px) {
+        padding: 20px 0;
+        width: 39%;
+
+        .container {
+          padding-left: 30px;
+          padding-right: 30px;
         }
       }
 
-      &__item {
+      @include to(1250px) {
+        width: 55%;
+      }
+
+      @include to(1025px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      @include to(850px) {
+        position: static;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+
+      @include to(480px) {
+        padding-bottom: 0;
+
+        .container {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 70%;
+        right: 0;
+        background: url('../images/panorama-decor.jpg') no-repeat center/cover;
+
+        @include to(1440px) {
+          width: 84%;
+        }
+
+        @include to(1370px) {
+          width: 100%;
+        }
+
+        @include to(850px) {
+          display: none;
+        }
+      }
+    }
+
+    &__wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+
+      @include to(850px) {
+        display: flex;
+        justify-content: center;
+      }
+
+      @include to(480px) {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .floor {
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+
+    .complex-name__bg {
+      background: url('../images/floor-home-bg.jpg') no-repeat center/cover;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    & .container,
+    &.parking .container {
+      position: relative;
+      z-index: 3;
+
+      @include to(1025px) {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      @include to(770px) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      @include to(480px) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 380px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      color: #fff;
+
+      @include to(480px) {
+        margin-bottom: 13px;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 30px;
+
+      @include to(480px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__btn {
+      align-self: flex-start;
+    }
+  }
+
+  .features {
+    &__top {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+
+      @include to(480px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .features__content {
+      // @media (min-width: 2000px) {
+      //   max-width: 1920px;
+      // }
+
+      .swiper-container {
+        width: 100%;
+        // padding-left: 17.2vw;
+
         // @include to(1650px) {
-        //   width: 300px !important;
+        //   padding-left: 11.7vw;
         // }
-        &--1 {
-          img {
-            width: 27px;
-            height: 21px;
 
-            @include to(320px) {
-              width: 24px;
-              height: 20px;
-            }
+        // @include to(1445px) {
+        //   padding-left: 6.3vw;
+        // }
+
+        // @include to(1370px) {
+        //   padding-left: 11vw;
+        // }
+
+        // @include to(1280px) {
+        //   padding-left: 8vw;
+        // }
+
+        // @include to(1025px) {
+        //   padding-left: 50px;
+        // }
+
+        // @include to(770px) {
+        //   padding-left: 30px;
+        // }
+
+        // @include to(480px) {
+        //   padding-left: 0;
+        // }
+      }
+
+      .swiper-wrapper {
+        padding-top: 2px;
+        margin: 0 auto;
+        // width: 100%;
+
+        @include to(1370px) {
+          max-width: 100%;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &__img {
+      margin-bottom: 15px;
+      background-color: transparent;
+
+      @include to(480px) {
+        margin-left: 1px;
+      }
+
+      img {
+        position: relative;
+        z-index: 3;
+      }
+    }
+
+    &__item {
+      // @include to(1650px) {
+      //   width: 300px !important;
+      // }
+      &--1 {
+        img {
+          width: 27px;
+          height: 21px;
+
+          @include to(320px) {
+            width: 24px;
+            height: 20px;
           }
         }
+      }
 
-        &--2 {
-          img {
-            width: 28px;
-            height: 28px;
+      &--2 {
+        img {
+          width: 28px;
+          height: 28px;
 
-            @include to(320px) {
-              width: 23px;
-              height: 24px;
-            }
+          @include to(320px) {
+            width: 23px;
+            height: 24px;
           }
         }
+      }
 
-        &--3 {
-          img {
-            width: 29px;
-            height: 28px;
+      &--3 {
+        img {
+          width: 29px;
+          height: 28px;
 
-            @include to(320px) {
-              width: 24px;
-              height: 24px;
-            }
+          @include to(320px) {
+            width: 24px;
+            height: 24px;
           }
         }
+      }
 
-        &--4 {
-          img {
-            width: 30px;
-            height: 30px;
+      &--4 {
+        img {
+          width: 30px;
+          height: 30px;
 
-            @include to(320px) {
-              width: 26px;
-              height: 26px;
-            }
-          }
-        }
-
-        &--5 {
-          img {
-            width: 27px;
-            height: 25px;
-
-            @include to(320px) {
-              width: 24px;
-              height: 25px;
-            }
-          }
-        }
-
-        &--6 {
-          img {
-            width: 29px;
-            height: 28px;
-
-            @include to(320px) {
-              width: 25px;
-              height: 25px;
-            }
-          }
-        }
-
-        &--7 {
-          img {
+          @include to(320px) {
             width: 26px;
-            height: 25px;
-
-            @include to(320px) {
-              width: 24px;
-              height: 24px;
-            }
+            height: 26px;
           }
         }
+      }
 
-        &--8 {
-          img {
-            width: 36px;
-            height: 14px;
+      &--5 {
+        img {
+          width: 27px;
+          height: 25px;
 
-            @include to(320px) {
-              width: 30px;
-              height: 12px;
-            }
+          @include to(320px) {
+            width: 24px;
+            height: 25px;
+          }
+        }
+      }
+
+      &--6 {
+        img {
+          width: 29px;
+          height: 28px;
+
+          @include to(320px) {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+
+      &--7 {
+        img {
+          width: 26px;
+          height: 25px;
+
+          @include to(320px) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      &--8 {
+        img {
+          width: 36px;
+          height: 14px;
+
+          @include to(320px) {
+            width: 30px;
+            height: 12px;
           }
         }
       }
     }
+  }
 
   .office-block,
   .parking {
@@ -758,7 +751,7 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
@@ -790,7 +783,7 @@
         align-items: flex-start;
       }
     }
-    
+
     &__title {
       color: #fff;
       margin-bottom: 25px;
@@ -840,27 +833,13 @@
   }
 
   .team {
-    .features__content {
-      max-width: 1920px;
-    }
+    // .features__content {
+    //   max-width: 1920px;
+    // }
 
-    .swiper-wrapper {
-      max-width: 1360px;
-      padding-left: 98px;
+    .swiper-container {
       width: 100%;
       margin: 0 auto;
-
-      @include to(1025px) {
-        padding-left: 50px;
-      }
-
-      @include to(770px) {
-        padding-left: 30px;
-      }
-
-      @include to(480px) {
-        padding-left: 15px;
-      }
     }
 
     &__item {
@@ -868,30 +847,6 @@
       flex-direction: column;
       align-items: center;
       box-sizing: border-box;
-
-      @include to(667px) {
-        width: 75% !important;
-      }
-
-      @include to(770px) {
-        width: 45% !important;
-      }
-
-      @include to(800px) {
-        width: 35% !important;
-      }
-      
-      @include to(1150px) {
-        width: 30% !important;
-      }
-
-      @media (min-width: 1200px) {
-        width: 210px !important;
-      }
-
-      @media (min-width: 1650px) {
-        width: 275px !important;
-      }
     }
 
     &__img {
@@ -900,7 +855,7 @@
       width: 100%;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: -15px;
         left: -4px;
@@ -914,6 +869,19 @@
         @include to(1440px) {
           top: -12px;
           left: -4px;
+        }
+
+        @include to(1025px) {
+          left: -3px;
+        }
+
+        @include to(770px) {
+          top: -10px;
+        }
+
+        @include to(480px) {
+          top: -8px;
+          left: -2px;
         }
       }
 
@@ -941,7 +909,7 @@
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 50%;
     right: 0;
@@ -960,7 +928,7 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 71px;
       height: 10px;
@@ -1029,13 +997,13 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(240, 240, 240, 0) 0%, #F0F0F0 100%);
+    background: linear-gradient(180deg, rgba(240, 240, 240, 0) 0%, #f0f0f0 100%);
   }
 
   &__content {
@@ -1096,8 +1064,8 @@
     width: 50%;
     background: #fff;
     z-index: 1;
-    border: 1px solid #E8E6DF;
-    transition: all .4s;
+    border: 1px solid #e8e6df;
+    transition: all 0.4s;
 
     @include to(667px) {
       width: 100%;
@@ -1107,15 +1075,15 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       opacity: 0;
-      transition: all .4s;
+      transition: all 0.4s;
       bottom: 0;
-      background: linear-gradient(83.47deg, #EBBA8C 0%, #EBC78C 22.34%, #FBDB94 99.73%);
+      background: linear-gradient(83.47deg, #ebba8c 0%, #ebc78c 22.34%, #fbdb94 99.73%);
     }
 
     &--top {
@@ -1174,7 +1142,6 @@
           width: 71px;
           height: 65px;
         }
-        
       }
     }
 
@@ -1199,7 +1166,7 @@
 
     @include to(667px) {
       border-radius: 5px;
-      border: 1px solid #E8E6DF;
+      border: 1px solid #e8e6df;
     }
   }
 
@@ -1454,7 +1421,7 @@
   &__intro {
     font-size: 22px;
     line-height: 1.5em;
-    color: #758BA2;
+    color: #758ba2;
     margin-bottom: 40px;
 
     @include to(1440px) {
@@ -1499,5 +1466,4 @@
       width: 100%;
     }
   }
-
 }
