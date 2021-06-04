@@ -38,6 +38,10 @@
         &--1 {
             background-color: #69E282;
 
+            @include to(1025px) {
+                display: none;
+            }
+
             svg {
               width: 20px;
               height: 20px; 
@@ -86,6 +90,14 @@
 
             &:hover {
                 background-color: darken(#655FA4, 10%);
+            }
+        }
+
+        &--tablet {
+            display: none;
+
+            @include to(1025px) {
+                display: inline-flex;
             }
         }
     }

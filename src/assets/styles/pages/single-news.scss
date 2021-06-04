@@ -57,11 +57,22 @@
                 height: 34vh;
             }
         }
+
+        &__btn-block {
+            position: fixed;
+
+            @include to(480px) {
+                position: relative;
+            }
+        }
     
         &__back {
             margin-top: 32px;
             min-width: 50px;
             margin-right: 10px;
+            border: 1px solid rgba($blue, 0.2);
+            border-radius: 50%;
+            transition: all .4s;
 
             @include to(480px) {
                 margin-top: 0;
@@ -105,15 +116,18 @@
                 background: rgba($blue, .2);
             }
 
+            &::before,
+            &::after {
+                display: none;
+            }
+
             &:hover {
-                &::after {
-                    opacity: 1;
-                    background: $blue;
-                }
+                border-color: $blue;
             }
         }
 
         &__content {
+            margin-left: 60px;
             display: flex;
             align-items: flex-start;
             padding: 50px 153px 50px 50px;
@@ -135,6 +149,7 @@
             }
 
             @include to(480px) {
+                margin-left: 0;
                 padding-top: 25px;
                 padding-bottom: 25px;
                 padding-left: 15px;
@@ -186,6 +201,11 @@
         &__block {
             display: flex;
             justify-content: flex-end;
+            margin-top: 25px;
+
+            @include to(720px) {
+                margin-top: 20px;
+            }
         }
     }
 

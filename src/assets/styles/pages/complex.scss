@@ -11,7 +11,7 @@
 
   .intro {
     position: relative;
-    min-height: 70vh;
+    min-height: 75vh;
     display: flex;
     color: #fff;
     align-items: center;
@@ -21,7 +21,7 @@
     }
 
     .complex-name__bg {
-      background: url('../images/complex/1.jpg') no-repeat center/cover;
+      background: url('../images/floor-home-bg.jpg') no-repeat center/cover;
     }
 
     &::after {
@@ -238,7 +238,7 @@
 
   .complex-desc {
     position: relative;
-    min-height: 70vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
 

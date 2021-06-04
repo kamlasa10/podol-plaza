@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 3.9,
     breakpoints: {
       320: {
-        slidesPerView: 1.1,
+        slidesPerView: 1,
         spaceBetween: 10,
       },
       480: {
@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const swiperTeam = new Swiper('.js-team-slider', {
-    spaceBetween: 40,
     slidesPerView: 5.2,
     navigation: {
       nextEl: '.js-controls-team-slider-next',
@@ -94,23 +93,19 @@ document.addEventListener('DOMContentLoaded', () => {
     breakpoints: {
       320: {
         slidesPerView: 1.7,
-        spaceBetween: 10,
       },
       375: {
         slidesPerView: 2.2,
-        spaceBetween: 15,
       },
       480: {
         slidesPerView: 2.7,
-        spaceBetween: 15,
       },
       720: {
         slidesPerView: 3.5,
-        spaceBetween: 25,
       },
       1000: {
         slidesPerView: 4.1,
-        spaceBetween: 20,
+        spaceBetween: 0,
       },
       1250: {
         slidesPerView: 5.1,

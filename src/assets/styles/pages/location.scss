@@ -19,12 +19,23 @@
         }
     }
 
+    .page__title {
+        @include to(567px) {
+            margin-bottom: 15px;
+        }
+    }
+
     .location {
        &__top {
            margin-bottom: 23px;
            display: flex;
            justify-content: space-between;
            align-items: center;
+
+            @include to(567px) {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
        }
 
        &__btn {
@@ -33,7 +44,7 @@
             }
 
             @include to(567px) {
-                display: none;
+                display: inline-flex;
 
                 &-infra {
                     position: absolute;
