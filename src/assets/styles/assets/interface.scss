@@ -321,6 +321,7 @@
     display: block;
     position: relative;
     z-index: 2;
+    text-decoration: none !important;
   }
 
   &::before {
@@ -364,6 +365,18 @@
   &:hover {
     transform: scale(0.9);
     opacity: 0.9;
+    text-decoration: none;
+  }
+
+  &:visited,
+  &:active {
+    text-decoration: none;
+    border-color: transparent !important;
+    outline: none !important;
+
+    span {
+      text-decoration: none;
+    }
   }
 }
 

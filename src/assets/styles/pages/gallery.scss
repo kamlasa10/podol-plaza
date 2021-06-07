@@ -189,6 +189,8 @@
     justify-content: center; 
 
     @include to(480px) {
+        padding-left: 15px;
+        padding-right: 15px;
         padding-bottom: 40px;
     }
 
@@ -243,6 +245,7 @@
 
         @include to(480px) {
             font-size: 19px;
+            white-space: nowrap;
         }
     }
 
@@ -266,12 +269,8 @@
     }
 
     @include to(480px) {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    @include to(320px) {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 15px; 
+        padding-right: 15px;
+        width: 50%;
     }
 }
