@@ -310,18 +310,22 @@
   text-decoration: none;
   align-items: center;
   justify-content: center;
+  border-color: transparent !important;
   display: inline-flex;
+  outline: none !important;
 
   span {
-    background: linear-gradient(180deg, #703221 0%, #000000 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    display: block;
+    // background: linear-gradient(180deg, #703221 0%, #000000 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent; 
+    // -moz-background-clip: text;
+    // -moz-text-fill-color: transparent;
+    color: #000;
     position: relative;
     z-index: 2;
     text-decoration: none !important;
+    border-color: transparent !important;
+    outline: none !important;
   }
 
   &::before {
@@ -369,6 +373,8 @@
   }
 
   &:visited,
+  &:hover,
+  &:focus,
   &:active {
     text-decoration: none;
     border-color: transparent !important;
@@ -376,6 +382,8 @@
 
     span {
       text-decoration: none;
+      border-color: transparent !important;
+      outline: none !important;
     }
   }
 }

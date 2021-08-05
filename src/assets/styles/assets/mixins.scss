@@ -12,6 +12,52 @@
 	}
 }
 
+@mixin blockWithBg($srcImg) {
+	.page__title {
+        margin-bottom: 20px;
+    }
+
+    background-color: #f0f0f0;
+
+    .header {
+        background-color: rgba(#fff, 0.95);
+    }
+
+    .parking {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 70%;
+            z-index: 1;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+
+            @include to(770px) {
+                width: 100%;
+				background: rgba(#000, 0.7);
+            }
+        }
+
+        color: #fff;
+
+        .office-block__content {
+            display: flex;
+            align-items: center;
+            max-width: 380px;
+
+            @include to(1440px) {
+                max-width: 332px;
+            }
+        }
+
+        .complex-name__bg {
+            background: url($srcImg) no-repeat center/cover;
+        }
+    }
+}
+
 @mixin placeholder () {
 	&::-webkit-input-placeholder {@content}
 	&:-moz-placeholder           {@content}

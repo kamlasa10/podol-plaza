@@ -1,0 +1,40 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Інвесторам'
+    var id_page = 'client-page'
+    var class_page = 'client-page'
+    var breadcrumbsLink = 'client'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/parking.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Інвесторам
+    section.with-animate-bg.parking(data-section="eight")
+        .complex-name__bg
+        .container
+            .office-block__content.block-with-height
+                .office-block__wrap
+                p.office-block__desc Сучасний бізнес-центр з офісними приміщеннями класу А, власна паркова зона з оригінальним ландшафтним дизайном, дитячі і спортивні майданчики, дворівневий закритий паркінг, вдале розташування і квартири з приголомшливим видом на старовинний Поділ складають основу успіху для вашого бізнесу.
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

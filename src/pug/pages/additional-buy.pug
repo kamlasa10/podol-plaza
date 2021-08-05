@@ -1,0 +1,64 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Умови придбання'
+    var id_page = 'additional-buy-page'
+    var class_page = 'additional-buy-page'
+    var breadcrumbsLink = 'additional-buy'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Умови придбання
+    .additional-buy 
+        .big-container 
+            .additional-buy__wrap 
+                .additional-buy__left 
+                    .additional-buy__info Вибір квартири з фахівцем відділу продажів
+                .additional-buy__right
+                    .additional-buy__content 
+                        .additional-buy__title Клієнт має можливість забронювати квартиру:
+                        ul.additional-buy__list 
+                            li.additional-buy__item на два дні для прийняття рішення, для цьго потрібно лишити свої контакти та ПІП
+                            li.additional-buy__item на три тижні, для цього підписується договор резервування на один квадратний метр, який при підписанні основного договору входить в загальну вартість квартири. Такий вид резерву фіксує за клієнтом квартиру та її вартість на строк резерву. 
+            .additional-buy__wrap 
+                .additional-buy__left 
+                    .additional-buy__info Для підписання основного договору узгоджується день та час з фахівцем відділу продажів, надаються копії паспорта і кода людини, на яку заключаються договори (присутність подружжя необов'язкова). В день підписання угоди потрібно мати оригінали документів.
+                .additional-buy__right
+                    .additional-buy__content
+                        .additional-buy__title Для укладання угоди, Компанія оформлює наступні договори:
+                        ul.additional-buy__list
+                            li.additional-buy__item договор деривативу (приклад надається за запитом)
+                            li.additional-buy__item договір майнових прав (приклад надається за запитом)
+                    .additional-buy__content
+                        .additional-buy__title Хронологія проведення угоди:
+                        ul.additional-buy__list
+                            li.additional-buy__item ви приходиде до офісу відділу продажів по вул. Глибочицька, 73, другий поверх;
+                            li.additional-buy__item перевіряєте заповнені договори та підписуєте їх;
+                            li.additional-buy__item завіряєте копії паспорту та коду;
+                            li.additional-buy__item фахівець сканує підписаний пакет документів, та відправляє на перевірку до компаніїї з управління актівами (КУА);
+                            li.additional-buy__item якщо помилок немає, КУА дає дозвіл на реєстрацію угоди на Фондовій біржі;
+                            li.additional-buy__item після реестрації договорів, фахівець відділу продажів надає Вам заповнені квітанціі на оплату;
+                            li.additional-buy__item на оплату дається термін три робочі дні, не враховуючи день проведення угоди, оплата здійснюється на р/р у ПАТ «Альфа-Банк».
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

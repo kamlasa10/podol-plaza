@@ -1,0 +1,12 @@
+#parking-page {
+    @include blockWithBg('../images/parking-bg.jpg');
+
+    .complex-name__decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: matrix(-1,0,0,1,0,0);
+    }
+}

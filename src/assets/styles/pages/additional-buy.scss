@@ -1,0 +1,163 @@
+#terms-of-purchase-page {
+    .page__title {
+        margin-bottom: 20px;
+    }
+
+    background-color: #f0f0f0;
+
+    .header {
+        background-color: rgba(#fff, 0.95);
+    }
+
+    .additional-buy {
+        margin-bottom: 50px;
+
+        @include to(567px) {
+            margin-bottom: 30px;
+        }
+
+        &__wrap {
+            padding: 50px 60px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            @include to(1025px) {
+                padding: 30px 40px;
+            }
+
+            @include to(900px) {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            @include to(567px) {
+                padding: 16px 18px;
+            }
+        }
+
+        &__left {
+            margin-right: 80px;
+            width: 45%;
+
+            @include to(1025px) {
+                margin-right: 40px;
+            }
+            @include to(900px) {
+                margin-right: 0;
+            }
+        }
+
+        &__right {
+            width: 55%;
+
+            .additional-buy__content {
+                &:not(:last-child) {
+                    margin-bottom: 60px;
+                }
+
+                @include to(900px) {
+                    &:not(:last-child) {
+                        margin-bottom: 40px;
+                    }
+                }
+
+                @include to(567px) {
+                    &:not(:last-child) {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+
+        &__left,
+        &__right {
+            @include to(900px) {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            .additional-buy__item {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+
+                @include to(567px) {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        &__info {
+            font-weight: 500;
+            color: #758BA2;
+            font-size: 22px;
+            line-height: 1.5em;
+
+            @include to(1440px) {
+                font-size: 20px;
+            }
+
+            @include to(900px) {
+                margin-bottom: 20px;
+            }
+
+            @include to(567px) {
+                font-size: 17px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__item {
+            position: relative;
+            padding-left: 30px;
+
+            @include to(567px) {
+                padding-left: 20px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 11px;
+                left: 0;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: #E9B560;
+
+                @include to(1440px) {
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 17px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 500;
+
+            @include to(1440px) {
+                font-size: 14px;
+            }
+
+            @include to(900px) {
+                margin-bottom: 15px;
+            }
+
+            @include to(567px) {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

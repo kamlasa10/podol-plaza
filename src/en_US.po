@@ -1,0 +1,518 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: podolplaza\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-28 09:39+0000\n"
+"PO-Revision-Date: 2021-05-28 09:40+0000\n"
+"Last-Translator: admin <gav.sqrt@gmail.com>\n"
+"Language-Team: English (United States)\n"
+"Language: en-US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.0; wp-5.7.2"
+
+#@ podolplaza
+msgid "СТОРІНКА В РОЗРОБЦІ"
+msgstr "PAGE IN DEVELOPMENT"
+
+#@ podolplaza
+msgid "На главную"
+msgstr "Home"
+
+#. Author URI of the theme
+msgid "https://smarto.agency/"
+msgstr ""
+
+#. Name of the theme
+msgid "podolplaza"
+msgstr ""
+
+#. Author of the theme
+msgid "Smart Orange"
+msgstr ""
+
+#: complex.php:15
+msgid ""
+"«PODIL PLAZA & RESIDENCE - 2» — це багатофункціональний престижний житловий "
+"комплекс преміум-класу, розташований у самому серці Подолу."
+msgstr ""
+
+#: inc/template-function.php:436
+msgid "Березень"
+msgstr ""
+
+#: inc/template-function.php:442
+msgid "Вересень"
+msgstr ""
+
+#: inc/template-function.php:27 inc/template-function.php:32
+msgid "Головна"
+msgstr ""
+
+#: inc/template-function.php:445
+msgid "Грудень"
+msgstr ""
+
+#: inc/template-function.php:443
+msgid "Жовтень"
+msgstr ""
+
+#: flat.php:20
+msgid "Квартира"
+msgstr ""
+
+#: inc/template-function.php:437
+msgid "Квітень"
+msgstr ""
+
+#: inc/template-function.php:440
+msgid "Липень"
+msgstr ""
+
+#: inc/template-function.php:444
+msgid "Листопад"
+msgstr ""
+
+#: inc/template-function.php:435
+msgid "Лютий"
+msgstr ""
+
+#: single-news.php:12 inc/template-function.php:21
+msgid "Новини"
+msgstr ""
+
+#: inc/template-function.php:441
+msgid "Серпень"
+msgstr ""
+
+#: inc/template-function.php:434
+msgid "Січень"
+msgstr ""
+
+#: inc/template-function.php:438
+msgid "Травень"
+msgstr ""
+
+#: inc/template-function.php:439
+msgid "Червень"
+msgstr ""
+
+#: single-news.php:71 template-parts/pages/news/list-block.php:25
+msgid "Читати новину"
+msgstr "Read news"
+
+#@ podolplaza
+msgid "Про проєкт"
+msgstr "About project"
+
+#@ podolplaza
+msgid "м. Київ, Глибочицька 77-79"
+msgstr "Kyiv, Hlybochytska str. 77-79"
+
+#@ podolplaza
+msgid "Контрактова площа"
+msgstr "Kontraktova square"
+
+#@ podolplaza
+msgid "пн-пт"
+msgstr "mon-fri"
+
+#@ podolplaza
+msgid "сб-нд"
+msgstr "sat-sun"
+
+#@ podolplaza
+msgid "Київ, Шевченківський район, вул. Глубочицька, 77-79"
+msgstr "Kyiv, Shevchenkivsky district, Hlybochytska str. 77-79"
+
+#@ podolplaza
+msgid "сб"
+msgstr "sat"
+
+#@ podolplaza
+msgid "вс: вихідний"
+msgstr "sun: day off"
+
+#@ podolplaza
+msgid "девелопер проєкту"
+msgstr "developer of the project"
+
+#@ podolplaza
+msgid "Якщо у вас виникли запитання, залиште свій номер і ми передзвонимо вам:"
+msgstr "If you have any questions, leave your number and we will call you back:"
+
+#@ podolplaza
+msgid "Надіслати"
+msgstr "Send"
+
+#@ podolplaza
+msgid "Усі права захищено"
+msgstr "All rights reserved"
+
+#@ podolplaza
+msgid "Розробка сайту"
+msgstr "Website developer"
+
+#@ podolplaza
+msgid "Головна"
+msgstr "Home"
+
+#@ podolplaza
+msgid "Залишились запитання?"
+msgstr "Any questions left?"
+
+#@ podolplaza
+msgid "Введіть ваше ім’я"
+msgstr "Enter your name"
+
+#@ podolplaza
+msgid "Ім`я:"
+msgstr "Name:"
+
+#@ podolplaza
+msgid "Введіть ваш номер телефону"
+msgstr "Enter your phone number"
+
+#@ podolplaza
+msgid "Вкажіть в якому месенджері вам зручно спілкуватися"
+msgstr "Indicate in which messenger you are comfortable communicating"
+
+#@ podolplaza
+msgid "Телефон"
+msgstr "Phone"
+
+#@ podolplaza
+msgid "обов’язкові поля для заповнення"
+msgstr "required fields"
+
+#@ podolplaza
+msgid "Обрати квартиру"
+msgstr "Choose flat"
+
+#@ podolplaza
+msgid "Комерційна нерухомість"
+msgstr "Commercial real-estate"
+
+#@ podolplaza
+msgid "Замовити дзвінок"
+msgstr "Order a call"
+
+#@ podolplaza
+msgid "Меню"
+msgstr "Menu"
+
+#@ podolplaza
+msgid "Назва комплексу — не просто гарне поєднання слів."
+msgstr "Название комплекса - не просто красивое сочетание слов."
+
+#@ podolplaza
+msgid "Це відображення особливого статусу та способу життя."
+msgstr "Это отражение особого статуса и образа жизни."
+
+#@ podolplaza
+msgid "Про комплекс"
+msgstr "About complex"
+
+#@ podolplaza
+msgid "«PODIL PLAZA & RESIDENCE - 2» — це багатофункціональний престижний житловий комплекс преміум-класу, розташований у самому серці Подолу."
+msgstr "«PODIL PLAZA & RESIDENCE - 2» - это многофункциональный престижный жилой комплекс премиум-класса, расположенный в самом сердце Подола. "
+
+#@ podolplaza
+msgid "Розкішне природне оточення біля підніжжя гори Щекавиця, статусне сусідство, ексклюзивна архітектура і дизайн, високоякісний сервіс — це правила життя у стилі преміум. Ваші правила!."
+msgstr "Роскошное природное окружение у подножия горы Щекавица, статусное соседство, эксклюзивная архитектура и дизайн, высококачественный сервис - это правила жизни в стиле премиум. Ваши правила!"
+
+#@ podolplaza
+msgid "Панорама з вікон житлового комплексу"
+msgstr "Panorama from the windows of the residential complex"
+
+#@ podolplaza
+msgid "Показати на Google Maps"
+msgstr "Show on Google Maps"
+
+#@ podolplaza
+msgid "Квартири"
+msgstr "Flats"
+
+#@ podolplaza
+msgid "Квартири в «PODIL PLAZA & RESIDENCE–2» — це ідеальне простір для створення розкішного інтер’єру вашої мрії. Ретельно продумані планувальні рішення квартир відповідають найвищим вимогам до житла класу Преміум."
+msgstr "Квартиры в «PODIL PLAZA & RESIDENCE-2» - это идеальное место для создания роскошного интерьера вашей мечты. Тщательно продуманные планировочные решения квартир отвечают самым высоким требованиям к жилью класса Премиум. "
+
+#@ podolplaza
+msgid "Переваги"
+msgstr "Features"
+
+#@ podolplaza
+msgid "Торгові та офісні приміщення"
+msgstr "Retail and office premises"
+
+#@ podolplaza
+msgid "Забудовник"
+msgstr "Developer"
+
+#@ podolplaza
+msgid "Об’єкти які знаходяться на стадії на будівництва:"
+msgstr "Objects under construction:"
+
+#@ podolplaza
+msgid "ЖК"
+msgstr "RC"
+
+#@ podolplaza
+msgid "м. Бориспільська"
+msgstr "m. Boryspilska"
+
+#@ podolplaza
+msgid "Наша команда"
+msgstr "Our team"
+
+#@ podolplaza
+msgid "Бондаренко Сергій"
+msgstr "Bondarenko Sergiy"
+
+#@ podolplaza
+msgid "Здоренко Марина"
+msgstr "Zdorenko Maryna"
+
+#@ podolplaza
+msgid "вул. Глибочицька 73"
+msgstr "Hlybochytska str., 73"
+
+#@ podolplaza
+msgid "м. Славутич"
+msgstr "m. Slavutych"
+
+#@ podolplaza
+msgid "вул. Приозерна 15"
+msgstr "Pryozerna str., 15"
+
+#@ podolplaza
+msgid "пр-т Бажана 17"
+msgstr "Bazhana Ave. 17"
+
+#@ podolplaza
+msgid "вул. Центральна 19"
+msgstr "Tsentralna str., 19"
+
+#@ podolplaza
+msgid "Абрамов Олексій"
+msgstr "Abramov Oleksiy"
+
+#@ podolplaza
+msgid "Січко Світлана"
+msgstr "Sichko Svitlana"
+
+
+#@ podolplaza
+msgid "Контакти"
+msgstr "Contacts"
+
+#@ podolplaza
+msgid "Розташування:"
+msgstr "Location:"
+
+#@ podolplaza
+msgid "Київ, Шевченківський район, вул. Глибочицька, 77-79"
+msgstr "Kyiv, Shevhenkivsky district, Hlybochynska str, 77-79"
+
+#@ podolplaza
+msgid "Перегляд об’єкту (для покупців) триває щоденно за попередньою згодою з відділом продажів"
+msgstr "Viewing the object (for buyers) occurs daily by prior agreement with the sales department"
+
+#@ podolplaza
+msgid "Відділ продажів:"
+msgstr "Sales department:"
+
+#@ podolplaza
+msgid "* Працюємо без вихідних та перерв на обід"
+msgstr "* We work without days off and lunch breaks"
+
+#@ podolplaza
+msgid "Повідомлення:"
+msgstr "Message:"
+
+#@ podolplaza
+msgid "Дізнатися більше"
+msgstr "Learn more"
+
+#@ podolplaza
+msgid "Обрати приміщення"
+msgstr "Choose premise"
+
+#@ podolplaza
+msgid "Паркінг"
+msgstr "Parking"
+
+#@ podolplaza
+msgid "Панорама"
+msgstr "Panorama"
+
+#@ podolplaza
+msgid "Фільтр"
+msgstr "Filter"
+
+#@ podolplaza
+msgid "Секція:"
+msgstr "Section:"
+
+#@ podolplaza
+msgid "кімнатні"
+msgstr "room"
+
+#@ podolplaza
+msgid "Дворівневі"
+msgstr "Two-level"
+
+#@ podolplaza
+msgid "Пентхауси"
+msgstr "Penthouses"
+
+#@ podolplaza
+msgid "За вашими параметрами Найдено:"
+msgstr "Found according to your parameters:"
+
+#@ podolplaza
+msgid "квартир"
+msgstr "flats"
+
+#@ podolplaza
+msgid "Квартира"
+msgstr "Flat"
+
+#@ podolplaza
+msgid "Галерея"
+msgstr "Gallery"
+
+#@ podolplaza
+msgid "Умовні позначення"
+msgstr "Legend"
+
+#@ podolplaza
+msgid "Метро"
+msgstr "Metro"
+
+#@ podolplaza
+msgid "Парки"
+msgstr "Parks"
+
+#@ podolplaza
+msgid "Освіта"
+msgstr "Education"
+
+#@ podolplaza
+msgid "Загальна площа:"
+msgstr "Total area:"
+
+#@ podolplaza
+msgid "Житлова площа:"
+msgstr "Liing area:"
+
+#@ podolplaza
+msgid "Поверх:"
+msgstr "Floor:"
+
+#@ podolplaza
+msgid "Передпокій:"
+msgstr "Hall:"
+
+#@ podolplaza
+msgid "Записатися на перегляд"
+msgstr "Sign up for viewing"
+
+#@ podolplaza
+msgid "Завантажити планування"
+msgstr "Download planning"
+
+#@ podolplaza
+msgid "м"
+msgstr "m"
+#@ podolplaza
+msgid "Кафе, рестораны"
+msgstr "Cafes, restaurants"
+
+#@ podolplaza
+msgid "Магазини"
+msgstr "Stores"
+
+#@ podolplaza
+msgid "Спорт"
+msgstr "Sport"
+
+#@ podolplaza
+msgid "Аптеки"
+msgstr "Pharmacies"
+
+#@ podolplaza
+msgid "Відкрити в навігаторі"
+msgstr "Open in the navigator"
+
+
+#@ podolplaza
+msgid "Офісна"
+msgstr "Office"
+
+#@ podolplaza
+msgid "головна"
+msgstr "Home"
+
+#@ podolplaza
+msgid "Січень"
+msgstr "January"
+
+#@ podolplaza
+msgid "закрити"
+msgstr "close"
+
+#@ podolplaza
+msgid "Попередній місяць"
+msgstr "Previous month"
+
+#@ podolplaza
+msgid "Наступний місяць"
+msgstr "Next month"
+
+#@ podolplaza
+msgid "Хід будівництва"
+msgstr "Construction progress"
+
+#@ podolplaza
+msgid "Статус робіт:"
+msgstr "Status of work:"
+
+#@ podolplaza
+msgid "будівництво"
+msgstr "construction"
+
+#@ podolplaza
+msgid "фасад"
+msgstr "facade"
+
+#@ podolplaza
+msgid "благоустрій"
+msgstr "landscaping"
+
+#@ podolplaza
+msgid "мережі"
+msgstr "networks"
+
+#@ podolplaza
+msgid "Загрузить Больше"
+msgstr "Load more"
+
+#@ podolplaza
+msgid "Останні новини"
+msgstr "Recent news"
+
+#@ podolplaza
+msgid "ДЯКУЄМО!"
+msgstr "THANK YOU!"
+
+#@ podolplaza
+msgid "Ваша заявка успішно відправлена. Менеджер обов′язково зв′яжеться з вами у робочий час."
+msgstr "Your application has been successfully sent. The manager will definitely contact you during business hours."
+
+#@ podolplaza
+msgid "нд"
+msgstr "sun"

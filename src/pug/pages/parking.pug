@@ -1,0 +1,40 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Паркінг'
+    var id_page = 'parking-page'
+    var class_page = 'parking-page'
+    var breadcrumbsLink = 'contacts'
+    var colorThemeBreadCrumbs = 'dark'
+    var breadcrumbsSubitem = [
+      {
+        label: 'About',
+        link: pagesLink[0].about
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/parking.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Паркінг
+    section.with-animate-bg.parking(data-section="eight")
+        .complex-name__bg
+        .container
+            .office-block__content.block-with-height
+                .office-block__wrap
+                p.office-block__desc В комплексі передбачений дворівневий паркінг для вашої зручності та безпеки автівки, з місцями для зарядки електомобілей. Також ми облаштуємо гостьові паркомісця вздовж вул. Глибочицької. 
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
