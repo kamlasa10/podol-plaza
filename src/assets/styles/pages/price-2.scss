@@ -1,0 +1,16 @@
+#price-2-page {
+    background-color: #f0f0f0;
+
+    .page__title {
+        margin-bottom: 20px;
+    }
+}
+
+
+.prices-2 {
+    .prices__headinges {
+        &-item--long {
+            grid-column: 2/5;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Ціни'
+    var id_page = 'price-2-page'
+    var class_page = 'prices-page'
+    var breadcrumbsLink = 'price'
+    var colorThemeBreadCrumbs = 'dark'
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/parking.js')
+block content
+    .big-container.gallery__wrapper-top
+        include ../includes/breadcrumbs.pug
+        .page__title Ціни
+        .prices
+            table.prices__table 
+                tr.prices__headinges 
+                    th.prices__headinges-item.prices__headinges-item--big.prices__headinges-text Тип приміщення
+                    th.prices__headinges-item.prices__headinges-text I секція
+                    th.prices__headinges-item.prices__headinges-text II секція
+                    th.prices__headinges-item.prices__headinges-text III секція
+                    th.prices__headinges-item.prices__headinges-item--long.prices__headinges-text ЦІНА за 1 КВ.М., грн
+                tr
+                    td.prices__title Житлова нерухомість
+                tr 
+                    td.prices__info-title.prices__headinges-text Однокімнатні квартири
+                tr.prices-info__content.prices-info 
+                    td.prices-info__item <span>з 4 по 10 поверхи</span>
+                    td.prices-info__item 40 000,00
+                    td.prices-info__item <span>44 000,00</span>
+                tr 
+                    td.prices__info-title.prices__headinges-text Двокімнатні квартири
+                tr.prices-info__content.prices-info 
+                    td.prices-info__item <span>з 4 по 10 поверхи</span>
+                    td.prices-info__item 38 000,00
+                    td.prices-info__item <span>42 000,00</span> <span>44 000,00</span>
+                tr 
+                    td.prices__info-title.prices__headinges-text Трикімнатні квартири
+                tr.prices-info__content.prices-info 
+                    td.prices-info__item <span>з 4 по 10 поверхи</span>
+                    td.prices-info__item 37 000,00
+                    td.prices-info__item <span>42 000,00</span>
+                tr(class="prices-info__content prices-info prices-info--penthouse") 
+                    td.prices-info__item Пентхауси
+                    td.prices-info__item.prices-info__item--long 60 000,00
+                tr
+                    td.prices__title Комерційна нерухомість
+                tr 
+                    td.prices__info-title.prices__headinges-text Нежитлові приміщення
+                tr.prices__commercial 
+                    td.prices-info__item 
+                        span 1 поверх ТП
+                        span 2 поверх ТП 
+                        span 3 поверх ОП
+                        span Кладові приміщення
+                        span Машиномісця
+                    td.prices-info__item 
+                        span 75 000,00
+                        span 70 000,00
+                        span 60 000,00
+                        span 40 000,00
+                        span 50 000,00 – 53 000,00                 
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
